@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
-    'eslint:recommended',
+    'airbnb',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
@@ -18,6 +18,8 @@ module.exports = {
   rules: {
     'no-var': 'error',
     'prefer-const': 'warn',
+    'import/prefer-default-export': 'off',
+    'react/button-has-type': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
