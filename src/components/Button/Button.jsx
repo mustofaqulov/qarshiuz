@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 
-export const Button = ({ type }) => {
+export function Button({ type }) {
   return <button type={type}>Click me!</button>;
+}
+
+Button.defaultProps = {
+  type: 'button',
 };
 
 Button.propTypes = {
