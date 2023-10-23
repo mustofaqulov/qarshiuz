@@ -1,9 +1,3 @@
-export const HomePage = () => {
-	return (
-		<>
-			<header></header>
-			<main></main>
-			<footer></footer>
-		</>
-	)
+export function HomePage() {
+  return <h1>HomePage</h1>;
 }
