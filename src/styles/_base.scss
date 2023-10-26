@@ -11,35 +11,47 @@ button {
   cursor: pointer;
 }
 
-/* ______background______ */
 
-$bg-primary: #fff;
-$bg-black: #000;
 
-/* ______color______ */
-$primary-color: #000;
-$secondary: #bfbfbf;
-$white: #fff;
+:root{
 
-/* ______size______ */
-$fs-96: 96px;
-$fs-64: 64px;
-$fs-48: 48px;
-$fs-32: 32px;
-$fs-24: 24px;
-$fs-20: 20px;
-$fs-18: 18px;
-$fs-16: 16px;
-$fs-15: 15px;
-$fs-14: 14px;
-$fs-12: 12px;
+  /*========== Colors ==========*/
+   --bg-body: #fff;
+   --bg-footer: #000;
 
-/* ______font______ */
-$red-hat: 'Red Hat Display', sans-serif;
-$gilroy: 'Gilroy', sans-serif;
+   --body-color: #000;
+   --body-color: #000;
+   --gray1-color: #626262;
+   --gray2-color: #A9A9A9;
+   --gray3-color:#CACACA;
+   --gray4-color: #E9E9E9;
+   --white-color: #fff;
 
-/* ______weight______ */
-$fw-700: 700;
-$fw-600: 600;
-$fw-500: 500;
-$fw-400: 400;
+
+  /*==========Font==========*/
+   --red-hat: 'Red Hat Display', sans-serif;
+   --gilroy: 'Gilroy', sans-serif;
+
+
+  /*==========Size==========*/
+  --heading-2xl: 6rem;
+  --heading-xl: 4rem;
+  --heading-lg: 2rem;
+  --heading-md: 1.5px;
+
+  --paragraph-2xl: 2rem;
+  --paragraph-xl: 1.25rem;
+  --paragraph-lg: 0.875rem;
+
+  --bottom-xl:1.5rem;
+  --bottom-lg: 1.125rem;
+  --bottom-md: 1rem;
+  --bottom-sm: 0.875rem;
+
+
+  /*==========Weight==========*/
+   --fw-bold: 700;
+   --fw-semi-bold: 600;
+   --fw-Medium: 500;
+   --fw-Normal: 400;
+  }
