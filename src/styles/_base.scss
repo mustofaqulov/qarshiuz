@@ -11,47 +11,37 @@ button {
   cursor: pointer;
 }
 
+:root {
+  /* ========== Colors ========== */
+  --bg-body: #fff;
+  --bg-footer: #000;
+  --body-color: #000;
+  --gray1-color: #626262;
+  --gray2-color: #a9a9a9;
+  --gray3-color: #cacaca;
+  --gray4-color: #e9e9e9;
+  --white-color: #fff;
 
+  /* ==========Font========== */
+  --red-hat: 'Red Hat Display', sans-serif;
+  --gilroy: 'Gilroy', sans-serif;
 
-:root{
-
-  /*========== Colors ==========*/
-   --bg-body: #fff;
-   --bg-footer: #000;
-
-   --body-color: #000;
-   --body-color: #000;
-   --gray1-color: #626262;
-   --gray2-color: #A9A9A9;
-   --gray3-color:#CACACA;
-   --gray4-color: #E9E9E9;
-   --white-color: #fff;
-
-
-  /*==========Font==========*/
-   --red-hat: 'Red Hat Display', sans-serif;
-   --gilroy: 'Gilroy', sans-serif;
-
-
-  /*==========Size==========*/
+  /* ==========Size========== */
   --heading-2xl: 6rem;
   --heading-xl: 4rem;
   --heading-lg: 2rem;
-  --heading-md: 1.5px;
-
+  --heading-md: 1.5rem;
   --paragraph-2xl: 2rem;
   --paragraph-xl: 1.25rem;
   --paragraph-lg: 0.875rem;
-
-  --bottom-xl:1.5rem;
+  --bottom-xl: 1.5rem;
   --bottom-lg: 1.125rem;
   --bottom-md: 1rem;
   --bottom-sm: 0.875rem;
 
-
-  /*==========Weight==========*/
-   --fw-bold: 700;
-   --fw-semi-bold: 600;
-   --fw-Medium: 500;
-   --fw-Normal: 400;
-  }
+  /* ==========Weight========== */
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-medium: 500;
+  --fw-normal: 400;
+}
