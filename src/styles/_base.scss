@@ -15,16 +15,17 @@ button {
   /* ========== Colors ========== */
   --bg-body: #fff;
   --bg-footer: #000;
-  --body-color: #000;
-  --gray1-color: #626262;
-  --gray2-color: #a9a9a9;
-  --gray3-color: #cacaca;
-  --gray4-color: #e9e9e9;
-  --white-color: #fff;
+
+  --clr-primary-dk: #000;
+  --clr-primary-lt: #fff;
+  --clr-gray-dark: #626262;
+  --clr-gray-lt: #a9a9a9;
+  --clr-gray-ltr: #cacaca;
+  --clr-gray-ltst: #f3f3f3;
 
   /* ==========Font========== */
-  --red-hat: 'Red Hat Display', sans-serif;
-  --gilroy: 'Gilroy', sans-serif;
+  --ff-red-hat: 'Red Hat Display', sans-serif;
+  --ff-gilroy: 'Gilroy', sans-serif;
 
   /* ==========Size========== */
   --heading-2xl: 6rem;
