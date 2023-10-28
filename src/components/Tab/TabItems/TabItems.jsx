@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
-import { TabLinks } from '../TabLink/TabLink';
+import classNames from 'classnames';
+import { PropTypes } from 'prop-types';
+import { TabLinks } from '../TabLink/TabLinks';
+import style from '../Tab.module.scss';
 
 export function TabComponent({
   tabs,
@@ -15,19 +17,26 @@ export function TabComponent({
   };
 
   return (
-    <div className="tab-component">
+    <div className={classNames(style.tab)}>
       <TabLinks
         tabs={tabs}
         activeTab={activeTab}
         onTabClick={handleTabClick}
       />
-      <div className="tab-content">
+      <div
+        className={classNames(
+          style['tab-content'],
+        )}
+      >
         {tabs.map((tab) => (
           <div
             key={tab.id}
-            className={`tab-pane ${
-              activeTab === tab.id ? 'active' : ''
-            }`}
+            className={classNames(
+              style['tab-link'],
+              tab.id === activeTab
+                ? style.active
+                : '',
+            )}
           >
             {tab.content}
           </div>
@@ -40,6 +49,7 @@ export function TabComponent({
 TabComponent.propTypes = {
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
+      lang: PropTypes.string,
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       content: PropTypes.node.isRequired,

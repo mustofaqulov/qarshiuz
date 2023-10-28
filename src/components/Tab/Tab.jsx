@@ -1,27 +1,14 @@
 import { TabComponent } from './TabItems/TabItems';
-import './Tab.scss';
+import style from './Tab.module.scss';
+import { tabs } from '../../utils/mock/tab';
 
 export function Tab() {
-  const tabs = [
-    {
-      id: 1,
-      title: 'eng',
-    },
-    {
-      id: 2,
-      title: 'rus',
-    },
-    {
-      id: 3,
-      title: 'uzb',
-    },
-  ];
-
   return (
-    <div className="tabs">
+    <div className={style.tabs}>
       <TabComponent
         tabs={tabs}
         defaultActiveTab={1}
+        onTabClick={() => {}}
       />
     </div>
   );
