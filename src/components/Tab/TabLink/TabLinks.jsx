@@ -1,44 +1,33 @@
-import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
-import style from '../Tab.module.scss';
+import style from '../tab.module.scss';
+import { locales } from '../../../constants/locales';
 
-export function TabLinks({
-  tabs,
-  activeTab,
-  onTabClick,
-}) {
+export function TabLinks() {
   const { i18n } = useTranslation();
+
+  const langBtns = Object.keys(locales).map(
+    (lang) => (
+      <button
+        key={lang}
+        className={classNames(style['tab-link'], {
+          [style.active]:
+            lang === i18n.resolvedLanguage,
+        })}
+        onClick={() => {
+          i18n.changeLanguage(lang);
+        }}
+      >
+        {locales[lang].title}
+      </button>
+    ),
+  );
+
   return (
     <div
       className={classNames(style['tab-links'])}
     >
-      {tabs.map(({ id, title, lang }) => (
-        <button
-          key={id}
-          className={classNames(
-            style['tab-link'],
-            id === activeTab ? style.active : '',
-          )}
-          onClick={() => {
-            onTabClick(id);
-            i18n.changeLanguage(lang);
-          }}
-        >
-          {title}
-        </button>
-      ))}
+      {langBtns}
     </div>
   );
 }
-
-TabLinks.propTypes = {
-  tabs: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  activeTab: PropTypes.number.isRequired,
-  onTabClick: PropTypes.func.isRequired,
-};
