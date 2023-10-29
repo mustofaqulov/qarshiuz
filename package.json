@@ -10,6 +10,7 @@
     "lint:fix": "eslint --fix .",
     "stylelint": "stylelint \"**/*.scss\"",
     "stylelint:fix": "stylelint \"**/*.scss\" --fix",
+    "svgr": "svgr --icon --replace-attr-values '#000=currentColor' -d src/assets/icons-component src/assets/icons --ext jsx",
     "preview": "vite preview",
     "prepare": "husky install"
   },
