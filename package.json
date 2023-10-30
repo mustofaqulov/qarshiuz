@@ -10,7 +10,6 @@
     "lint:fix": "eslint --fix .",
     "stylelint": "stylelint \"**/*.scss\"",
     "stylelint:fix": "stylelint \"**/*.scss\" --fix",
-    "svgr": "svgr --icon --replace-attr-values '#000=currentColor' -d src/assets/icons-component src/assets/icons --ext jsx",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -50,6 +49,7 @@
     "stylelint-config-standard-scss": "^11.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-prettier": "^4.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-svgr": "^4.1.0"
   }
 }
