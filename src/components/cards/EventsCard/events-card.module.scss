@@ -1,0 +1,52 @@
+@import '../../../styles/style';
+
+.events-card{
+  width: 100%;
+  max-width: 26.25rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  font-family: var(--ff-gilroy);
+  .event-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    .event-date{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span{
+        font-size: var(--bottom-md);
+        font-weight: var(--fw-medium);
+        line-height: 1.5rem;
+        color: var(--clr-gray-lt);
+      }
+    }
+    .event-about{
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      h5{
+        font-family: var(--ff-gilroy);
+        font-size: var(--heading-md);
+        font-weight: var(--fw-medium);
+        letter-spacing: -0.0075rem;
+      }
+      .event-location{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .location-info{
+          display: flex;
+          align-items: center;
+          column-gap: 0.625rem;
+          span{
+            font-size: var(--bottom-sm);
+            font-weight: var(--fw-medium);
+            color: var(--clr-gray-lt);
+          }
+        }
+      }
+    }
+  }
+}
