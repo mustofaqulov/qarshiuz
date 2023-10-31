@@ -3,7 +3,7 @@ import style from './events-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg?react';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg?react';
 
-export function EventsCard() {
+function EventsCard() {
   return (
     <div
       className={classNames(style['events-card'])}
@@ -51,3 +51,5 @@ export function EventsCard() {
     </div>
   );
 }
+
+export default EventsCard;
