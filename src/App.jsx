@@ -1,5 +1,11 @@
-import { CategoryCard } from './components/cards/CategoryCard/CategoryCard';
+import NewsCard from './components/cards/NewsCard/NewsCard';
+import EventsCard from './components/cards/EventsCard/EventsCard';
 
 export default function App() {
-  return <CategoryCard />;
+  return (
+    <>
+      <NewsCard />
+      <EventsCard />
+    </>
+  );
 }
