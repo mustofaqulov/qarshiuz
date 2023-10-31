@@ -1,10 +1,5 @@
-import { Tab } from './components/LanguageTab/Tab';
-import AddIcon from './assets/icons/add-icon.svg?react';
+import { CategoryCard } from './components/cards/CategoryCard/CategoryCard';
+
 export default function App() {
-  return (
-    <>
-      <AddIcon fill={'#fff'} />
-      <Tab />
-    </>
-  );
+  return <CategoryCard />;
 }
