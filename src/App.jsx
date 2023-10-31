@@ -1,11 +1,11 @@
-import NewsCard from './components/cards/NewsCard/NewsCard';
-import EventsCard from './components/cards/EventsCard/EventsCard';
+import { Tab } from './components/LanguageTab/Tab';
+import AddIcon from './assets/icons/add-icon.svg?react';
 
 export default function App() {
   return (
     <>
-      <NewsCard />
-      <EventsCard />
+      <AddIcon />
+      <Tab />
     </>
   );
 }
