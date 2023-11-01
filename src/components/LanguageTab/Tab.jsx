@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
-import style from '../tab.module.scss';
-import { locales } from '../../../constants/locales';
+import { locales } from '../../constants/locales.js';
+import style from './tab.module.scss';
 
-export function TabLinks() {
+export function Tab() {
   const { i18n } = useTranslation();
 
   const langBtns = Object.keys(locales).map(
