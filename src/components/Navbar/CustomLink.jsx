@@ -1,4 +1,5 @@
 import { Link, useMatch } from 'react-router-dom';
+import style from './navbar.module.scss';
 
 export function CustomLink({
   to,
@@ -6,15 +7,12 @@ export function CustomLink({
   ...props
 }) {
   const match = useMatch(to);
-  const activeClass = {
-    padding: match ? '16px 28px' : '',
-    borderRadius: match ? '36px' : '',
-    border: match
-      ? '1px solid var(--clr-primary-dk)'
-      : '',
-  };
   return (
-    <Link to={to} {...props} style={activeClass}>
+    <Link
+      to={to}
+      {...props}
+      className={[match && style.active]}
+    >
       {children}
     </Link>
   );
