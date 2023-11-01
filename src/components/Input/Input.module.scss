@@ -1,0 +1,30 @@
+form {
+  label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 26px;
+    padding-right: 15px;
+    border-radius: 32px;
+    border: 1px solid black;
+    overflow: hidden;
+    input {
+      cursor: pointer;
+      width: 100%;
+      padding: 13px 10px;
+      border: none;
+      font-size: var(--bottom-md);
+      font-family: var(--ff-gilroy);
+      background-color: white;
+      &::placeholder {
+        color: var(--clr-gray-ltr);
+      }
+      &:focus{
+        background-color: white;
+      }
+    }
+
+
+  }
+}

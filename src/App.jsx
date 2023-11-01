@@ -4,8 +4,9 @@ import EventsCard from './components/cards/EventsCard/EventsCard';
 export default function App() {
   return (
     <>
-      <NewsCard />
-      <EventsCard />
+      <AddIcon fill="#fff" />
+      <Tab />
+      <Input />
     </>
   );
 }
