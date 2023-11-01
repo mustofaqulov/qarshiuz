@@ -24,7 +24,9 @@ export function Tab() {
   );
 
   return (
-    <div className={classNames(style['tab-links'])}>
+    <div
+      className={classNames(style['tab-links'])}
+    >
       {langBtns}
     </div>
   );
