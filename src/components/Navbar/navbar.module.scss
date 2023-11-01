@@ -1,0 +1,39 @@
+@import '../../styles/style';
+
+.container {
+  max-width: 84.375rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.625rem 0.938rem;
+
+  svg {
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+    ul {
+      display: flex;
+      column-gap: 2.5rem;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--clr-primary-dk);
+        cursor: pointer;
+        font-family: var(--ff-gilroy);
+        font-size: var(--paragraph-lg);
+        font-weight: var(--fw-normal);
+        line-height: var(--paragraph-xl);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
