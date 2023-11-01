@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import style from './news-card.module.scss';
-import ViewIcon from '../../assets/icons/eye-black-icon.svg?react';
+import EyesBlackIcon from '../../../assets/icons/eye-black-icon.svg?react';
 
-export function NewsCard() {
+function NewsCard() {
   return (
     <div
       className={classNames(style['news-card'])}
@@ -43,7 +43,7 @@ export function NewsCard() {
               style['news-watch'],
             )}
           >
-            <ViewIcon />
+            <EyesBlackIcon />
             <span>1240</span>
           </div>
         </div>
@@ -51,3 +51,5 @@ export function NewsCard() {
     </div>
   );
 }
+
+export default NewsCard;
