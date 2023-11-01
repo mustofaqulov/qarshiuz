@@ -28,9 +28,7 @@ button {
   transition: 0.2s;
 
   &:hover {
-    border: 1px solid var(--clr-primary-dk);
-    background-color: transparent;
-    color: var(--clr-primary-dk);
+    transform: scale(1.087);
   }
 }
 
