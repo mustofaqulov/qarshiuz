@@ -1,0 +1,68 @@
+@import '../../../styles/style';
+
+.news-card {
+  display: flex;
+  width: 100%;
+  max-width: 26.25rem;
+  flex-direction: column;
+  border-radius: 1rem;
+  font-family: var(--ff-gilroy);
+  row-gap: 1.5rem;
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    .news-info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.75rem;
+
+      span {
+        color: var(--clr-gray-lt);
+        font-size: var(--bottom-md);
+        font-weight: var(--fw-medium);
+        line-height: 1.5rem;
+      }
+
+      .news-about {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+        h5 {
+          font-size: var(--heading-md);
+          font-weight: var(--fw-medium);
+          letter-spacing: 0.015rem;
+        }
+
+        p {
+          color: var(--clr-gray-dark);
+          font-size: var(--bottom-md);
+          font-weight: var(--fw-medium);
+          line-height: 1.5rem;
+        }
+      }
+    }
+
+    .news-status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        color: var(--clr-gray-lt);
+        font-size: var(--bottom-md);
+        font-weight: var(--fw-medium);
+        line-height: 1.5rem;
+      }
+
+      .news-watch {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+      }
+    }
+  }
+}

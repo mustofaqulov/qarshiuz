@@ -1,4 +1,4 @@
-@import '../../styles/style.scss';
+@import '../../styles/style';
 
 .container {
   max-width: 84.375rem;
@@ -10,22 +10,26 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.625rem 0.938rem;
+
   svg {
     cursor: pointer;
   }
+
   nav {
-    column-gap: 2.5rem;
     display: flex;
     align-items: center;
+    column-gap: 2.5rem;
+
     ul {
       display: flex;
       column-gap: 2.5rem;
+
       li {
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
         color: var(--clr-primary-dk);
+        cursor: pointer;
         font-family: var(--ff-gilroy);
         font-size: var(--paragraph-lg);
         font-weight: var(--fw-normal);

@@ -1,5 +1,11 @@
-import { Navbar } from './components/Navbar/Navbar';
+import NewsCard from './components/cards/NewsCard/NewsCard';
+import EventsCard from './components/cards/EventsCard/EventsCard';
 
 export default function App() {
-  return <Navbar />;
+  return (
+    <>
+      <NewsCard />
+      <EventsCard />
+    </>
+  );
 }
