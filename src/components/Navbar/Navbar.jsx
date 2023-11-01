@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import style from './navbar.module.scss';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
-import { CustomLink } from './CustomLink';
+import { NavLink } from './NavLink';
 import Logo from '../../assets/icons/logo.svg?react';
 import AddIcon from '../../assets/icons/add-icon-white.svg?react';
 
@@ -45,9 +45,7 @@ export function Navbar() {
         <ul>
           {links.map(({ to, title }) => (
             <li key={to}>
-              <CustomLink to={to}>
-                {title}
-              </CustomLink>
+              <NavLink to={to}>{title}</NavLink>
             </li>
           ))}
         </ul>
