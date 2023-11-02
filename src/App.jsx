@@ -1,5 +1,13 @@
-import { Footer } from './components/Footer/Footer';
+import { Tab } from './components/LanguageTab/Tab';
+import Input from './components/Input/Input';
+import Navbar from './components/Navbar/NavLink';
 
 export default function App() {
-  return <Footer />;
+  return (
+    <>
+      <Navbar />
+      <Tab />
+      <Input />
+    </>
+  );
 }
