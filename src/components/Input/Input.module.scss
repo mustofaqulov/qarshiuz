@@ -1,30 +1,31 @@
 form {
   label {
-    cursor: pointer;
     display: flex;
-    align-items: center;
-    flex-grow: 1;
-    padding-left: 26px;
-    padding-right: 15px;
-    border-radius: 32px;
-    border: 1px solid black;
     overflow: hidden;
+    flex-grow: 1;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 26px;
+    border: 1px solid black;
+    border-radius: 32px;
+    cursor: pointer;
+
     input {
-      cursor: pointer;
       width: 100%;
       padding: 13px 10px;
       border: none;
-      font-size: var(--bottom-md);
-      font-family: var(--ff-gilroy);
       background-color: white;
+      cursor: pointer;
+      font-family: var(--ff-gilroy);
+      font-size: var(--bottom-md);
+
       &::placeholder {
         color: var(--clr-gray-ltr);
       }
-      &:focus{
+
+      &:focus {
         background-color: white;
       }
     }
-
-
   }
 }

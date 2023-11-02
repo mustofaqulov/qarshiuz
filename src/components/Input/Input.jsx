@@ -21,6 +21,7 @@ export default function Input({ placeholder }) {
     </form>
   );
 }
+
 Input.defaultProps = {
   placeholder: 'Some',
 };
