@@ -25,8 +25,13 @@ footer {
 
       span {
         display: flex;
+        align-items: start;
         flex-direction: column;
         row-gap: 1.563rem;
+        a
+        {
+          outline: none;
+        }
       }
 
       .footer-text {
@@ -59,17 +64,12 @@ footer {
           align-items: center;
           color: var(--clr-primary-lt);
           column-gap: 0.625rem;
-          cursor: pointer;
           font-family: var(--ff-gilroy);
           font-size: 1rem;
           font-weight: var(--fw-medium);
           line-height: var(--heading-md);
           transition: 0.2s;
           user-select: none;
-
-          &:hover {
-            column-gap: 0.938rem;
-          }
         }
 
         ul {

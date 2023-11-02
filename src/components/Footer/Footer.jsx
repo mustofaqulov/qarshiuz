@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import Logo from '../../assets/icons/logo-white.svg';
 import Arrow from '../../assets/icons/arrow-up-white.svg';
@@ -22,11 +23,12 @@ export function Footer() {
           ])}
         >
           <span>
-            <div
+            <Link
+              to="/home"
               className={classNames([style.logo])}
             >
               <Logo />
-            </div>
+            </Link>
             <p
               className={classNames([
                 [style.address],
