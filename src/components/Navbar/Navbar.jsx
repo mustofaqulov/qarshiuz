@@ -4,7 +4,7 @@ import style from './navbar.module.scss';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
 import { NavLink } from './NavLink';
-import Logo from '../../assets/icons/logo.svg?react';
+import Logo from '../../assets/icons/logo-black.svg?react';
 import AddIcon from '../../assets/icons/add-icon-white.svg?react';
 
 const links = [
@@ -25,8 +25,8 @@ const links = [
     title: 'News',
   },
   {
-    to: '/abou',
-    title: 'Abou us',
+    to: '/about-us',
+    title: 'About us',
   },
 ];
 
@@ -50,8 +50,8 @@ export function Navbar() {
           ))}
         </ul>
         <Button
-          btnClass="primary"
-          title="Add new"
+          btnClass="secondary"
+          title="Add"
           icon={<AddIcon />}
         />
         <Tab />

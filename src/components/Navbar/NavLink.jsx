@@ -1,7 +1,7 @@
 import { Link, useMatch } from 'react-router-dom';
 import style from './navbar.module.scss';
 
-export function CustomLink({
+export function NavLink({
   to,
   children,
   ...props
