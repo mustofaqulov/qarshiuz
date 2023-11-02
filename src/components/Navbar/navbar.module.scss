@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.625rem 0.938rem;
+  user-select: none;
 
   svg {
     cursor: pointer;
@@ -17,7 +18,7 @@
 
     ul {
       display: flex;
-      column-gap: 2.5rem;
+      gap: 6px;
 
       li {
         display: flex;
@@ -30,13 +31,17 @@
         font-weight: var(--fw-normal);
         line-height: var(--paragraph-xl);
         text-transform: uppercase;
+
+        a {
+          padding: 14px 28px;
+          outline: none;
+        }
       }
     }
   }
 }
 
 .active {
-  padding: 16px 28px;
   border: 1px solid var(--clr-primary-dk);
   border-radius: 36px;
 }
