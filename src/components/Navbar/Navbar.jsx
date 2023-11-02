@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import style from './navbar.module.scss';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
 import { NavLink } from './NavLink';
-import Logo from '../../assets/icons/logo-black.svg?react';
+import Logo from '../../assets/icons/logo.svg?react';
 import AddIcon from '../../assets/icons/add-icon-white.svg?react';
 
 const links = [
@@ -38,9 +38,9 @@ export function Navbar() {
         [style.header],
       )}
     >
-      <div className="logo">
+      <Link to="/home" className="logo">
         <Logo />
-      </div>
+      </Link>
       <nav>
         <ul>
           {links.map(({ to, title }) => (

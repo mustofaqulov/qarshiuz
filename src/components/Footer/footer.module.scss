@@ -26,21 +26,20 @@ footer {
       span {
         display: flex;
         flex-direction: column;
+        align-items: start;
         row-gap: 1.563rem;
+
+        a {
+          outline: none;
+        }
       }
 
       .footer-text {
         color: var(--clr-primary-lt);
-        cursor: pointer;
         font-family: var(--ff-gilroy);
         font-size: 1rem;
         font-weight: var(--fw-medium);
         line-height: var(--heading-md);
-        transition: 0.3s;
-
-        &:hover {
-          font-size: 1.063rem;
-        }
       }
     }
 
@@ -65,17 +64,12 @@ footer {
           align-items: center;
           color: var(--clr-primary-lt);
           column-gap: 0.625rem;
-          cursor: pointer;
           font-family: var(--ff-gilroy);
           font-size: 1rem;
           font-weight: var(--fw-medium);
           line-height: var(--heading-md);
           transition: 0.2s;
           user-select: none;
-
-          &:hover {
-            column-gap: 0.938rem;
-          }
         }
 
         ul {
@@ -95,12 +89,16 @@ footer {
             list-style: none;
             transition: 0.3s;
 
+            a {
+              outline: none;
+            }
+
             &::after {
               position: absolute;
               bottom: 0;
               left: 0;
               width: 0%;
-              height: 0.188rem;
+              height: 0.068rem;
               background-color: var(
                 --clr-primary-lt
               );
@@ -111,21 +109,6 @@ footer {
             &:hover {
               &::after {
                 width: 100%;
-              }
-            }
-
-            .active {
-              &::after {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 0.188rem;
-                background-color: var(
-                  --clr-primary-lt
-                );
-                content: '';
-                transition: 0.3s;
               }
             }
           }
@@ -147,10 +130,12 @@ footer {
             cursor: pointer;
             font-family: var(--ff-gilroy);
             font-size: 1rem;
-            font-weight: var(--fw-semi-bold);
+            font-weight: var(--fw-semi-normal);
             letter-spacing: 0.2px;
             line-height: var(--heading-md);
             text-decoration-line: underline;
+            text-decoration-thickness: 0.068rem;
+            text-underline-offset: 3px;
             transition: 0.5s;
 
             &:hover {
