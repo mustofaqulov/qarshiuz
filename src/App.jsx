@@ -1,11 +1,13 @@
 import { Tab } from './components/LanguageTab/Tab';
-import AddIcon from './assets/icons/add-icon.svg?react';
+import Input from './components/Input/Input';
+import Navbar from './components/Navbar/NavLink';
 
 export default function App() {
   return (
     <>
-      <AddIcon />
+      <Navbar />
       <Tab />
+      <Input />
     </>
   );
 }

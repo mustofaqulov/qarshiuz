@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import style from './news-card.module.scss';
-import EyesBlackIcon from '../../../assets/icons/eye-black-icon.svg?react';
+import EyesBlackIcon from '../../../assets/icons/eye-black-icon.svg';
 
 function NewsCard() {
   return (
