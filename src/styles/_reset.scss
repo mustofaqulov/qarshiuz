@@ -206,6 +206,7 @@ html {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 a {
+  outline: none;
   text-decoration: none;
 }
 

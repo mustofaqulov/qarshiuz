@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { Link, useMatch } from 'react-router-dom';
-import style from './navbar.module.scss';
+import style from './footer.module.scss';
 
-export function NavLink({
+export function FooterLinks({
   to,
   children,
   ...props
@@ -20,13 +20,13 @@ export function NavLink({
   );
 }
 
-NavLink.defaultProps = {
+FooterLinks.defaultProps = {
   to: '',
   children: null,
   props: null,
 };
 
-NavLink.propTypes = {
+FooterLinks.propTypes = {
   to: PropTypes.string,
   children: PropTypes.node,
   props: PropTypes.node,

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import style from './category-card.module.scss';
-import LocationIcon from '../../../assets/icons/location-gray.svg?react';
-import SideArrowIcon from '../../../assets/icons/side-arrow.svg?react';
+import LocationIcon from '../../../assets/icons/location-gray.svg';
+import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
 export function CategoryCard() {
   return (
