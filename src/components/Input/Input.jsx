@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import style from './Input.module.scss';
-import SearchIcons from '../../assets/icons/search.svg?react';
+import SearchIcons from '../../assets/icons/search.svg';
 
 export default function Input({ placeholder }) {
   return (

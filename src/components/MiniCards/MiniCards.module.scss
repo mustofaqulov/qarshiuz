@@ -1,0 +1,19 @@
+
+.mini-container {
+  width: 200px;
+  text-align: center;
+  background-color: rgb(143, 143, 143);
+  border: 2px solid black;
+  .image-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+  }
+  .card-title p {
+    margin-top: 16px;
+    color: var(--clr-primary-dk);
+    font-family: var(--ff-gilroy);
+    font-size: var(--heading-md);
+    font-weight: var(--fw-semi-bold);
+  }
+}
