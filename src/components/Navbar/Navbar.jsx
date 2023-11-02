@@ -4,7 +4,7 @@ import style from './navbar.module.scss';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
 import { NavLink } from './NavLink';
-import Logo from '../../assets/icons/logo.svg?react';
+import Logo from '../../assets/icons/logo-black.svg?react';
 import AddIcon from '../../assets/icons/add-icon-white.svg?react';
 
 const links = [
