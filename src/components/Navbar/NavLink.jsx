@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { Link, useMatch } from 'react-router-dom';
 import style from './navbar.module.scss';
 
-export function CustomLink({
+export function NavLink({
   to,
   children,
   ...props
@@ -10,6 +11,7 @@ export function CustomLink({
   return (
     <Link
       to={to}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
       className={[match && style.active]}
     >
@@ -17,3 +19,15 @@ export function CustomLink({
     </Link>
   );
 }
+
+NavLink.defaultProps = {
+  to: '',
+  children: null,
+  props: null,
+};
+
+NavLink.propTypes = {
+  to: PropTypes.string,
+  children: PropTypes.node,
+  props: PropTypes.node,
+};
