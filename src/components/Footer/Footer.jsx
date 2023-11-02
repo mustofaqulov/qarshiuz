@@ -97,7 +97,7 @@ export function Footer() {
               </li>
               <li>
                 <FooterLinks to="/childrens-park">
-                  {"Children's "}park
+                  Children&apos;s park
                 </FooterLinks>
               </li>
               <li>
