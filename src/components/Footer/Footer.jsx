@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import style from './Footer.module.scss';
-import Logo from '../../assets/icons/logo-white.svg?react';
-import Arrow from '../../assets/icons/arrow-up-white.svg?react';
-import Facebook from '../../assets/icons/facebook-white.svg?react';
-import Telegram from '../../assets/icons/telegram-white.svg?react';
-import Vkontakte from '../../assets/icons/vkontakte-white.svg?react';
+import Logo from '../../assets/icons/logo-white.svg';
+import Arrow from '../../assets/icons/arrow-up-white.svg';
+import Facebook from '../../assets/icons/facebook-white.svg';
+import Telegram from '../../assets/icons/telegram-white.svg';
+import Vkontakte from '../../assets/icons/vkontakte-white.svg';
 import { FooterLinks } from './FooterLinks';
+import style from './footer.module.scss';
 
 export function Footer() {
   return (
