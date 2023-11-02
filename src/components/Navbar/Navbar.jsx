@@ -4,8 +4,9 @@ import classNames from 'classnames';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
 import { NavLink } from './NavLink';
-import Logo from '../../assets/icons/logo.svg?react';
-import AddIcon from '../../assets/icons/add-icon-white.svg?react';
+import Logo from '../../assets/icons/logo.svg';
+import AddIcon from '../../assets/icons/add-icon-white.svg';
+import style from './navbar.module.scss';
 
 const links = [
   {
