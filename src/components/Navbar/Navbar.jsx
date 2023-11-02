@@ -4,31 +4,9 @@ import style from './navbar.module.scss';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
 import { NavLink } from './NavLink';
-import Logo from '../../assets/icons/logo.svg?react';
-import AddIcon from '../../assets/icons/add-icon-white.svg?react';
-
-const links = [
-  {
-    to: '/home',
-    title: 'Home',
-  },
-  {
-    to: '/category',
-    title: 'Category',
-  },
-  {
-    to: '/events',
-    title: 'Events',
-  },
-  {
-    to: '/news',
-    title: 'News',
-  },
-  {
-    to: '/abou',
-    title: 'Abou us',
-  },
-];
+import { links } from '../../utils/mock';
+import AddIcon from '../../assets/icons/add-icon-white.svg';
+import Logo from '../../assets/icons/logo.svg';
 
 export function Navbar() {
   return (
