@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
-import style from './tab.module.scss';
 import { locales } from '../../constants/locales.js';
+import style from './tab.module.scss';
 
 export function Tab() {
   const { i18n } = useTranslation();
@@ -24,7 +24,9 @@ export function Tab() {
   );
 
   return (
-    <div className={classNames(style['tab-links'])}>
+    <div
+      className={classNames(style['tab-links'])}
+    >
       {langBtns}
     </div>
   );

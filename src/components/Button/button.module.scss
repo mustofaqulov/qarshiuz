@@ -1,3 +1,62 @@
+@import '../../styles/style';
+
 button {
-  background: transparent;
+  background-color: transparent;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-family: Gilroy, sans-serif;
+  font-size: var(--paragraph-lg);
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.primary {
+  padding: var(--paragraph-lg) 1.75rem;
+  border-radius: 2.25rem;
+  background-color: var(--clr-primary-dk);
+  color: var(--clr-primary-lt);
+  font-weight: var(--fw-normal);
+  gap: var(--bottom-md);
+  text-transform: uppercase;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.087);
+  }
+}
+
+.secondary {
+  padding: 0.75rem var(--bottom-xl);
+  border: 1px solid var(--clr-primary-dk);
+  border-radius: 2.438rem;
+  color: var(--clr-primary-dk);
+  column-gap: 0.625rem;
+  font-weight: var(--fw-medium);
+  line-height: var(--paragraph-xl);
+  transition: 0.3s;
+
+  &:hover {
+    gap: var(--paragraph-xl);
+  }
+}
+
+.circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--clr-primary-lt);
+  color: var(--clr-primary-dk);
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--clr-primary-dk);
+    color: var(--clr-primary-lt);
+  }
 }
