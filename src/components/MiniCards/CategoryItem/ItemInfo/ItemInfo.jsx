@@ -1,71 +1,81 @@
+import { Link } from 'react-router-dom';
 import CategoryItem from '../CategoryItem';
 import InfoIcons from '../../../../assets/icons/corner-left.svg';
 import style from './itemInfo.module.scss';
-import Advertisements from './Advertisements';
 
 export default function App() {
   return (
     <div className={style['mini-blog']}>
-      <Advertisements />
+      <Link to="/" className={style['mini-box']}>
+        <DirectionIcon />
+        <p
+          className={style['mini-advertisements']}
+        >
+          See all advertisements
+        </p>
+        <p className={style['category-name']}>
+          in Restaurants
+        </p>
+      </Link>
       <div className={style['mini-blogs']}>
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Chayxana"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Restaurants"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Cafe"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Chayxana"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Restaurants"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Restaurants"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Bakery"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Entertainment"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Bakery"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="ATM"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="School"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Bakery"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="University"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="University"
         />
         <CategoryItem
-          icons={InfoIcons}
+          icons={DirectionIcon}
           title="Bakery"
         />
       </div>

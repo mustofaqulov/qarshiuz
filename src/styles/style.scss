@@ -1,2 +1,24 @@
 @import 'reset';
 @import 'base';
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  overflow: hidden;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1340px;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+}

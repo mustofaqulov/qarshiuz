@@ -8,11 +8,7 @@ function CategoryItem({ icons, title }) {
       className={style['mini-container']}
       to="/"
     >
-      <img
-        className={style['complete-info']}
-        src={icons}
-        alt=""
-      />
+      {icons}
       <p className={style['info-title']}>
         {title}
       </p>
@@ -22,10 +18,10 @@ function CategoryItem({ icons, title }) {
 export default CategoryItem;
 
 CategoryItem.defaultProps = {
-  icons: string,
+  icons: null,
   title: string,
 };
 CategoryItem.propTypes = {
-  icons: PropTypes.string,
+  icons: PropTypes.node,
   title: PropTypes.string,
 };
