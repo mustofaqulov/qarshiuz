@@ -10,10 +10,10 @@ import style from './footer.module.scss';
 
 export function Footer() {
   return (
-    <footer>
+    <footer className={style.footer}>
       <div
         className={classNames(
-          [style.container],
+          'container',
           style['footer-content'],
         )}
       >
@@ -35,8 +35,8 @@ export function Footer() {
                 style['footer-text'],
               ])}
             >
-              © 2023 Qarshiuz. All rights
-              reserved
+              © {new Date().getFullYear()}{' '}
+              Qarshiuz. All rights reserved
             </p>
           </span>
           <span>

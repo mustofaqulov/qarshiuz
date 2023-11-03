@@ -42,7 +42,7 @@ Button.propTypes = {
     'secondary',
     'circle-btn',
   ]),
-  icon: PropTypes.element,
+  icon: PropTypes.node,
   title: PropTypes.string,
   onClick: PropTypes.func,
 };

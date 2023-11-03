@@ -1,11 +1,10 @@
-import Input from './components/Input/Input';
-import Navbar from './components/Navbar/NavLink';
+import { Layout } from './layout/Layout';
+import { HomePage } from './pages';
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <Input />
-    </>
+    <Layout>
+      <HomePage />
+    </Layout>
   );
 }
