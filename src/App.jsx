@@ -1,17 +1,10 @@
-import Input from './components/Input/Input';
-import { Navbar } from './components/Navbar/Navbar';
-import MiniComponents from './components/MiniCards/MiniComponents/MiniComponents';
-import CategoryItem from './components/MiniCards/CategoryItem/ItemInfo/ItemInfo';
-import { Footer } from './components/Footer/Footer';
+import { Layout } from './layout/Layout';
+import { HomePage } from './pages/HomePage';
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <Input />
-      <MiniComponents />
-      <CategoryItem />
-      <Footer />
-    </>
+    <Layout>
+      <HomePage />
+    </Layout>
   );
 }

@@ -12,10 +12,9 @@ import style from './navbar.module.scss';
 export function Navbar() {
   return (
     <header
-      className={classNames(
-        [style.container],
-        [style.header],
-      )}
+      className={classNames('container', [
+        style.header,
+      ])}
     >
       <Link to="/home" className="logo">
         <Logo />

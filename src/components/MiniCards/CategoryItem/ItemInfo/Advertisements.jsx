@@ -5,7 +5,7 @@ import DirectionIcon from '../../../../assets/icons/corner-left.svg';
 function Advertisements() {
   return (
     <Link to="/" className={style['mini-box']}>
-      <img src={DirectionIcon} alt="" />
+      <DirectionIcon />
       <p className={style['mini-advertisements']}>
         See all advertisements
       </p>
