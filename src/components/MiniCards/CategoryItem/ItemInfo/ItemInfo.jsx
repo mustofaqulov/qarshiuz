@@ -1,5 +1,5 @@
 import CategoryItem from '../CategoryItem';
-import DirectionIcon from '../../../../assets/icons/corner-left.svg';
+import InfoIcons from '../../../../assets/icons/corner-left.svg';
 import style from './itemInfo.module.scss';
 import Advertisements from './Advertisements';
 
@@ -9,64 +9,63 @@ export default function App() {
       <Advertisements />
       <div className={style['mini-blogs']}>
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Chayxana"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Restaurants"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Cafe"
         />
-
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Chayxana"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Restaurants"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Restaurants"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Bakery"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Entertainment"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Bakery"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="ATM"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="School"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Bakery"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="University"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="University"
         />
         <CategoryItem
-          icons={DirectionIcon}
+          icons={InfoIcons}
           title="Bakery"
         />
       </div>
