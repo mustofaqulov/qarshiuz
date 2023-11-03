@@ -8,7 +8,7 @@ import { SliderButtons } from '../SliderButtons/SliderButtons';
 import EventsCard from '../../cards/EventsCard/EventsCard';
 import style from '../sliders.module.scss';
 
-export default function EventsSlider() {
+export function EventsSlider() {
   return (
     <Swiper
       slidesPerView={3}

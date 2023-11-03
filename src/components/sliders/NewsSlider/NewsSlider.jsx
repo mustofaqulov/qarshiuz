@@ -8,7 +8,7 @@ import { SliderButtons } from '../SliderButtons/SliderButtons';
 import NewsCard from '../../cards/NewsCard/NewsCard';
 import style from '../sliders.module.scss';
 
-export default function NewsSlider() {
+export function NewsSlider() {
   return (
     <Swiper
       slidesPerView={3}

@@ -4,32 +4,10 @@ import classNames from 'classnames';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
 import { NavLink } from './NavLink';
-import Logo from '../../assets/icons/logo.svg';
+import { links } from '../../utils/mock';
 import AddIcon from '../../assets/icons/add-icon-white.svg';
+import Logo from '../../assets/icons/logo.svg';
 import style from './navbar.module.scss';
-
-const links = [
-  {
-    to: '/home',
-    title: 'Home',
-  },
-  {
-    to: '/category',
-    title: 'Category',
-  },
-  {
-    to: '/events',
-    title: 'Events',
-  },
-  {
-    to: '/news',
-    title: 'News',
-  },
-  {
-    to: '/abou',
-    title: 'Abou us',
-  },
-];
 
 export function Navbar() {
   return (
