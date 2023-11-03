@@ -1,0 +1,20 @@
+.mini-box {
+  display: flex;
+  align-items: center;
+  margin-top: 64px;
+  margin-bottom: 36px;
+
+  .mini-advertisements {
+    margin-left: 8px;
+    font-family: var(--ff-gilroy);
+    font-size: var(--paragraph-xl);
+    font-weight: var(--fw-medium);
+  }
+
+  .category-name {
+    margin-left: 8px;
+    color: #bfbfbf;
+    font-family: var(--ff-gilroy);
+    font-weight: var(--fw-medium);
+  }
+}
