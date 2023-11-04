@@ -1,13 +1,13 @@
-import Input from './components/Input/Input';
-import { Navbar } from './components/Navbar/Navbar';
-import { Footer } from './components/Footer/Footer';
+import { Layout } from './layout/Layout';
+import { HomePage } from './pages/HomePage';
+import { Select } from './components/Select/Select';
 
 export default function App() {
-  return (
-    <>
-      <Navbar />
-      <Input />
-      <Footer />
-    </>
-  );
+  return <Select />;
+  // <Layout>
+  // {
+  //   /* <HomePage /> */
+  // }
+  // </Layout>
+  // );
 }
