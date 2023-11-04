@@ -1,6 +1,5 @@
-// import { Layout } from './layout/Layout';
-// import { HomePage } from './pages/HomePage/HomePage';
-import { Category } from './pages/Category/Category';
+import { Layout } from './layout/Layout';
+import { HomePage } from './pages';
 
 export default function App() {
   return <Category />;

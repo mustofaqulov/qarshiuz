@@ -1,6 +1,6 @@
-export { EventsSlider } from './sliders/EventsSlider/EventsSlider';
-export { NewsSlider } from './sliders/NewsSlider/NewsSlider';
-export { RecommendationSlider } from './sliders/RecommendationSlider/RecSlider';
+export { EventsSlider } from './Sliders/EventsSlider/EventsSlider';
+export { NewsSlider } from './Sliders/NewsSlider/NewsSlider';
+export { RecommendationSlider } from './Sliders/RecommendationSlider/RecSlider';
 export { Button } from './Button/Button';
 export { Navbar } from './Navbar/Navbar';
 export { Footer } from './Footer/Footer';
