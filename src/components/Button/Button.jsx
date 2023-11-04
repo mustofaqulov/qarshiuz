@@ -12,6 +12,7 @@ export function Button({
   const buttonClasses = classNames(style.btn, {
     [style.primary]: btnClass === 'primary',
     [style.secondary]: btnClass === 'secondary',
+    [style.sm]: btnClass === 'sm',
     [style['circle-btn']]:
       btnClass === 'circle-btn',
   });

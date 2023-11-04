@@ -7,7 +7,7 @@ button {
   align-items: center;
   justify-content: center;
   border: 0;
-  font-family: Gilroy, sans-serif;
+  font-family: var(--ff-gilroy);
   font-size: var(--paragraph-lg);
 
   &:active {
@@ -25,11 +25,10 @@ button {
   text-transform: uppercase;
   transition: 0.2s;
 
-  svg {
-    transition: 0.3s;
-
-    &:hover {
+  &:hover {
+    svg {
       transform: rotate(90deg);
+      transition: 0.3s;
     }
   }
 }
@@ -59,6 +58,27 @@ button {
   transition: 0.3s;
 
   &:hover {
+    background-color: var(--clr-primary-dk);
+    color: var(--clr-primary-lt);
+  }
+}
+
+.sm {
+  padding: 6px 18px;
+  border: 1px solid var(--clr-gray-ltr);
+  border-radius: 30px;
+  color: var(--clr-gray-ltr);
+  font-family: var(--ff-gilroy);
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--clr-gray-ltst);
+    color: var(--clr-gray-lt);
+  }
+
+  &.active {
     background-color: var(--clr-primary-dk);
     color: var(--clr-primary-lt);
   }
