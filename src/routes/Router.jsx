@@ -1,11 +1,12 @@
 import {
-  BrowserRouter,
+  // BrowserRouter,
   Route,
   Routes,
 } from 'react-router-dom';
 import App from '../App';
 import { routePaths } from '../constants/routers';
 import { Category, HomePage } from '../pages';
+import Notfound from '../errors/404';
 
 export function Router() {
   return (
@@ -18,6 +19,10 @@ export function Router() {
         <Route
           path={routePaths.CATEGORY}
           element={<Category />}
+        />
+        <Route
+          path={routePaths.NOT_FOUND}
+          element={<Notfound />}
         />
       </Route>
     </Routes>
