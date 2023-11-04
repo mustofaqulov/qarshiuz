@@ -1,5 +1,5 @@
 import { MiniCards } from '../MiniCards';
-import style from './miniComponents.module.scss';
+import style from './mini-components.module.scss';
 
 export function MiniComponents() {
   return (

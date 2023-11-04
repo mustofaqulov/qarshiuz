@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes, { string } from 'prop-types';
-import style from './categoryList.module.scss';
+import style from './category-list.module.scss';
 
 function CategoryList({ icons, title }) {
   return (

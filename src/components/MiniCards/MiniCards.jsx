@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import style from './miniCards.module.scss';
+import style from './mini-cards.module.scss';
 
 export function MiniCards({ img, title }) {
   return (
