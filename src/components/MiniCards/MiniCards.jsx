@@ -19,8 +19,8 @@ export function MiniCards({ img, title }) {
 }
 
 MiniCards.defaultProps = {
-  img: string,
-  title: string,
+  img: '',
+  title: '',
 };
 MiniCards.propTypes = {
   img: PropTypes.string,

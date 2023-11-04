@@ -1,13 +1,13 @@
+import classNames from 'classnames';
+import { Autoplay } from 'swiper/modules';
 import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import classNames from 'classnames';
+import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
+import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
-import { SliderButtons } from '../SliderButtons/SliderButtons';
-import { CategoryCard } from '../../cards/CategoryCard/CategoryCard';
+import 'swiper/css';
 
 export function RecommendationSlider() {
   return (

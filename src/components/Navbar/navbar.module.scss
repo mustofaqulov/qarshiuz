@@ -1,47 +1,25 @@
 @import '../../styles/style';
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.625rem 0.938rem;
-  user-select: none;
+.nav {
+   width: 100%;
+   padding: 1.563rem 0;
+   font-family: var(--ff-gilroy);
 
-  svg {
-    cursor: pointer;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    column-gap: 2.5rem;
-
-    ul {
+   .nav-wrapper {
       display: flex;
-      gap: 6px;
+      justify-content: space-between;
+      align-items: center;
 
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--clr-primary-dk);
-        cursor: pointer;
-        font-family: var(--ff-gilroy);
-        font-size: var(--paragraph-lg);
-        font-weight: var(--fw-normal);
-        line-height: var(--paragraph-xl);
-        text-transform: uppercase;
-
-        a {
-          padding: 14px 28px;
-          outline: none;
-        }
+      .nav-list {
+         display: flex;
+         align-items: center;
+         gap: 40px;
       }
-    }
-  }
+   }
 }
 
 .active {
-  border: 1px solid var(--clr-primary-dk);
-  border-radius: 36px;
+   padding: 16px 28px;
+   border: 1px solid var(--clr-primary-dk);
+   border-radius: 36px;
 }
