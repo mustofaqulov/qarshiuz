@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import PropTypes, { string } from 'prop-types';
-import style from './categoryItem.module.scss';
+import style from './category-list.module.scss';
 
-function CategoryItem({ icons, title }) {
+function CategoryList({ icons, title }) {
   return (
     <Link
       className={style['mini-container']}
@@ -15,13 +15,13 @@ function CategoryItem({ icons, title }) {
     </Link>
   );
 }
-export default CategoryItem;
+export default CategoryList;
 
-CategoryItem.defaultProps = {
+CategoryList.defaultProps = {
   icons: null,
   title: string,
 };
-CategoryItem.propTypes = {
+CategoryList.propTypes = {
   icons: PropTypes.node,
   title: PropTypes.string,
 };
