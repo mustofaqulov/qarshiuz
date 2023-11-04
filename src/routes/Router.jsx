@@ -4,7 +4,7 @@ import {
   Routes,
 } from 'react-router-dom';
 import { routePaths } from '../constants/routers';
-import { HomePage } from '../pages/HomePage';
+import { HomePage } from '../pages';
 
 export function Router() {
   return (
