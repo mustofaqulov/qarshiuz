@@ -1,43 +1,45 @@
 .category {
   width: 100%;
-  background-color: #934444;
   padding-top: 96px;
+  background-color: #934444;
+
   .category-info {
     display: flex;
     flex-direction: column;
     align-items: end;
+
     h1 {
       width: 100%;
       color: var(--clr-primary-dk);
       font-family: var(--ff-gilroy);
       font-size: 64px;
       font-weight: 500;
-      line-height: 120%;
       letter-spacing: 0.64px;
+      line-height: 120%;
       text-transform: uppercase;
     }
-    p
-    {
+
+    p {
       width: 100%;
       max-width: 450px;
-      color: var(--clr-primary-dk );
+      color: var(--clr-primary-dk);
       font-family: var(--ff-gilroy);
       font-size: 16px;
       font-weight: 500;
       line-height: 24px;
     }
   }
+
   .category-search {
-    width: 100%;
     display: flex;
+    width: 100%;
     align-items: center;
-    column-gap: 16px;
     background-color: blue;
-    .filter-button
-    {
-      border: 0;
-      border-radius: 30px;
+    column-gap: 16px;
+
+    .filter-button {
       border: 1px solid var(--primary-black, #000);
+      border-radius: 30px;
     }
   }
 }

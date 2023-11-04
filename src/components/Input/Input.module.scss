@@ -1,5 +1,6 @@
 form {
   flex-grow: 1;
+
   label {
     display: flex;
     overflow: hidden;
@@ -9,6 +10,7 @@ form {
     border: 1px solid black;
     border-radius: 32px;
     cursor: pointer;
+
     input {
       width: 100%;
       padding: 13px 10px;
