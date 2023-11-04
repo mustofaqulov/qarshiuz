@@ -1,5 +1,5 @@
 import { Layout } from './layout/Layout';
-import { HomePage } from './pages/HomePage/HomePage';
+import { HomePage } from './pages';
 
 export default function App() {
   return (
