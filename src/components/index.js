@@ -7,3 +7,4 @@ export { Footer } from './Footer/Footer';
 export { Input } from './Input/Input';
 export { PromoSlider } from './PromoSlider/PromoSlider';
 export { MiniCards } from './MiniCards/MiniCards';
+export { Select } from './Select/Select';
