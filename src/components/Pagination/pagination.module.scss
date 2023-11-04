@@ -1,0 +1,57 @@
+.pagination {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+
+  .pagination-btn {
+    display: flex;
+    width: 100%;
+    max-width: 26.5rem;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+
+    .pagination-active a {
+      border: 0;
+      background-color: #000;
+      color: white;
+
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+
+    .page-num {
+      padding: 0.5rem 0.75rem;
+      border-radius: 100%;
+      cursor: pointer;
+      font-family: var(--ff-gilroy);
+      font-size: var(--paragraph-lg);
+      font-weight: var(--fw-medium);
+
+      &:hover {
+        background-color: #000;
+        color: var(--clr-primary-lt);
+      }
+    }
+
+    .next-btn a,
+    .prev-btn a {
+      padding: 1rem;
+      border: 1px solid black;
+      border-radius: 100%;
+
+      &:hover {
+        background-color: #000;
+
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}
