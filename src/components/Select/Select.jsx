@@ -51,7 +51,7 @@ export function Select() {
       <div
         ref={dropdownRef}
         className={classNames(
-          style['select-button'],
+          style['select-menu'],
         )}
       >
         <p>Sort by</p>
@@ -62,6 +62,7 @@ export function Select() {
           )}
         >
           <button
+            className={style['select-btn']}
             onClick={() => setIsOpen(!isOpen)}
           >
             {text} <SelectIcon />

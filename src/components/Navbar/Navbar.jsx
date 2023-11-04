@@ -11,29 +11,34 @@ import style from './navbar.module.scss';
 
 export function Navbar() {
   return (
-    <header
-      className={classNames('container', [
-        style.header,
-      ])}
-    >
-      <Link to="/home" className="logo">
-        <Logo />
-      </Link>
-      <nav>
-        <ul>
+    <nav className={classNames(style.nav)}>
+      <div
+        className={classNames(
+          style['nav-wrapper'],
+          'container',
+        )}
+      >
+        <Link to="/" className={style.logo}>
+          <Logo />
+        </Link>
+        <ul className={style['nav-list']}>
           {links.map(({ to, title }) => (
             <li key={to}>
               <NavLink to={to}>{title}</NavLink>
             </li>
           ))}
+          <li>
+            <Button
+              btnClass="primary"
+              title="Add new"
+              icon={<AddIcon />}
+            />
+          </li>
+          <li>
+            <Tab />
+          </li>
         </ul>
-        <Button
-          btnClass="primary"
-          title="Add new"
-          icon={<AddIcon />}
-        />
-        <Tab />
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }

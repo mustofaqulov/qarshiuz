@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import classNames from 'classnames';
 import style from './promo-slider.module.scss';
 
-export default function PromoSlider() {
+export function PromoSlider() {
   return (
     <div
       className={classNames(style['promo-slide'])}

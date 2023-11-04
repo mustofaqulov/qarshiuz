@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import style from './news-card.module.scss';
 import EyesBlackIcon from '../../../assets/icons/eye-black-icon.svg';
 
-function NewsCard() {
+export function NewsCard() {
   return (
     <div
       className={classNames(style['news-card'])}
@@ -51,5 +51,3 @@ function NewsCard() {
     </div>
   );
 }
-
-export default NewsCard;

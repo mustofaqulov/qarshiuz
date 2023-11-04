@@ -2,9 +2,9 @@ import { useSwiper } from 'swiper/react';
 import classNames from 'classnames';
 import style from './slider-buttons.module.scss';
 import { Button } from '../../Button/Button';
-import CaruselRightIcon from '../../../assets/icons/carusel-right-icon.svg?react';
-import CaruselLeftIcon from '../../../assets/icons/carusel-left-icon.svg?react';
-import ArrowUpIcon from '../../../assets/icons/arrow-up.svg?react';
+import CarouselRightIcon from '../../../assets/icons/carousel-right-icon.svg';
+import CarouselLeftIcon from '../../../assets/icons/carousel-left-icon.svg';
+import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
 
 export function SliderButtons() {
   const swiperBtn = useSwiper();
@@ -23,13 +23,13 @@ export function SliderButtons() {
         <Button
           type="button"
           btnClass="circle-btn"
-          icon={<CaruselLeftIcon />}
+          icon={<CarouselLeftIcon />}
           onClick={() => swiperBtn.slidePrev()}
         />
         <Button
           type="button"
           btnClass="circle-btn"
-          icon={<CaruselRightIcon />}
+          icon={<CarouselRightIcon />}
           onClick={() => swiperBtn.slideNext()}
         />
       </div>
