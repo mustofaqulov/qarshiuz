@@ -1,10 +1,5 @@
-import { Layout } from './layout/Layout';
-import { HomePage } from './pages';
+import { Pagination } from './components';
 
 export default function App() {
-  return (
-    <Layout>
-      <HomePage />
-    </Layout>
-  );
+  return <Pagination />;
 }
