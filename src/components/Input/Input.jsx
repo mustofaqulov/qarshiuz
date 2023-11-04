@@ -1,13 +1,20 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import style from './Input.module.scss';
 import SearchIcons from '../../assets/icons/search.svg';
 
-export function Input({ placeholder }) {
+export function Input({ placeholder, classInp }) {
+  const inputClass = classNames(
+    style['input-search'],
+    {
+      [style.lg]: classInp === 'lg',
+    },
+  );
   return (
     <form>
       <label
         htmlFor="search"
-        className={style['input-search']}
+        className={inputClass}
       >
         <SearchIcons />
         <input
@@ -24,8 +31,10 @@ export function Input({ placeholder }) {
 
 Input.defaultProps = {
   placeholder: 'Some',
+  classInp: '',
 };
 
 Input.propTypes = {
+  classInp: PropTypes.string,
   placeholder: PropTypes.string,
 };

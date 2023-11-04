@@ -3,18 +3,23 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
+import App from '../App';
 import { routePaths } from '../constants/routers';
-import { HomePage } from '../pages';
+import { Category, HomePage } from '../pages';
 
 export function Router() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <Routes>
+      <Route
+        path={routePaths.HOME}
+        element={<App />}
+      >
+        <Route index element={<HomePage />} />
         <Route
-          path={routePaths.HOME}
-          element={<HomePage />}
+          path={routePaths.CATEGORY}
+          element={<Category />}
         />
-      </Routes>
-    </BrowserRouter>
+      </Route>
+    </Routes>
   );
 }

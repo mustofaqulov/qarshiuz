@@ -1,3 +1,45 @@
 .category {
-  background-color: #fff;
+  width: 100%;
+  padding-top: 96px;
+  background-color: #934444;
+
+  .category-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    h1 {
+      width: 100%;
+      color: var(--clr-primary-dk);
+      font-family: var(--ff-gilroy);
+      font-size: 64px;
+      font-weight: 500;
+      letter-spacing: 0.64px;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+
+    p {
+      width: 100%;
+      max-width: 450px;
+      color: var(--clr-primary-dk);
+      font-family: var(--ff-gilroy);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+
+  .category-search {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: blue;
+    column-gap: 16px;
+
+    .filter-button {
+      border: 1px solid var(--primary-black, #000);
+      border-radius: 30px;
+    }
+  }
 }
