@@ -1,12 +1,12 @@
+import classNames from 'classnames';
 import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react';
-import 'swiper/css';
-import classNames from 'classnames';
-import { SliderButtons } from '../SliderButtons/SliderButtons';
-import NewsCard from '../../cards/NewsCard/NewsCard';
+import { SliderButtons } from '../SliderButton/SliderButtons';
+import { NewsCard } from '../../Cards/NewsCard/NewsCard';
 import style from '../sliders.module.scss';
+import 'swiper/css';
 
 export function NewsSlider() {
   return (
