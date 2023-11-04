@@ -24,10 +24,11 @@ button {
   gap: var(--bottom-md);
   text-transform: uppercase;
   transition: 0.2s;
+
   &:hover {
     svg {
-      transition: 0.3s;
       transform: rotate(90deg);
+      transition: 0.3s;
     }
   }
 }
@@ -62,23 +63,23 @@ button {
   }
 }
 
-.sm
-{
-  border-radius: 30px;
-  border: 1px solid var(--clr-gray-ltr);
+.sm {
   padding: 6px 18px;
+  border: 1px solid var(--clr-gray-ltr);
+  border-radius: 30px;
   color: var(--clr-gray-ltr);
   font-family: var(--ff-gilroy);
   font-size: 14px;
   font-weight: 500;
   transition: 0.3s;
-  &:hover{
+
+  &:hover {
     background-color: var(--clr-gray-ltst);
     color: var(--clr-gray-lt);
   }
-  &.active
-  {
-    color: var(--clr-primary-lt);
+
+  &.active {
     background-color: var(--clr-primary-dk);
+    color: var(--clr-primary-lt);
   }
 }
