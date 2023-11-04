@@ -33,40 +33,40 @@
     display: flex;
     width: 100%;
     align-items: center;
-    column-gap: 16px;
     margin-top: 64px;
+    column-gap: 16px;
 
     .filter-button {
+      display: flex;
+      align-items: center;
       border: 1px solid var(--primary-black, #000);
       border-radius: 30px;
-      display: flex;
-      align-items: center;
       column-gap: 16px;
     }
   }
+
   .category-fiter-btn {
     .btns {
-      padding-top: 16px;
       display: flex;
+      padding-top: 16px;
       column-gap: 16px;
     }
   }
-  .wrapper
-  {
+
+  .wrapper {
     padding-top: 64px;
-    .result
-    {
+
+    .result {
       display: flex;
       align-items: center;
-      column-gap: 10px;
       padding-bottom: 36px;
+      column-gap: 10px;
     }
-    .cards
-    {
+
+    .cards {
       display: flex;
       flex-wrap: wrap;
-      column-gap: 30px;
-      row-gap: 48px;
+      gap: 48px 30px;
     }
   }
 }
