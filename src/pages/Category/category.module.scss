@@ -1,3 +1,43 @@
 .category {
-  background-color: #fff;
+  width: 100%;
+  background-color: #934444;
+  padding-top: 96px;
+  .category-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    h1 {
+      width: 100%;
+      color: var(--clr-primary-dk);
+      font-family: var(--ff-gilroy);
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: 0.64px;
+      text-transform: uppercase;
+    }
+    p
+    {
+      width: 100%;
+      max-width: 450px;
+      color: var(--clr-primary-dk );
+      font-family: var(--ff-gilroy);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+  .category-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    background-color: blue;
+    .filter-button
+    {
+      border: 0;
+      border-radius: 30px;
+      border: 1px solid var(--primary-black, #000);
+    }
+  }
 }

@@ -4,17 +4,22 @@ import {
   Routes,
 } from 'react-router-dom';
 import { routePaths } from '../constants/routers';
-import { HomePage } from '../pages';
+import { Category, HomePage } from '../pages';
+import App from '../App';
 
 export function Router() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <Routes>
+      <Route
+        path={routePaths.HOME}
+        element={<App />}
+      >
+        <Route index element={<HomePage />} />
         <Route
-          path={routePaths.HOME}
-          element={<HomePage />}
+          path={routePaths.CATEGORY}
+          element={<Category />}
         />
-      </Routes>
-    </BrowserRouter>
+      </Route>
+    </Routes>
   );
 }
