@@ -6,5 +6,7 @@ export { Navbar } from './Navbar/Navbar';
 export { Footer } from './Footer/Footer';
 export { Input } from './Input/Input';
 export { PromoSlider } from './PromoSlider/PromoSlider';
+// export { MiniCards } from './MiniCards/MiniCards';
+export { MiniComponents } from './MiniCards/MiniComponents/MiniComponents';
 export { MiniCards } from './MiniCards/MiniCards';
 export { Pagination } from './Pagination/Pagination';

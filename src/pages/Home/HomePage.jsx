@@ -6,8 +6,9 @@ import {
   RecommendationSlider,
   NewsSlider,
   EventsSlider,
-  MiniCards,
+  // MiniCards,
   // sliderData,
+  MiniComponents,
 } from '../../components';
 
 import style from './home-page.module.scss';
@@ -106,7 +107,7 @@ export function HomePage() {
         <PromoSlider />
       </section>
       <section className="category">
-        <MiniCards />
+        <MiniComponents />
       </section>
       {sliderData.map((slider) => {
         const { id, title, component } = slider;
