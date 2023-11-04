@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import CategoryItem from '../CategoryItem';
+import CategoryList from '../CategoryList';
 import InfoIcons from '../../../../assets/icons/corner-left.svg';
-import style from './itemInfo.module.scss';
+import style from './description.module.scss';
 
-export default function App() {
+function Description() {
   return (
     <div className={style['mini-blog']}>
       <Link to="/" className={style['mini-box']}>
-        <DirectionIcon />
+        <InfoIcons />
         <p
           className={style['mini-advertisements']}
         >
@@ -18,67 +18,68 @@ export default function App() {
         </p>
       </Link>
       <div className={style['mini-blogs']}>
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Chayxana"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Restaurants"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Cafe"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Chayxana"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Restaurants"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Restaurants"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Bakery"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Entertainment"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Bakery"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="ATM"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="School"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Bakery"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="University"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="University"
         />
-        <CategoryItem
-          icons={DirectionIcon}
+        <CategoryList
+          icons={InfoIcons}
           title="Bakery"
         />
       </div>
     </div>
   );
 }
+export default Description;

@@ -1,7 +1,7 @@
-import MiniCards from '../MiniCards';
+import { MiniCards } from '../MiniCards';
 import style from './miniComponents.module.scss';
 
-export default function App() {
+export function MiniComponents() {
   return (
     <div className={style['mini-blogs']}>
       <MiniCards
