@@ -1,16 +1,10 @@
-import { Pagination } from './components';
+import { Layout } from './layout/Layout';
+import { HomePage } from './pages';
 
 export default function App() {
-  return <Pagination />;
+  return (
+    <Layout>
+      <HomePage />
+    </Layout>
+  );
 }
-
-// import { Layout } from './layout/Layout';
-// import { HomePage } from './pages';
-
-// export default function App() {
-//   return (
-//     <Layout>
-//       <HomePage />
-//     </Layout>
-//   );
-// }

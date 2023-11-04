@@ -153,7 +153,7 @@ export function Pagination() {
   );
   const [pageNumber, setPageNumber] = useState(0);
 
-  const usersPerPage = 2;
+  const usersPerPage = 15;
   const pagesVisited = pageNumber * usersPerPage;
 
   const displayUsers = users
@@ -161,11 +161,11 @@ export function Pagination() {
       pagesVisited,
       pagesVisited + usersPerPage,
     )
-    .map((user, id) => {
+    .map((user) => {
       return (
         <div
           className={classNames(style.user)}
-          key={id}
+          key={user.id}
         >
           <h3>{user.firstName}</h3>
           <h3>{user.lastName}</h3>
@@ -196,19 +196,19 @@ export function Pagination() {
         pageCount={pageCount}
         onPageChange={changePage}
         containerClassName={classNames(
-          style.paginationBtn,
+          style['pagination-btn'],
+        )}
+        pageLinkClassName={classNames(
+          style['page-num'],
         )}
         previousClassName={classNames(
-          style.prevBtn,
+          style['prev-btn'],
         )}
-        nextLinkClassName={classNames(
-          style.nextBtn,
-        )}
-        disabledClassName={classNames(
-          style.paginationDisabled,
+        nextClassName={classNames(
+          style['next-btn'],
         )}
         activeClassName={classNames(
-          style.paginationActive,
+          style['pagination-active'],
         )}
       />
     </div>

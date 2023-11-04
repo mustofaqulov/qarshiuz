@@ -1,44 +1,18 @@
 .pagination {
   display: flex;
   flex-direction: column;
-  row-gap: 64px;
-
-  .user {
-    display: flex;
-    flex-direction: column;
-  }
+  row-gap: 4rem;
 
   .pagination-btn {
     display: flex;
     width: 100%;
-    max-width: 424px;
+    max-width: 26.5rem;
     align-items: center;
     justify-content: space-between;
-
-    .next-btn,
-    .prev-btn {
-      width: 100%;
-      border-radius: 100%;
-    }
-
-    a {
-      padding: 8px 12px;
-      border-radius: 100%;
-      cursor: pointer;
-    }
-
-    a:hover {
-      background-color: #000;
-      color: white;
-
-      svg {
-        path {
-          fill: white;
-        }
-      }
-    }
+    user-select: none;
 
     .pagination-active a {
+      border: 0;
       background-color: #000;
       color: white;
 
@@ -49,19 +23,35 @@
       }
     }
 
-    .pagination-disabled {
-      display: flex;
-      width: 48px;
-      height: 48px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid black;
+    .page-num {
+      padding: 0.5rem 0.75rem;
       border-radius: 100%;
-      color: grey;
+      cursor: pointer;
+      font-family: var(--ff-gilroy);
+      font-size: var(--paragraph-lg);
+      font-weight: var(--fw-medium);
+
+      &:hover {
+        background-color: #000;
+        color: var(--clr-primary-lt);
+      }
     }
 
-    .pagination-disabled a {
-      color: grey;
+    .next-btn a,
+    .prev-btn a {
+      padding: 1rem;
+      border: 1px solid black;
+      border-radius: 100%;
+
+      &:hover {
+        background-color: #000;
+
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
     }
   }
 }
