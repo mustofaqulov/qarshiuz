@@ -1,7 +1,6 @@
 .category {
   width: 100%;
   padding-top: 96px;
-  background-color: #934444;
 
   .category-info {
     display: flex;
@@ -34,12 +33,40 @@
     display: flex;
     width: 100%;
     align-items: center;
-    background-color: blue;
     column-gap: 16px;
+    margin-top: 64px;
 
     .filter-button {
       border: 1px solid var(--primary-black, #000);
       border-radius: 30px;
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+    }
+  }
+  .category-fiter-btn {
+    .btns {
+      padding-top: 16px;
+      display: flex;
+      column-gap: 16px;
+    }
+  }
+  .wrapper
+  {
+    padding-top: 64px;
+    .result
+    {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      padding-bottom: 36px;
+    }
+    .cards
+    {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 30px;
+      row-gap: 48px;
     }
   }
 }
