@@ -3,9 +3,9 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
+import App from '../App';
 import { routePaths } from '../constants/routers';
 import { Category, HomePage } from '../pages';
-import App from '../App';
 
 export function Router() {
   return (
