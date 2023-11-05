@@ -4,7 +4,7 @@ import {
   Routes,
 } from 'react-router-dom';
 import { routePaths } from '../constants/routers';
-import { HomePage } from '../pages';
+import { EventsPage, HomePage } from '../pages';
 
 export function Router() {
   return (
@@ -13,6 +13,10 @@ export function Router() {
         <Route
           path={routePaths.HOME}
           element={<HomePage />}
+        />
+        <Route
+          path={routePaths.Events}
+          element={<EventsPage />}
         />
       </Routes>
     </BrowserRouter>

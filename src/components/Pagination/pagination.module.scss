@@ -1,7 +1,16 @@
 .pagination {
   display: flex;
+  width: 100%;
   flex-direction: column;
+  align-items: center;
   row-gap: 4rem;
+
+  .users-content {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   .pagination-btn {
     display: flex;
