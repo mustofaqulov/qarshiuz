@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import { useState } from 'react';
+import { useState, cloneElement } from 'react';
 import ReactPaginate from 'react-paginate';
 import style from './pagination.module.scss';
 import PrevBtnIcon from '../../assets/icons/carousel-left-icon.svg';
 import NextBtnIcon from '../../assets/icons/carousel-right-icon.svg';
 
-export function Pagination() {
+export function Pagination({ component }) {
   const JsonData = [
     {
       id: 1,
@@ -161,17 +161,10 @@ export function Pagination() {
       pagesVisited,
       pagesVisited + usersPerPage,
     )
-    .map((user) => {
-      return (
-        <div
-          className={classNames(style.user)}
-          key={user.id}
-        >
-          <h3>{user.firstName}</h3>
-          <h3>{user.lastName}</h3>
-          <h3>{user.email}</h3>
-        </div>
-      );
+    .map((cardInfo) => {
+      return cloneElement(component, {
+        cardInfo,
+      });
     });
 
   const pageCount = Math.ceil(
@@ -184,7 +177,11 @@ export function Pagination() {
 
   return (
     <div className={classNames(style.pagination)}>
-      <div className="users-content">
+      <div
+        className={classNames(
+          style['users-content'],
+        )}
+      >
         {displayUsers}
       </div>
       <ReactPaginate

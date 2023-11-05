@@ -5,7 +5,11 @@ import {
 } from 'react-router-dom';
 import App from '../App';
 import { routePaths } from '../constants/routers';
-import { Category, HomePage } from '../pages';
+import {
+  HomePage,
+  Category,
+  EventsPage,
+} from '../pages';
 import Notfound from '../errors/404';
 
 export function Router() {
@@ -19,6 +23,10 @@ export function Router() {
         <Route
           path={routePaths.CATEGORY}
           element={<Category />}
+        />
+        <Route
+          path={routePaths.EVENTS}
+          element={<EventsPage />}
         />
         <Route
           path={routePaths.NOT_FOUND}
