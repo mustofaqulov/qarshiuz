@@ -4,28 +4,28 @@
   .notfound {
     margin-top: 188px;
     color: var(--bg-footer);
-    text-align: center;
     font-family: var(--ff-gilroy);
     font-size: 200px;
-    line-height: 235.4px;
     font-weight: 600;
+    line-height: 235.4px;
+    text-align: center;
   }
 
   .notpage {
     margin-top: 16px;
     color: var(--clr-gray-lt);
-    text-align: center;
     font-family: var(--ff-red-hat);
     font-size: var(--paragraph-2xl);
     font-weight: var(--fw-medium);
     line-height: 42.34px;
+    text-align: center;
     text-transform: uppercase;
   }
 
   .unavailable {
     margin-top: 24px;
-    font-family: var(--ff-gilroy);
     color: var(--clr-gray-lt);
+    font-family: var(--ff-gilroy);
     font-size: var(--paragraph-md);
     text-align: center;
   }
