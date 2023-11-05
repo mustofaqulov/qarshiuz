@@ -5,7 +5,7 @@ import { Button } from '../components/Button/Button';
 export default function Notfound() {
   return (
     <div className="blog">
-      <h1 className="notfound">404</h1>
+      <p className="notfound">404</p>
       <p className="notpage">
         Oops, Sorry we can't find that page!
       </p>
