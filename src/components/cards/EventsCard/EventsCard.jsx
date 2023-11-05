@@ -3,7 +3,8 @@ import style from './events-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
-function EventsCard() {
+function EventsCard({ user }) {
+  console.log(user);
   return (
     <div
       className={classNames(style['events-card'])}
