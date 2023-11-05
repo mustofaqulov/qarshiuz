@@ -1,15 +1,16 @@
-import './page404.scss';
+import style from './page.module.scss';
+
 import ArrowIcons from '../assets/icons/arrow-up-white.svg';
 import { Button } from '../components/Button/Button';
 
 export default function Notfound() {
   return (
-    <div className="blog">
-      <p className="notfound">404</p>
-      <p className="notpage">
+    <div className={style['blog-found']}>
+      <p className={style['not-found']}>404</p>
+      <p className={style['not-page']}>
         Oops, Sorry we can't find that page!
       </p>
-      <p className="unavailable">
+      <p className={style['notfound-title']}>
         The page you are looking for might have
         been removed, had its name changed, or is
         temporarily unavailable.

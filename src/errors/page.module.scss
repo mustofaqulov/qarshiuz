@@ -1,8 +1,8 @@
-.blog {
+.blog-found{
   padding-top: 188px;
   padding-bottom: 288px;
 
-  .notfound {
+  .not-found{
     color: var(--bg-footer);
     font-family: var(--ff-gilroy);
     font-size: 200px;
@@ -11,7 +11,7 @@
     text-align: center;
   }
 
-  .notpage {
+  .not-page {
     margin-top: 16px;
     color: var(--clr-gray-lt);
     font-family: var(--ff-red-hat);
@@ -22,7 +22,7 @@
     text-transform: uppercase;
   }
 
-  .unavailable {
+  .notfound-title {
     margin-top: 24px;
     color: var(--clr-gray-lt);
     font-family: var(--ff-gilroy);
