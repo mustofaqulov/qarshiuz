@@ -1,12 +1,12 @@
 export { EventsSlider } from './Sliders/EventsSlider/EventsSlider';
 export { NewsSlider } from './Sliders/NewsSlider/NewsSlider';
 export { RecommendationSlider } from './Sliders/RecommendationSlider/RecSlider';
+export { PromoSlider } from './PromoSlider/PromoSlider';
+export { Pagination } from './Pagination/Pagination';
+export { MiniCards } from './MiniCards/MiniCards';
 export { Button } from './Button/Button';
 export { Navbar } from './Navbar/Navbar';
 export { Footer } from './Footer/Footer';
-export { Input } from './Input/Input';
-export { PromoSlider } from './PromoSlider/PromoSlider';
-export { MiniComponents } from './MiniCards/MiniComponents/MiniComponents';
-export { MiniCards } from './MiniCards/MiniCards';
-export { Pagination } from './Pagination/Pagination';
 export { Select } from './Select/Select';
+export { Input } from './Input/Input';
+export { MiniComponents } from './MiniCards/MiniComponents/MiniComponents';
