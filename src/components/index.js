@@ -9,3 +9,4 @@ export { Navbar } from './Navbar/Navbar';
 export { Footer } from './Footer/Footer';
 export { Select } from './Select/Select';
 export { Input } from './Input/Input';
+export { MiniComponents } from './MiniCards/MiniComponents/MiniComponents';
