@@ -1,6 +1,6 @@
 export const links = [
   {
-    to: '/home',
+    to: '/',
     title: 'Home',
   },
   {
@@ -16,7 +16,7 @@ export const links = [
     title: 'News',
   },
   {
-    to: '/abou',
-    title: 'Abou us',
+    to: '/about-us',
+    title: 'About us',
   },
 ];

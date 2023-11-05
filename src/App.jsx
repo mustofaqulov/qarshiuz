@@ -1,16 +1,10 @@
-import { Pagination } from './components';
+import { Outlet } from 'react-router-dom';
+import { Layout } from './layout/Layout';
 
 export default function App() {
-  return <Pagination />;
+  return (
+    <Layout>
+      <Outlet />
+    </Layout>
+  );
 }
-
-// import { Layout } from './layout/Layout';
-// import { HomePage } from './pages';
-
-// export default function App() {
-//   return (
-//     <Layout>
-//       <HomePage />
-//     </Layout>
-//   );
-// }
