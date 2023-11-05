@@ -1,26 +1,27 @@
 .events-page {
   padding: 96px 0 128px;
 }
+
 .promo-section {
   display: flex;
   height: 161px;
   justify-content: space-between;
 
   h1 {
+    align-self: flex-start;
     font-family: var(--ff-red-hat);
     font-size: var(--heading-xl);
     font-weight: var(--fw-medium);
     letter-spacing: 0.04rem;
-    align-self: flex-start;
     text-transform: uppercase;
   }
 
   p {
     max-width: 450px;
+    align-self: flex-end;
     font-family: var(--ff-gilroy);
     font-size: var(--bottom-md);
     font-weight: var(--fw-medium);
-    align-self: flex-end;
     line-height: 1.5rem;
   }
 }
