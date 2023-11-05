@@ -8,7 +8,7 @@ export default function Notfound() {
     <div className={style['blog-found']}>
       <p className={style['not-found']}>404</p>
       <p className={style['not-page']}>
-        Oops, Sorry we can't find that page!
+        Oops, Sorry we can &apos;t find that page!
       </p>
       <p className={style['notfound-title']}>
         The page you are looking for might have
