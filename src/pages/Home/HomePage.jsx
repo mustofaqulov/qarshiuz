@@ -6,7 +6,8 @@ import {
   RecommendationSlider,
   NewsSlider,
   EventsSlider,
-  // MiniCards,
+  MiniCards,
+  Select,
   // sliderData,
   MiniComponents,
 } from '../../components';
@@ -43,11 +44,7 @@ export function HomePage() {
             style['region-name'],
           )}
         >
-          <select name="" id="">
-            <option value="Kashqadarya region">
-              Kashqadarya region
-            </option>
-          </select>
+          <Select />
           <h1>
             Information portal <br /> of Qarshi
             city
