@@ -6,7 +6,6 @@ export const sliderData = [
   {
     id: 1,
     title: 'Our recommendations',
-    // eslint-disable-next-line react/jsx-filename-extension
     component: <RecommendationSlider />,
   },
   {

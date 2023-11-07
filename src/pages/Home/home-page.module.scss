@@ -1,7 +1,10 @@
-main {
+.home-page {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+
+  // padding-bottom: 96px;
+  padding: 6rem 0 8rem;
   row-gap: 12.5rem;
 }
 
@@ -9,7 +12,6 @@ main {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-top: 6rem;
   row-gap: 3rem;
 
   .region-name {
@@ -83,7 +85,6 @@ main {
 .slider-section {
   display: flex;
   flex-direction: column;
-  padding-bottom: 8rem;
   row-gap: 3rem;
 
   h3 {

@@ -3,7 +3,11 @@ import style from './category-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
-export function CategoryCard() {
+export function CategoryCard({
+  cardImg,
+  title,
+  location,
+}) {
   return (
     <div
       className={classNames(
@@ -22,14 +26,20 @@ export function CategoryCard() {
         >
           <span>top</span>
         </div>
-        <img src="" alt="" />
+        <div
+          className={classNames(
+            style['card-img'],
+          )}
+        >
+          <img src={cardImg} alt="" />
+        </div>
       </div>
       <div
         className={classNames(
           style['category-info'],
         )}
       >
-        <h5>Aroma</h5>
+        <h5>{title}</h5>
         <div
           className={classNames(
             style['category-location'],
@@ -41,10 +51,7 @@ export function CategoryCard() {
             )}
           >
             <LocationIcon />
-            <span>
-              Uzbekistan street, Karshi 180100,
-              Uzbekistan
-            </span>
+            <span>{location}</span>
           </div>
           <SideArrowIcon />
         </div>

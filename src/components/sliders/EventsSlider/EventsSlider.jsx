@@ -4,9 +4,12 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import classNames from 'classnames';
+import style from '../sliders.module.scss';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import EventsCard from '../../Cards/EventsCard/EventsCard';
-import style from '../sliders.module.scss';
+import { eventsCardData } from '../../../utils/mock/events-card.mock';
+import { Button } from '../../Button/Button';
+import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
 
 export function EventsSlider() {
   return (
@@ -29,10 +32,36 @@ export function EventsSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      <SwiperSlide>
-        <EventsCard />
-      </SwiperSlide>
-      <SliderButtons />
+      {eventsCardData.map(
+        ({
+          id,
+          status,
+          date,
+          title,
+          location,
+          cardImg,
+        }) => {
+          return (
+            <SwiperSlide key={id}>
+              <EventsCard
+                status={status}
+                date={date}
+                title={title}
+                location={location}
+                cardImg={cardImg}
+              />
+            </SwiperSlide>
+          );
+        },
+      )}
+      <div className={classNames(style.buttons)}>
+        <Button
+          title="view all news"
+          btnClass="secondary"
+          icon={<ArrowUpIcon />}
+        />
+        <SliderButtons />
+      </div>
     </Swiper>
   );
 }

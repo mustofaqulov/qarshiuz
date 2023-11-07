@@ -4,10 +4,11 @@ import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react';
+import 'swiper/css';
 import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
+import { recommendationCardData } from '../../../utils/mock/recomendation.mock';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
-import 'swiper/css';
 
 export function RecommendationSlider() {
   return (
@@ -36,10 +37,26 @@ export function RecommendationSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      <SwiperSlide>
-        <CategoryCard />
-      </SwiperSlide>
-      <SliderButtons />
+      {recommendationCardData.map(
+        ({ id, title, location, cardImg }) => {
+          return (
+            <SwiperSlide key={id}>
+              <CategoryCard
+                title={title}
+                location={location}
+                cardImg={cardImg}
+              />
+            </SwiperSlide>
+          );
+        },
+      )}
+      <div
+        className={classNames(
+          style['btn-slider'],
+        )}
+      >
+        <SliderButtons />
+      </div>
     </Swiper>
   );
 }

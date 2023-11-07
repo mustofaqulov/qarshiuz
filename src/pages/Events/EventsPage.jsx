@@ -4,15 +4,12 @@ import {
   Select,
 } from '../../components';
 import EventsCard from '../../components/Cards/EventsCard/EventsCard';
-import style from './events.module.scss';
+import style from './events-page.module.scss';
 
 export function EventsPage() {
   return (
     <main
-      className={classNames(
-        style.container,
-        style['events-page'],
-      )}
+      className={classNames(style['events-page'])}
     >
       <section
         className={classNames(

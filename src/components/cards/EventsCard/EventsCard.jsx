@@ -3,13 +3,22 @@ import style from './events-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
-function EventsCard({ user }) {
-  console.log(user);
+function EventsCard({
+  status,
+  date,
+  title,
+  location,
+  cardImg,
+}) {
   return (
     <div
       className={classNames(style['events-card'])}
     >
-      <img src="" alt="" />
+      <div
+        className={classNames(style['card-img'])}
+      >
+        <img src={cardImg} alt="" />
+      </div>
       <div
         className={classNames(
           style['event-info'],
@@ -20,15 +29,15 @@ function EventsCard({ user }) {
             style['event-date'],
           )}
         >
-          <span>Concert</span>
-          <span>Octaber 15, 2023</span>
+          <span>{status}</span>
+          <span>{date}</span>
         </div>
         <div
           className={classNames(
             style['event-about'],
           )}
         >
-          <h5>Solo concert of jony Karshi</h5>
+          <h5>{title}</h5>
           <div
             className={classNames(
               style['event-location'],
@@ -40,10 +49,7 @@ function EventsCard({ user }) {
               )}
             >
               <LocationIcon />
-              <span>
-                Uzbekistan street, Karshi 180100,
-                Uzbekistan
-              </span>
+              <span>{location}</span>
             </div>
             <SideArrowIcon />
           </div>

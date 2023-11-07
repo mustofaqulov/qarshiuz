@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { Button } from '../Button/Button';
 import { Tab } from '../LanguageTab/Tab';
 import { NavLink } from './NavLink';
-import { links } from '../../utils/mock';
+import { links } from '../../utils';
 import AddIcon from '../../assets/icons/add-icon-white.svg';
 import Logo from '../../assets/icons/logo.svg';
 import style from './navbar.module.scss';

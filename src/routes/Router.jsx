@@ -4,7 +4,6 @@ import {
   Routes,
 } from 'react-router-dom';
 import App from '../App';
-import App from '../App';
 import { routePaths } from '../constants/routers';
 import {
   HomePage,
