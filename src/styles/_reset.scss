@@ -1,7 +1,7 @@
 *,
 ::after,
 ::before {
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -85,18 +85,18 @@ time,
 mark,
 audio,
 video {
-   padding: 0;
-   border: 0;
-   margin: 0;
-   font: inherit;
-   font-size: 100%;
-   vertical-align: baseline;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 /* make sure to set some focus styles for accessibility */
 
 :focus {
-   outline: 0;
+  outline: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -112,52 +112,52 @@ hgroup,
 menu,
 nav,
 section {
-   display: block;
+  display: block;
 }
 
 body {
-   line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-   list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-   quotes: none;
+  quotes: none;
 }
 
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-   content: '';
-   content: none;
+  content: '';
+  content: none;
 }
 
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-decoration,
 input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
-   appearance: none;
+  appearance: none;
 }
 
 input[type='search'] {
-   box-sizing: content-box;
-   appearance: none;
+  box-sizing: content-box;
+  appearance: none;
 }
 
 textarea {
-   overflow: auto;
-   resize: vertical;
-   vertical-align: top;
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
 }
 
 /*
@@ -167,10 +167,10 @@ textarea {
 audio,
 canvas,
 video {
-   display: inline-block;
-   *display: inline;
-   max-width: 100%;
-   *zoom: 1;
+  display: inline-block;
+  *display: inline;
+  max-width: 100%;
+  *zoom: 1;
 }
 
 /**
@@ -179,8 +179,8 @@ video {
  */
 
 audio:not([controls]) {
-   display: none;
-   height: 0;
+  display: none;
+  height: 0;
 }
 
 /**
@@ -189,7 +189,7 @@ audio:not([controls]) {
  */
 
 [hidden] {
-   display: none;
+  display: none;
 }
 
 /**
@@ -200,15 +200,15 @@ audio:not([controls]) {
  */
 
 html {
-   font-size: 100%;
+  font-size: 100%;
 
-   /* 1 */
+  /* 1 */
 
-   /* 2 */
+  /* 2 */
 
-   text-size-adjust: 100%;
+  text-size-adjust: 100%;
 
-   /* 2 */
+  /* 2 */
 }
 
 /**
@@ -216,10 +216,9 @@ html {
  */
 
 a {
-   outline: none;
-   text-decoration: none;
+  outline: none;
+  text-decoration: none;
 }
-
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -227,7 +226,7 @@ a {
 
 a:active,
 a:hover {
-   outline: 0;
+  outline: 0;
 }
 
 /**
@@ -236,9 +235,9 @@ a:hover {
  */
 
 img {
-   border: 0;
+  border: 0;
 
-   /* 1 */
+  /* 1 */
 }
 
 /**
@@ -246,7 +245,7 @@ img {
  */
 
 figure {
-   margin: 0;
+  margin: 0;
 }
 
 /**
@@ -254,7 +253,7 @@ figure {
  */
 
 form {
-   margin: 0;
+  margin: 0;
 }
 
 /**
@@ -262,9 +261,9 @@ form {
  */
 
 fieldset {
-   padding: 0.35em 0.625em 0.75em;
-   border: 1px solid #c0c0c0;
-   margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
 }
 
 /**
@@ -274,18 +273,18 @@ fieldset {
  */
 
 legend {
-   padding: 0;
-   border: 0;
+  padding: 0;
+  border: 0;
 
-   /* 1 */
+  /* 1 */
 
-   margin-left: -7px;
+  margin-left: -7px;
 
-   /* 3 */
+  /* 3 */
 
-   white-space: normal;
+  white-space: normal;
 
-   /* 2 */
+  /* 2 */
 }
 
 /**
@@ -299,21 +298,21 @@ button,
 input,
 select,
 textarea {
-   margin: 0;
+  margin: 0;
 
-   /* 2 */
+  /* 2 */
 
-   font-size: 100%;
+  font-size: 100%;
 
-   /* 1 */
+  /* 1 */
 
-   vertical-align: baseline;
+  vertical-align: baseline;
 
-   /* 3 */
+  /* 3 */
 
-   *vertical-align: middle;
+  *vertical-align: middle;
 
-   /* 3 */
+  /* 3 */
 }
 
 /**
@@ -323,7 +322,7 @@ textarea {
 
 button,
 input {
-   line-height: normal;
+  line-height: normal;
 }
 
 /**
@@ -335,7 +334,7 @@ input {
 
 button,
 select {
-   text-transform: none;
+  text-transform: none;
 }
 
 /**
@@ -355,17 +354,17 @@ html input[type="button"],
 
 input[type="reset"],
 input[type="submit"] {
-   *overflow: visible;
+  *overflow: visible;
 
-   /* 4 */
+  /* 4 */
 
-   appearance: button;
+  appearance: button;
 
-   /* 2 */
+  /* 2 */
 
-   cursor: pointer;
+  cursor: pointer;
 
-   /* 3 */
+  /* 3 */
 }
 
 /**
@@ -374,7 +373,7 @@ input[type="submit"] {
 
 button[disabled],
 html input[disabled] {
-   cursor: default;
+  cursor: default;
 }
 
 /**
@@ -386,21 +385,21 @@ html input[disabled] {
 
 input[type='checkbox'],
 input[type='radio'] {
-   *width: 13px;
+  *width: 13px;
 
-   /* 3 */
+  /* 3 */
 
-   *height: 13px;
+  *height: 13px;
 
-   /* 3 */
+  /* 3 */
 
-   box-sizing: border-box;
+  box-sizing: border-box;
 
-   /* 1 */
+  /* 1 */
 
-   padding: 0;
+  padding: 0;
 
-   /* 2 */
+  /* 2 */
 }
 
 /**
@@ -410,12 +409,12 @@ input[type='radio'] {
  */
 
 input[type='search'] {
-   box-sizing: content-box;
-   appearance: textfield;
+  box-sizing: content-box;
+  appearance: textfield;
 
-   /* 1 */
+  /* 1 */
 
-   /* 2 */
+  /* 2 */
 }
 
 /**
@@ -425,7 +424,7 @@ input[type='search'] {
 
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-decoration {
-   appearance: none;
+  appearance: none;
 }
 
 /**
@@ -434,8 +433,8 @@ input[type='search']::-webkit-search-decoration {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-   padding: 0;
-   border: 0;
+  padding: 0;
+  border: 0;
 }
 
 /**
@@ -444,13 +443,13 @@ input::-moz-focus-inner {
  */
 
 textarea {
-   overflow: auto;
+  overflow: auto;
 
-   /* 1 */
+  /* 1 */
 
-   vertical-align: top;
+  vertical-align: top;
 
-   /* 2 */
+  /* 2 */
 }
 
 /**
@@ -458,8 +457,8 @@ textarea {
  */
 
 table {
-   border-collapse: collapse;
-   border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 html,
@@ -467,31 +466,29 @@ button,
 input,
 select,
 textarea {
-   color: #222;
+  color: #222;
 }
 
 ::selection {
-   background: #b3d4fc;
-   text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-   background: #b3d4fc;
-   text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 img {
-   vertical-align: middle;
+  vertical-align: middle;
 }
 
 fieldset {
-   padding: 0;
-   border: 0;
-   margin: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
-
-
 textarea {
-   resize: vertical;
+  resize: vertical;
 }
