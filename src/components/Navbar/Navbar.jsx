@@ -1,44 +1,63 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from '../Button/Button';
-import { Tab } from '../LanguageTab/Tab';
-import { NavLink } from './NavLink';
-import { links } from '../../utils/mock';
 import AddIcon from '../../assets/icons/add-icon-white.svg';
 import Logo from '../../assets/icons/logo.svg';
 import style from './navbar.module.scss';
+import { LanguageTab } from '../LanguageTab/LanguageTab';
+
+const navbarData = [
+  { id: 1, text: 'About Us', link: '/about' },
+  { id: 2, text: 'News', link: '/news' },
+  { id: 3, text: 'Events', link: '/events' },
+  { id: 4, text: 'Category', link: '/category' },
+  { id: 5, text: 'Home', link: '/' },
+];
 
 export function Navbar() {
+  const setActive = ({ isActive }) =>
+    isActive
+      ? style.active
+      : style['nav-list_link'];
+
   return (
-    <nav className={classNames(style.nav)}>
+    <header className={style.header}>
       <div
         className={classNames(
-          style['nav-wrapper'],
           'container',
+          style['header-container'],
         )}
       >
-        <Link to="/" className={style.logo}>
+        <Link to="/">
           <Logo />
         </Link>
-        <ul className={style['nav-list']}>
-          {links.map(({ to, title }) => (
-            <li key={to}>
-              <NavLink to={to}>{title}</NavLink>
-            </li>
-          ))}
-          <li>
-            <Button
-              btnClass="primary"
-              title="Add new"
-              icon={<AddIcon />}
-            />
-          </li>
-          <li>
-            <Tab />
-          </li>
-        </ul>
+        <nav className={style.nav}>
+          <ul className={style['nav-list']}>
+            {navbarData.map(
+              ({ id, text, link }) => {
+                return (
+                  <li key={id}>
+                    <NavLink
+                      to={link}
+                      className={setActive}
+                    >
+                      {text}
+                    </NavLink>
+                  </li>
+                );
+              },
+            )}
+          </ul>
+        </nav>
+        <div className={style['header-btn']}>
+          <Button
+            btnClass="primary"
+            title="Add new"
+            icon={<AddIcon />}
+          />
+          <LanguageTab />
+        </div>
       </div>
-    </nav>
+    </header>
   );
 }

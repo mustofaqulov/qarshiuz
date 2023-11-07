@@ -3,18 +3,18 @@ import { Footer, Navbar } from '../components';
 
 export function Layout({ children }) {
   return (
-    <div className="wrapper">
+    <>
       <Navbar />
-      <div className="main-content container">
+      <main className="main-content container">
         {children}
-      </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
 Layout.defaultProps = {
-  children: '',
+  children: null,
 };
 
 Layout.propTypes = {

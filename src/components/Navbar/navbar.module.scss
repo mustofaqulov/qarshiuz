@@ -1,25 +1,50 @@
 @import '../../styles/style';
 
-.nav {
-  width: 100%;
-  padding: 1.563rem 0;
-  font-family: var(--ff-gilroy);
+.header {
+  padding: 25px 0;
 
-  .nav-wrapper {
+  .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-    .nav-list {
+    .nav {
+      flex-grow: 1;
+
+      &-list {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 6px;
+
+        &_item {
+          margin: 0 24px;
+        }
+
+        &_link {
+          padding: 14px 26px;
+          cursor: pointer;
+          font-size: var(--paragraph-lg);
+          font-weight: var(--fw-normal);
+          outline: none;
+          transition: all 0.2s ease;
+
+          &:hover {
+            border: 1px solid var(--clr-gray-ltr);
+            border-radius: 36px;
+          }
+        }
+      }
+    }
+
+    .header-btn {
       display: flex;
-      align-items: center;
-      gap: 40px;
+      gap: 25px;
     }
   }
 }
 
 .active {
-  padding: 16px 28px;
+  padding: 14px 26px;
   border: 1px solid var(--clr-primary-dk);
   border-radius: 36px;
 }
