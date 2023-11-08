@@ -1,15 +1,13 @@
 import classNames from 'classnames';
 import {
   Button,
-  Input,
+  SearchInput,
   PromoSlider,
   RecommendationSlider,
   NewsSlider,
   EventsSlider,
-  MiniCards,
   Select,
-  // sliderData,
-  MiniComponents,
+  SmallCard,
 } from '../../components';
 
 import style from './home-page.module.scss';
@@ -31,9 +29,10 @@ const sliderData = [
     component: <EventsSlider />,
   },
 ];
+
 export function HomePage() {
   return (
-    <main className={classNames(style.container)}>
+    <>
       <section
         className={classNames(
           style['promo-section'],
@@ -71,7 +70,7 @@ export function HomePage() {
                 style['input-button'],
               )}
             >
-              <Input />
+              <SearchInput />
               <Button
                 btnClass="primary"
                 title="search"
@@ -104,7 +103,7 @@ export function HomePage() {
         <PromoSlider />
       </section>
       <section className="category">
-        <MiniComponents />
+        <SmallCard />
       </section>
       {sliderData.map((slider) => {
         const { id, title, component } = slider;
@@ -122,6 +121,6 @@ export function HomePage() {
           </section>
         );
       })}
-    </main>
+    </>
   );
 }

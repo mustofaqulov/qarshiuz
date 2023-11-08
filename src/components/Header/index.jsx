@@ -3,18 +3,18 @@ import { Link, NavLink } from 'react-router-dom';
 import { Button } from '../Button/Button';
 import AddIcon from '../../assets/icons/add-icon-white.svg';
 import Logo from '../../assets/icons/logo.svg';
-import style from './navbar.module.scss';
+import style from './header.module.scss';
 import { LanguageTab } from '../LanguageTab/LanguageTab';
 
-const navbarData = [
-  { id: 1, text: 'About Us', link: '/about' },
-  { id: 2, text: 'News', link: '/news' },
+const linksData = [
+  { id: 1, text: 'Home', link: '/' },
+  { id: 2, text: 'Category', link: '/category' },
   { id: 3, text: 'Events', link: '/events' },
-  { id: 4, text: 'Category', link: '/category' },
-  { id: 5, text: 'Home', link: '/' },
-];
+  { id: 4, text: 'News', link: '/news' },
+  { id: 5, text: 'About Us', link: '/about' },
+].reverse();
 
-export function Navbar() {
+export function Header() {
   const setActive = ({ isActive }) =>
     isActive
       ? style.active
@@ -33,7 +33,7 @@ export function Navbar() {
         </Link>
         <nav className={style.nav}>
           <ul className={style['nav-list']}>
-            {navbarData.map(
+            {linksData.map(
               ({ id, text, link }) => {
                 return (
                   <li key={id}>

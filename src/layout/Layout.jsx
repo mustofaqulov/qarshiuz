@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { Footer, Navbar } from '../components';
+import { Footer, Header } from '../components';
 
 export function Layout({ children }) {
   return (
     <>
-      <Navbar />
+      <Header />
       <main className="main-content container">
         {children}
       </main>

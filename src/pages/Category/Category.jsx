@@ -1,6 +1,8 @@
 import classNames from 'classnames';
-import { Input } from '../../components';
-import { Button } from '../../components';
+import {
+  Button,
+  SearchInput,
+} from '../../components';
 import style from './category.module.scss';
 // import MenuIcon from '../../assets/icons/menu-icon.svg';
 
@@ -34,7 +36,7 @@ export function Category() {
           {/* <MenuIcon /> */}
           <span>Categorys</span>
         </button>
-        <Input placeholder="Events" />
+        <SearchInput placeholder="Events" />
         <Button
           title="Search"
           btnClass="primary"
