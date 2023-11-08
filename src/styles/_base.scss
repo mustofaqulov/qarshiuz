@@ -1,9 +1,14 @@
+body {
+  font-family: var(--ff-gilroy);
+}
+
 a {
   color: inherit;
 }
 
 input,
-button {
+button,
+textarea {
   font-family: inherit;
 }
 
