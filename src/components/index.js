@@ -8,4 +8,4 @@ export { Header } from './Header/Header';
 export { Footer } from './Footer/Footer';
 export { Select } from './Select/Select';
 export { SearchInput } from './Inputs/SearchInput/SearchInput';
-export { SmallCard } from './Cards/SmallCards';
+export { MiniCategory } from './Cards/MiniCategory/MiniCategory';

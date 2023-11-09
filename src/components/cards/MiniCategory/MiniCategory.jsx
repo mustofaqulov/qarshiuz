@@ -46,7 +46,7 @@ const subList = [
   { text: 'Chayxana', path: '/' },
   { text: 'Chayxana', path: '/' },
 ];
-export function SmallCard() {
+export function MiniCategory() {
   const id = useId();
   return (
     <div className={style['cards-wrapper']}>
