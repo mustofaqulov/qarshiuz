@@ -84,35 +84,27 @@ export function Footer() {
             </h3>
             <ul>
               <li>
-                <NavLink to="/catalog">
-                  Catalog
-                </NavLink>
+                <NavLink to="">Catalog</NavLink>
               </li>
               <li>
-                <NavLink to="/about">
-                  About Us
-                </NavLink>
+                <NavLink to="">About Us</NavLink>
               </li>
               <li>
-                <NavLink to="/events">
-                  Events
-                </NavLink>
+                <NavLink to="">Events</NavLink>
               </li>
             </ul>
 
             <ul>
               <li>
-                <NavLink to="/local-new">
-                  Local new
-                </NavLink>
+                <NavLink to="">Local new</NavLink>
               </li>
               <li>
-                <NavLink to="/childrens-park">
+                <NavLink to="">
                   Children&apos;s park
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Concert-hall">
+                <NavLink to="">
                   Concert hall
                 </NavLink>
               </li>
@@ -120,17 +112,15 @@ export function Footer() {
 
             <ul>
               <li>
-                <NavLink to="/library">
-                  Library
-                </NavLink>
+                <NavLink to="">Library</NavLink>
               </li>
               <li>
-                <NavLink to="/nightclubs">
+                <NavLink to="">
                   Nightclubs
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/zoo">Zoo</NavLink>
+                <NavLink to="">Zoo</NavLink>
               </li>
             </ul>
           </div>

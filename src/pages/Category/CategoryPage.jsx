@@ -4,9 +4,8 @@ import {
   SearchInput,
 } from '../../components';
 import style from './category.module.scss';
-// import MenuIcon from '../../assets/icons/menu-icon.svg';
 
-export function Category() {
+export function CategoryPage() {
   return (
     <div className={classNames(style.category)}>
       <div

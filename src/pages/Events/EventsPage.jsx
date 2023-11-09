@@ -3,8 +3,8 @@ import {
   Pagination,
   Select,
 } from '../../components';
-import EventsCard from '../../components/Cards/EventsCard/EventsCard';
 import style from './events.module.scss';
+import { EventsCard } from '../../components/Cards/EventsCard/EventsCard';
 
 export function EventsPage() {
   return (

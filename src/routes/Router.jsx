@@ -2,10 +2,10 @@ import { Route, Routes } from 'react-router-dom';
 import { routePaths } from '../constants/routers';
 import {
   HomePage,
-  Category,
   EventsPage,
+  NotFoundPage,
+  CategoryPage,
 } from '../pages';
-import PageNotfound from '../pages/error/404';
 
 export function Router() {
   return (
@@ -16,7 +16,7 @@ export function Router() {
       />
       <Route
         path={routePaths.CATEGORY}
-        element={<Category />}
+        element={<CategoryPage />}
       />
       <Route
         path={routePaths.EVENTS}
@@ -24,7 +24,7 @@ export function Router() {
       />
       <Route
         path={routePaths.NOT_FOUND}
-        element={<PageNotfound />}
+        element={<NotFoundPage />}
       />
     </Routes>
   );

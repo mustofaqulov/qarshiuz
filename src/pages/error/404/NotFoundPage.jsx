@@ -2,7 +2,7 @@ import ArrowIcons from '../../../assets/icons/arrow-up-white.svg';
 import { Button } from '../../../components';
 import style from './not-found.scss';
 
-export default function PageNotfound() {
+export function NotFoundPage() {
   return (
     <div className={style.blog}>
       <h1 className={style.notfound}>404</h1>
