@@ -24,13 +24,6 @@ button {
   gap: var(--bottom-md);
   text-transform: uppercase;
   transition: 0.2s;
-
-  &:hover {
-    svg {
-      transform: rotate(90deg);
-      transition: 0.3s;
-    }
-  }
 }
 
 .secondary {

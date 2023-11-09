@@ -39,7 +39,7 @@
     .filter-button {
       display: flex;
       align-items: center;
-      border: 1px solid var(--primary-black, #000);
+      border: 1px solid var(--clr-primary-dk);
       border-radius: 30px;
       column-gap: 16px;
     }
@@ -56,11 +56,41 @@
   .wrapper {
     padding-top: 64px;
 
-    .result {
+    .results {
+      width: 100%;
       display: flex;
       align-items: center;
+      position: relative;
+      justify-content: space-between;
       padding-bottom: 36px;
-      column-gap: 10px;
+      .result {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        position: absolute;
+        bottom: 0;
+        h3
+        {
+          color: var(--clr-primary-dk);
+          font-family: var(--ff-gilroy);
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.12px;
+          text-transform: uppercase;
+        }
+        span
+        {
+          color: var(--clr-primary-lt);
+          font-family: var(--ff-gilroy);
+          font-size: 20px;
+          font-weight: 500;
+          border-radius: 33px;
+          padding: 0 10px;
+          background: var(--clr-primary-dk);
+        }
+      }
     }
 
     .cards {

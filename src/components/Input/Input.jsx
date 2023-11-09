@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import style from './Input.module.scss';
 import SearchIcons from '../../assets/icons/search.svg';
 
-export function Input({ placeholder, classInp }) {
+export function Input({
+  placeholder,
+  classInp,
+  value,
+}) {
   const inputClass = classNames(
     style['input-search'],
     {
@@ -23,6 +27,7 @@ export function Input({ placeholder, classInp }) {
           placeholder={placeholder}
           autoCapitalize="none"
           autoComplete="off"
+          defaultValue={value}
         />
       </label>
     </form>
@@ -32,9 +37,11 @@ export function Input({ placeholder, classInp }) {
 Input.defaultProps = {
   placeholder: 'Some',
   classInp: '',
+  value: '',
 };
 
 Input.propTypes = {
   classInp: PropTypes.string,
   placeholder: PropTypes.string,
+  value: PropTypes.string,
 };

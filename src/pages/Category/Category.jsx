@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Input } from '../../components/Input/Input';
 import { Button } from '../../components/Button/Button';
 import { CategoryCard } from '../../components/Cards/CategoryCard/CategoryCard';
-// import Sele
+import { Select } from '../../components/Select/Select';
 import CategoryMenuIcon from '../../assets/icons/categorys-menu.svg';
 import ClouseIcon from '../../assets/icons/clouse-icon-white.svg';
 import FilterIcon from '../../assets/icons/filter-white.svg';
@@ -46,6 +46,7 @@ const btnData = [
 
 export function Category() {
   const [close, setClose] = useState(false);
+  const [values, setValues] = useState('');
   return (
     <div className={classNames(style.category)}>
       <div
@@ -80,7 +81,10 @@ export function Category() {
           )}
           <span>Categorys</span>
         </button>
-        <Input placeholder="Events" />
+        <Input
+          placeholder="Events"
+          value={values}
+        />
         <Button
           title="Search"
           btnClass="primary"
@@ -102,6 +106,9 @@ export function Category() {
               key={btn.id}
               title={btn.title}
               btnClass="secondary"
+              onClick={(e) =>
+                setValues(e.target.value)
+              }
             />
           ))}
         </div>
@@ -116,7 +123,9 @@ export function Category() {
             <h3>Result</h3>
             <span>45</span>
           </div>
-
+          <div className={classNames(style.sort)}>
+            <Select />
+          </div>
         </div>
         <div className={classNames(style.cards)}>
           <CategoryCard />
