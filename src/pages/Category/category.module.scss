@@ -57,38 +57,39 @@
     padding-top: 64px;
 
     .results {
-      width: 100%;
-      display: flex;
-      align-items: center;
       position: relative;
+      display: flex;
+      width: 100%;
+      align-items: center;
       justify-content: space-between;
       padding-bottom: 36px;
+
       .result {
+        position: absolute;
+        bottom: 0;
         display: flex;
         align-items: center;
         column-gap: 10px;
-        position: absolute;
-        bottom: 0;
-        h3
-        {
+
+        h3 {
           color: var(--clr-primary-dk);
           font-family: var(--ff-gilroy);
           font-size: 24px;
           font-style: normal;
           font-weight: 500;
-          line-height: normal;
           letter-spacing: -0.12px;
+          line-height: normal;
           text-transform: uppercase;
         }
-        span
-        {
+
+        span {
+          padding: 0 10px;
+          border-radius: 33px;
+          background: var(--clr-primary-dk);
           color: var(--clr-primary-lt);
           font-family: var(--ff-gilroy);
           font-size: 20px;
           font-weight: 500;
-          border-radius: 33px;
-          padding: 0 10px;
-          background: var(--clr-primary-dk);
         }
       }
     }

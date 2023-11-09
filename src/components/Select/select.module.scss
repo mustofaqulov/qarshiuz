@@ -1,12 +1,13 @@
 .select {
   position: absolute;
+  z-index: 99;
+  right: 0;
   display: flex;
   width: 16.25rem;
   flex-direction: column;
   align-items: end;
   user-select: none;
-  right: 0;
-  z-index: 99;
+
   p {
     color: var(--clr-gray-lt);
     font-family: var(--ff-gilroy);
@@ -22,8 +23,8 @@
     border-radius: 0.375rem;
     background-color: var(--clr-primary-lt);
     box-shadow: 0 0.125rem 1rem 0
-      rgba(0, 0, 0, 0.148);
-      gap: 10px;
+      rgb(0 0 0 / 14.8%);
+    gap: 10px;
 
     li {
       width: 140px;
@@ -42,6 +43,7 @@
         background-color: transparent;
         text-align: start;
         transition: 0.2s;
+
         &:hover {
           color: var(--clr-gray-lt);
         }
