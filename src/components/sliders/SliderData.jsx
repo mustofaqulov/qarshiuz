@@ -10,12 +10,12 @@ export const sliderData = [
   },
   {
     id: 2,
-    title: 'Our recommendations',
+    title: 'city news in one place',
     component: <NewsSlider />,
   },
   {
     id: 3,
-    title: 'Our recommendations',
+    title: 'exciting events in the city',
     component: <EventsSlider />,
   },
 ];

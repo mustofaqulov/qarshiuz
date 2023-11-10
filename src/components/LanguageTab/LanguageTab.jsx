@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { locales } from '../../constants/locales';
 import style from './tab.module.scss';
 
-export function Tab() {
+export function LanguageTab() {
   const { i18n } = useTranslation();
 
   const langBtns = Object.keys(locales).map(

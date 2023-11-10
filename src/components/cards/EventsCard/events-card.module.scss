@@ -3,31 +3,43 @@
 .events-card {
   display: flex;
   width: 100%;
-  max-width: 26.25rem;
   flex-direction: column;
   font-family: var(--ff-gilroy);
-  row-gap: 1.5rem;
+  row-gap: 24px;
 
   .card-img {
     overflow: hidden;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 16px;
+
+    .card-color {
+      position: absolute;
+      z-index: 50;
+      width: 100%;
+      height: 260px;
+      border-radius: 16px;
+      background: linear-gradient(
+        0deg,
+        rgb(0 0 0 / 10%) 0%,
+        rgb(0 0 0 / 10%) 100%
+      );
+    }
 
     img {
       width: 100%;
       height: 260px;
+    }
 
-      &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-      }
+    &:hover img {
+      transform: scale(1.2);
+      transition: 2s;
     }
   }
 
   .event-info {
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 24px;
 
     .event-date {
       display: flex;
@@ -38,20 +50,20 @@
         color: var(--clr-gray-lt);
         font-size: var(--bottom-md);
         font-weight: var(--fw-medium);
-        line-height: 1.5rem;
+        line-height: 24px;
       }
     }
 
     .event-about {
       display: flex;
       flex-direction: column;
-      row-gap: 1rem;
+      row-gap: 16px;
 
       h5 {
         font-family: var(--ff-gilroy);
         font-size: var(--heading-md);
         font-weight: var(--fw-medium);
-        letter-spacing: -0.0075rem;
+        letter-spacing: -0.12px;
       }
 
       .event-location {
@@ -62,7 +74,7 @@
         .location-info {
           display: flex;
           align-items: center;
-          column-gap: 0.625rem;
+          column-gap: 10px;
 
           span {
             color: var(--clr-gray-lt);

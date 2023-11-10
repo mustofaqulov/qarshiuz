@@ -20,15 +20,21 @@
     align-items: flex-start;
     row-gap: 2.5rem;
 
-    select {
+    .regions {
+      display: flex;
       width: 13.88rem;
+      align-items: center;
+      justify-content: space-between;
       border: 0;
       background: none;
       cursor: pointer;
-      font-family: var(--ff-gilroy);
-      font-size: var(--bottom-md);
-      font-weight: var(--fw-semi-bold);
-      text-transform: uppercase;
+
+      strong {
+        font-family: var(--ff-gilroy);
+        font-size: var(--bottom-md);
+        font-weight: var(--fw-semi-bold);
+        text-transform: uppercase;
+      }
     }
 
     h1 {

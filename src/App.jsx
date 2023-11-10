@@ -1,10 +1,10 @@
 import { Layout } from './layout/Layout';
-import { HomePage } from './pages';
+import { Router } from './routes/Router';
 
 export default function App() {
   return (
     <Layout>
-      <HomePage />
+      <Router />
     </Layout>
   );
 }

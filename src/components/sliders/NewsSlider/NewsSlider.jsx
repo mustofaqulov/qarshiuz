@@ -5,11 +5,11 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import style from '../sliders.module.scss';
-import { SliderButtons } from '../SliderButton/SliderButtons';
 import { NewsCard } from '../../Cards/NewsCard/NewsCard';
+import { newsCardData } from '../../../utils';
+import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
-import { newsSliderData } from '../../../utils';
 
 export function NewsSlider() {
   return (
@@ -32,7 +32,7 @@ export function NewsSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      {newsSliderData.map(
+      {newsCardData.map(
         ({
           id,
           status,
@@ -46,7 +46,7 @@ export function NewsSlider() {
                 status={status}
                 title={title}
                 description={description}
-                slideImg={newsImg}
+                cardImg={newsImg}
               />
             </SwiperSlide>
           );

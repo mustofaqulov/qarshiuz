@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './category-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
@@ -31,6 +33,11 @@ export function CategoryCard({
             style['card-img'],
           )}
         >
+          <div
+            className={classNames(
+              style['card-color'],
+            )}
+          />
           <img src={cardImg} alt="" />
         </div>
       </div>
@@ -53,9 +60,22 @@ export function CategoryCard({
             <LocationIcon />
             <span>{location}</span>
           </div>
-          <SideArrowIcon />
+          <Link to="/category">
+            <SideArrowIcon />
+          </Link>
         </div>
       </div>
     </div>
   );
 }
+
+CategoryCard.defaultProps = {
+  cardImg: '',
+  title: '',
+  location: '',
+};
+CategoryCard.propType = {
+  cardImg: PropTypes.string,
+  title: PropTypes.string,
+  location: PropTypes.string,
+};

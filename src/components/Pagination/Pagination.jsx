@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { useState, cloneElement } from 'react';
+import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 import style from './pagination.module.scss';
 import PrevBtnIcon from '../../assets/icons/carousel-left-icon.svg';
@@ -81,3 +82,10 @@ export function Pagination({ component }) {
     </div>
   );
 }
+
+Pagination.defaultProps = {
+  component: '',
+};
+Pagination.propTypes = {
+  component: PropTypes.string,
+};

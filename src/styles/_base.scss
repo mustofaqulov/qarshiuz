@@ -1,5 +1,21 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-red-hat);
+}
+
+li,
+a,
+button {
+  text-transform: uppercase;
+}
+
 a {
   color: inherit;
+  outline: none;
 }
 
 input,
@@ -14,19 +30,22 @@ button {
 :root {
   /* ========== Colors ========== */
   --bg-body: #fff;
-  --bg-footer: #000;
+  --primary-black: #000;
   --clr-primary-dk: #000;
   --clr-primary-lt: #fff;
   --clr-gray-dark: #626262;
   --clr-gray-lt: #a9a9a9;
   --clr-gray-ltr: #cacaca;
   --clr-gray-ltst: #f3f3f3;
+  --silver: #bfbfbf;
 
   /* ==========Font========== */
+
   --ff-red-hat: 'Red Hat Display', sans-serif;
   --ff-gilroy: 'Gilroy', sans-serif;
 
   /* ==========Size========== */
+
   --heading-2xl: 6rem;
   --heading-xl: 4rem;
   --heading-lg: 2rem;

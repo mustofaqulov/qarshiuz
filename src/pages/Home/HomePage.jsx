@@ -1,21 +1,20 @@
 import classNames from 'classnames';
 import {
   Button,
-  Input,
+  SearchInput,
   PromoSlider,
-  MiniComponents,
+  Select,
+  MiniCategory,
   sliderData,
 } from '../../components';
 import { smallBtnData } from '../../utils';
 import style from './home-page.module.scss';
+import SelectIcon from '../../assets/icons/angle-down.svg';
 
 export function HomePage() {
   return (
     <main
-      className={classNames(
-        style.container,
-        style['home-page'],
-      )}
+      className={classNames(style['home-page'])}
     >
       <section
         className={classNames(
@@ -27,11 +26,13 @@ export function HomePage() {
             style['region-name'],
           )}
         >
-          <select name="" id="">
-            <option value="Kashqadarya region">
-              Kashqadarya region
-            </option>
-          </select>
+          {/* <Select /> */}
+          <div
+            className={classNames(style.regions)}
+          >
+            <strong>Kashqadarya region</strong>
+            <SelectIcon />
+          </div>
           <h1>
             Information portal <br /> of Qarshi
             city
@@ -58,7 +59,7 @@ export function HomePage() {
                 style['input-button'],
               )}
             >
-              <Input />
+              <SearchInput />
               <Button
                 btnClass="primary"
                 title="search"
@@ -86,7 +87,7 @@ export function HomePage() {
         <PromoSlider />
       </section>
       <section className="category">
-        <MiniComponents />
+        <MiniCategory />
       </section>
       {sliderData.map((slider) => {
         const { id, title, component } = slider;

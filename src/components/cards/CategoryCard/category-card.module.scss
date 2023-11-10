@@ -1,25 +1,25 @@
 @import '../../../styles/style';
 
 .category-card {
+  // overflow: hidden;
   display: flex;
   width: 100%;
-  max-width: 26.25rem;
   flex-direction: column;
   font-family: var(--ff-gilroy);
-  row-gap: 1.5rem;
+  row-gap: 24px;
 
   .category-status {
     position: relative;
+    overflow: hidden;
 
     .status-name {
       position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      padding: 0.38rem 1.13rem;
-      border-radius: 2.25rem;
+      z-index: 999;
+      top: 20px;
+      right: 20px;
+      padding: 6px 16px;
+      border-radius: 36px;
       background: var(--bg-body);
-
-      // border: 1px solid black;
 
       span {
         font-size: var(--bottom-sm);
@@ -31,13 +31,28 @@
     .card-img {
       overflow: hidden;
       width: 100%;
-      border-radius: 1rem;
+      border-radius: 16px;
+
+      .card-color {
+        position: absolute;
+        z-index: 50;
+        width: 100%;
+        height: 340px;
+        border-radius: 16px;
+        background: linear-gradient(
+          0deg,
+          rgb(0 0 0 / 10%) 0%,
+          rgb(0 0 0 / 10%) 100%
+        );
+      }
 
       img {
         width: 100%;
         height: 340px;
+      }
 
-        &:hover {
+      &:hover {
+        img {
           transform: scale(1.2);
           transition: 2s;
         }
@@ -48,12 +63,12 @@
   .category-info {
     display: flex;
     flex-direction: column;
-    row-gap: 0.75rem;
+    row-gap: 12px;
 
     h5 {
       font-size: var(--heading-md);
       font-weight: var(--fw-medium);
-      letter-spacing: 0.015rem;
+      letter-spacing: 0.24px;
     }
 
     .category-location {
@@ -64,7 +79,7 @@
       .location-info {
         display: flex;
         align-items: center;
-        column-gap: 0.625rem;
+        column-gap: 10px;
 
         span {
           color: var(--clr-gray-lt);

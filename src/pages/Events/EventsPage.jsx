@@ -1,15 +1,18 @@
 import classNames from 'classnames';
 import {
+  EventsCard,
   Pagination,
   Select,
 } from '../../components';
-import EventsCard from '../../components/Cards/EventsCard/EventsCard';
-import style from './events-page.module.scss';
+import style from './events.module.scss';
 
 export function EventsPage() {
   return (
     <main
-      className={classNames(style['events-page'])}
+      className={classNames(
+        style.container,
+        style['events-page'],
+      )}
     >
       <section
         className={classNames(

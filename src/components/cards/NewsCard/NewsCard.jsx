@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './news-card.module.scss';
 import EyesBlackIcon from '../../../assets/icons/eye-black-icon.svg';
@@ -6,7 +7,7 @@ export function NewsCard({
   status,
   title,
   description,
-  slideImg,
+  cardImg,
 }) {
   return (
     <div
@@ -15,7 +16,12 @@ export function NewsCard({
       <div
         className={classNames(style['card-img'])}
       >
-        <img src={slideImg} alt="" />
+        <div
+          className={classNames(
+            style['card-color'],
+          )}
+        />
+        <img src={cardImg} alt="" />
       </div>
       <div
         className={classNames(style['card-info'])}
@@ -54,3 +60,16 @@ export function NewsCard({
     </div>
   );
 }
+
+NewsCard.defaultProps = {
+  cardImg: '',
+  status: '',
+  description: '',
+  title: '',
+};
+NewsCard.propType = {
+  cardImg: PropTypes.string,
+  status: PropTypes.string,
+  description: PropTypes.string,
+  title: PropTypes.string,
+};
