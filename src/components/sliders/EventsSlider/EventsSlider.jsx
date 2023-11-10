@@ -4,9 +4,9 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import classNames from 'classnames';
-import { SliderButtons } from '../SliderButton/SliderButtons';
-import EventsCard from '../../Cards/EventsCard/EventsCard';
 import style from '../sliders.module.scss';
+import { EventsCard } from '../../Cards/EventsCard/EventsCard';
+import { SliderButtons } from '../SliderButton/SliderButtons';
 
 export function EventsSlider() {
   return (
