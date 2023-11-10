@@ -9,3 +9,5 @@ export { Footer } from './Footer/Footer';
 export { Select } from './Select/Select';
 export { SearchInput } from './Inputs/SearchInput/SearchInput';
 export { MiniCategory } from './Cards/MiniCategory/MiniCategory';
+export { EventsCard } from './Cards/EventsCard/EventsCard';
+export { SliderButtons } from './Sliders/SliderButton/SliderButtons';

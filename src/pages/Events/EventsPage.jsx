@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import {
+  EventsCard,
   Pagination,
   Select,
 } from '../../components';
 import style from './events.module.scss';
-import { EventsCard } from '../../components/Cards/EventsCard/EventsCard';
 
 export function EventsPage() {
   return (
