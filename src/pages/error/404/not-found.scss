@@ -1,0 +1,37 @@
+.blog {
+  padding: 188px 0 288px;
+
+  .notfound {
+    margin-top: 188px;
+    color: var(--bg-footer);
+    font-family: var(--ff-gilroy);
+    font-size: 200px;
+    font-weight: 600;
+    line-height: 235.4px;
+    text-align: center;
+  }
+
+  .notpage {
+    margin-top: 16px;
+    color: var(--clr-gray-lt);
+    font-family: var(--ff-red-hat);
+    font-size: var(--paragraph-2xl);
+    font-weight: var(--fw-medium);
+    line-height: 42.34px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .unavailable {
+    margin-top: 24px;
+    color: var(--clr-gray-lt);
+    font-family: var(--ff-gilroy);
+    font-size: var(--paragraph-md);
+    text-align: center;
+  }
+
+  button {
+    margin: 0 auto;
+    margin-top: 64px;
+  }
+}

@@ -1,14 +1,25 @@
-import { Link } from 'react-router-dom';
+import {
+  Link,
+  NavLink,
+  useLocation,
+} from 'react-router-dom';
 import classNames from 'classnames';
 import Logo from '../../assets/icons/logo-white.svg';
 import Arrow from '../../assets/icons/arrow-up-white.svg';
 import Facebook from '../../assets/icons/facebook-white.svg';
 import Telegram from '../../assets/icons/telegram-white.svg';
 import Vkontakte from '../../assets/icons/vkontakte-white.svg';
-import { FooterLinks } from './FooterLinks';
 import style from './footer.module.scss';
+import { routePaths } from '../../constants/routers';
 
 export function Footer() {
+  const { pathname } = useLocation();
+
+  if (
+    !Object.values(routePaths).includes(pathname)
+  ) {
+    return null;
+  }
   return (
     <footer className={style.footer}>
       <div
@@ -73,55 +84,43 @@ export function Footer() {
             </h3>
             <ul>
               <li>
-                <FooterLinks to="/catalog">
-                  Catalog
-                </FooterLinks>
+                <NavLink to="">Catalog</NavLink>
               </li>
               <li>
-                <FooterLinks to="/about">
-                  About Us
-                </FooterLinks>
+                <NavLink to="">About Us</NavLink>
               </li>
               <li>
-                <FooterLinks to="/events">
-                  Events
-                </FooterLinks>
+                <NavLink to="">Events</NavLink>
               </li>
             </ul>
 
             <ul>
               <li>
-                <FooterLinks to="/local-new">
-                  Local new
-                </FooterLinks>
+                <NavLink to="">Local new</NavLink>
               </li>
               <li>
-                <FooterLinks to="/childrens-park">
+                <NavLink to="">
                   Children&apos;s park
-                </FooterLinks>
+                </NavLink>
               </li>
               <li>
-                <FooterLinks to="/Concert-hall">
+                <NavLink to="">
                   Concert hall
-                </FooterLinks>
+                </NavLink>
               </li>
             </ul>
 
             <ul>
               <li>
-                <FooterLinks to="/library">
-                  Library
-                </FooterLinks>
+                <NavLink to="">Library</NavLink>
               </li>
               <li>
-                <FooterLinks to="/nightclubs">
+                <NavLink to="">
                   Nightclubs
-                </FooterLinks>
+                </NavLink>
               </li>
               <li>
-                <FooterLinks to="/zoo">
-                  Zoo
-                </FooterLinks>
+                <NavLink to="">Zoo</NavLink>
               </li>
             </ul>
           </div>

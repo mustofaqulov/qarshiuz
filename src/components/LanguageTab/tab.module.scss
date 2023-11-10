@@ -21,7 +21,7 @@ button {
   border: none;
   border-radius: 2.25rem;
   color: var(--clr-primary-dk);
-  fill: #000;
+  fill: var(--clr-primary-dk);
   font-family: Gilroy, sans-serif;
   font-size: var(--bottom-sm);
   font-weight: var(--fw-normal);
@@ -30,8 +30,8 @@ button {
   transition: 0.4s;
 
   &:hover {
-    background-color: var(--clr-primary-dk);
-    color: var(--clr-primary-lt);
+    background-color: var(--clr-gray-ltst);
+    color: var(--clr-primary-dk);
   }
 }
 
