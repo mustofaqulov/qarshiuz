@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import {
+  EventsCard,
   Pagination,
   Select,
 } from '../../components';
-import EventsCard from '../../components/Cards/EventsCard/EventsCard';
 import style from './events.module.scss';
 
 export function EventsPage() {

@@ -3,10 +3,13 @@ import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react';
-import { SliderButtons } from '../SliderButton/SliderButtons';
-import { NewsCard } from '../../Cards/NewsCard/NewsCard';
-import style from '../sliders.module.scss';
 import 'swiper/css';
+import style from '../sliders.module.scss';
+import { NewsCard } from '../../Cards/NewsCard/NewsCard';
+import { newsCardData } from '../../../utils';
+import { SliderButtons } from '../SliderButton/SliderButtons';
+import { Button } from '../../Button/Button';
+import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
 
 export function NewsSlider() {
   return (
@@ -29,10 +32,34 @@ export function NewsSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      <SwiperSlide>
-        <NewsCard />
-      </SwiperSlide>
-      <SliderButtons />
+      {newsCardData.map(
+        ({
+          id,
+          status,
+          title,
+          description,
+          newsImg,
+        }) => {
+          return (
+            <SwiperSlide key={id}>
+              <NewsCard
+                status={status}
+                title={title}
+                description={description}
+                cardImg={newsImg}
+              />
+            </SwiperSlide>
+          );
+        },
+      )}
+      <div className={classNames(style.buttons)}>
+        <Button
+          title="view all news"
+          btnClass="secondary"
+          icon={<ArrowUpIcon />}
+        />
+        <SliderButtons />
+      </div>
     </Swiper>
   );
 }

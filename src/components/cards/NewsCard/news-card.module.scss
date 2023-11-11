@@ -3,11 +3,39 @@
 .news-card {
   display: flex;
   width: 100%;
-  max-width: 26.25rem;
   flex-direction: column;
   border-radius: 1rem;
   font-family: var(--ff-gilroy);
   row-gap: 1.5rem;
+
+  .card-img {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 1rem;
+
+    .card-color {
+      position: absolute;
+      z-index: 50;
+      width: 100%;
+      height: 260px;
+      border-radius: 16px;
+      background: linear-gradient(
+        0deg,
+        rgb(0 0 0 / 10%) 0%,
+        rgb(0 0 0 / 10%) 100%
+      );
+    }
+
+    img {
+      width: 100%;
+      height: 260px;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+      transition: 2s;
+    }
+  }
 
   .card-info {
     display: flex;

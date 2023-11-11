@@ -1,9 +1,0 @@
-.mini-blogs {
-  display: grid;
-  grid-auto-columns: minmax(15rem, auto);
-  grid-gap: 1rem;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(15rem, 1fr)
-  );
-}
