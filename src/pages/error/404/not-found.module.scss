@@ -10,7 +10,7 @@
     text-align: center;
   }
 
-  .notfound-title {
+  h2{
     margin-top: 16px;
     color: var(--clr-gray-lt);
     font-family: var(--ff-red-hat);
@@ -21,7 +21,7 @@
     text-transform: uppercase;
   }
 
-  .notfound-description {
+  p{
     margin-top: 24px;
     color: var(--clr-gray-lt);
     font-family: var(--ff-gilroy);
