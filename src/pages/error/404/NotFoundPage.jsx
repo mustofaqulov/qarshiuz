@@ -1,17 +1,17 @@
 import ArrowIcons from '../../../assets/icons/arrow-up-white.svg';
 import { Button } from '../../../components';
-import style from './not-found.scss';
+import style from './not-found.module.scss';
 
 export function NotFoundPage() {
   return (
     <div className={style.blog}>
-      <h1 className={style.notfound}>404</h1>
-      <p className={style.notpage}>
-        Oops, Sorry we cant find that page!
+      <h1>404</h1>
+      <p className={style.title}>
+        Oops, Sorry we can &#39;t find that page!
       </p>
-      <p className={style.unavailable}>
+      <p className={style.description}>
         The page you are looking for might have
-        been removed, had its name changed, or is
+        been removed, had its name changed, or i
         temporarily unavailable.
       </p>
       <Button
