@@ -3,36 +3,19 @@ import {
   Button,
   SearchInput,
   PromoSlider,
-  RecommendationSlider,
-  NewsSlider,
-  EventsSlider,
   Select,
   MiniCategory,
+  sliderData,
 } from '../../components';
-
+import { smallBtnData } from '../../utils';
 import style from './home-page.module.scss';
-
-const sliderData = [
-  {
-    id: 1,
-    title: 'Our recommendations',
-    component: <RecommendationSlider />,
-  },
-  {
-    id: 2,
-    title: 'city news in one place',
-    component: <NewsSlider />,
-  },
-  {
-    id: 3,
-    title: 'exciting events in the city',
-    component: <EventsSlider />,
-  },
-];
+import SelectIcon from '../../assets/icons/angle-down.svg';
 
 export function HomePage() {
   return (
-    <>
+    <main
+      className={classNames(style['home-page'])}
+    >
       <section
         className={classNames(
           style['promo-section'],
@@ -43,7 +26,13 @@ export function HomePage() {
             style['region-name'],
           )}
         >
-          <Select />
+          {/* <Select /> */}
+          <div
+            className={classNames(style.regions)}
+          >
+            <strong>Kashqadarya region</strong>
+            <SelectIcon />
+          </div>
           <h1>
             Information portal <br /> of Qarshi
             city
@@ -81,22 +70,17 @@ export function HomePage() {
                 style['promo-category'],
               )}
             >
-              <Button
-                btnClass="secondary"
-                title="Events"
-              />
-              <Button
-                btnClass="secondary"
-                title="Banks"
-              />
-              <Button
-                btnClass="secondary"
-                title="Bars"
-              />
-              <Button
-                btnClass="secondary"
-                title="Museum"
-              />
+              {smallBtnData.map(
+                ({ title, id }) => {
+                  return (
+                    <Button
+                      key={id}
+                      btnClass="sm"
+                      title={title}
+                    />
+                  );
+                },
+              )}
             </div>
           </div>
         </div>
@@ -121,6 +105,6 @@ export function HomePage() {
           </section>
         );
       })}
-    </>
+    </main>
   );
 }

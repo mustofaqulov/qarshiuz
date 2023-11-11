@@ -6,17 +6,16 @@ export const sliderData = [
   {
     id: 1,
     title: 'Our recommendations',
-    // eslint-disable-next-line react/jsx-filename-extension
     component: <RecommendationSlider />,
   },
   {
     id: 2,
-    title: 'Our recommendations',
+    title: 'city news in one place',
     component: <NewsSlider />,
   },
   {
     id: 3,
-    title: 'Our recommendations',
+    title: 'exciting events in the city',
     component: <EventsSlider />,
   },
 ];
