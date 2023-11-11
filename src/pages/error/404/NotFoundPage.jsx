@@ -7,7 +7,7 @@ export function NotFoundPage() {
     <div className={style.blog}>
       <h1 className={style.notfound}>404</h1>
       <p className={style.notpage}>
-        Oops, Sorry we can't find that page!
+        Oops, Sorry we cant find that page!
       </p>
       <p className={style.unavailable}>
         The page you are looking for might have

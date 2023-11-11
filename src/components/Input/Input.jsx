@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import style from './Input.module.scss';
+// import style from './Input.module.scss';
 import SearchIcons from '../../assets/icons/search.svg';
 
 export function Input({ placeholder, classInp }) {
