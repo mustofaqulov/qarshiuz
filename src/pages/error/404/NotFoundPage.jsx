@@ -4,13 +4,13 @@ import style from './not-found.module.scss';
 
 export function NotFoundPage() {
   return (
-    <div className={style['notFound-blog']}>
+    <div className={style['notfound-blog']}>
       <h1>404</h1>
-      <p className={style['notFound-title']}>
+      <p className={style['notfound-title']}>
         Oops, Sorry we can &#39;t find that page!
       </p>
       <p
-        className={style['notFound-description']}
+        className={style['notfound-description']}
       >
         The page you are looking for might have
         been removed, had its name changed, or i
