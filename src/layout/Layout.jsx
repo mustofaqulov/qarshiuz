@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
-import { Footer, Navbar } from '../components';
+import { Footer, Header } from '../components';
 
 export function Layout({ children }) {
   return (
-    <div className="wrapper">
-      <Navbar />
-      <div className="main-content container">
+    <>
+      <Header />
+      <main className="main-content container">
         {children}
-      </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
 Layout.defaultProps = {
-  children: '',
+  children: null,
 };
 
 Layout.propTypes = {

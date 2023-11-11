@@ -1,20 +1,23 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import style from './Input.module.scss';
-import SearchIcons from '../../assets/icons/search.svg';
+import style from './search-input.module.scss';
+import SearchIcons from '../../../assets/icons/search.svg';
 
-export function Input({ placeholder, classInp }) {
-  const inputClass = classNames(
+export function SearchInput({
+  placeholder,
+  size,
+}) {
+  const inputSize = classNames(
     style['input-search'],
     {
-      [style.lg]: classInp === 'lg',
+      [style.lg]: size === 'lg',
     },
   );
   return (
     <form>
       <label
         htmlFor="search"
-        className={inputClass}
+        className={inputSize}
       >
         <SearchIcons />
         <input
@@ -29,12 +32,12 @@ export function Input({ placeholder, classInp }) {
   );
 }
 
-Input.defaultProps = {
-  placeholder: 'Some',
-  classInp: '',
+SearchInput.defaultProps = {
+  placeholder: '',
+  size: '',
 };
 
-Input.propTypes = {
-  classInp: PropTypes.string,
+SearchInput.propTypes = {
+  size: PropTypes.string,
   placeholder: PropTypes.string,
 };

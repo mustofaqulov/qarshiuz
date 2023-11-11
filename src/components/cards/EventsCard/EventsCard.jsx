@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './events-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
-function EventsCard({ user }) {
-  console.log(user);
+export function EventsCard({ user }) {
   return (
     <div
       className={classNames(style['events-card'])}
@@ -53,4 +53,9 @@ function EventsCard({ user }) {
   );
 }
 
-export default EventsCard;
+EventsCard.defaultProps = {
+  user: '',
+};
+EventsCard.propType = {
+  user: PropTypes.string,
+};
