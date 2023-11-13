@@ -56,7 +56,11 @@ export function MiniCategory() {
             key={id}
             className={style['cards-item']}
           >
-            <img src={url} alt={text} />
+            <div
+              className={style['img-container']}
+            >
+              <img src={url} alt={text} />
+            </div>
             <p>{text}</p>
           </div>
         );
