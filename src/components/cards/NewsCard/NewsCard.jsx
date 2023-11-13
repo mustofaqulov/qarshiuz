@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './news-card.module.scss';
@@ -10,7 +11,8 @@ export function NewsCard({
   cardImg,
 }) {
   return (
-    <div
+    <Link
+      to="/news"
       className={classNames(style['news-card'])}
     >
       <div
@@ -57,7 +59,7 @@ export function NewsCard({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -11,11 +11,18 @@ export function CategoryCard({
   location,
 }) {
   return (
-    <div
+    <Link
+      to="/category"
       className={classNames(
         style['category-card'],
       )}
     >
+      {/* <div
+        className={classNames(
+          style['category-card'],
+        )}
+      >
+      </div> */}
       <div
         className={classNames(
           style['category-status'],
@@ -65,7 +72,7 @@ export function CategoryCard({
           </Link>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

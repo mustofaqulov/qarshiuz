@@ -56,6 +56,11 @@ export function PromoSlider() {
           ({ sliderImg, id }) => {
             return (
               <SwiperSlide key={id}>
+                <div
+                  className={classNames(
+                    style['slider-color'],
+                  )}
+                />
                 <img src={sliderImg} alt="" />
               </SwiperSlide>
             );

@@ -1,5 +1,3 @@
-@import '../../../styles/style';
-
 .events-card {
   display: flex;
   width: 100%;
@@ -29,11 +27,6 @@
       width: 100%;
       height: 260px;
     }
-
-    &:hover img {
-      transform: scale(1.2);
-      transition: 2s;
-    }
   }
 
   .event-info {
@@ -51,6 +44,7 @@
         font-size: var(--bottom-md);
         font-weight: var(--fw-medium);
         line-height: 24px;
+        text-transform: none;
       }
     }
 
@@ -64,6 +58,7 @@
         font-size: var(--heading-md);
         font-weight: var(--fw-medium);
         letter-spacing: -0.12px;
+        text-transform: none;
       }
 
       .event-location {
@@ -80,9 +75,14 @@
             color: var(--clr-gray-lt);
             font-size: var(--bottom-sm);
             font-weight: var(--fw-medium);
+            text-transform: capitalize;
           }
         }
       }
     }
+  }
+  &:hover img {
+    transform: scale(1.15);
+    transition: 2s;
   }
 }

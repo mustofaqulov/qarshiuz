@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   Swiper,
   SwiperSlide,
@@ -55,11 +56,13 @@ export function EventsSlider() {
         },
       )}
       <div className={classNames(style.buttons)}>
-        <Button
-          title="view all news"
-          btnClass="secondary"
-          icon={<ArrowUpIcon />}
-        />
+        <Link to="/events">
+          <Button
+            title="view all events"
+            btnClass="secondary"
+            icon={<ArrowUpIcon />}
+          />
+        </Link>
         <SliderButtons />
       </div>
     </Swiper>
