@@ -16,8 +16,8 @@ button {
 }
 
 .primary {
-  padding: var(--paragraph-lg) 1.75rem;
-  border-radius: 2.25rem;
+  padding: var(--paragraph-lg) 28px;
+  border-radius: 36px;
   background-color: var(--clr-primary-dk);
   color: var(--clr-primary-lt);
   font-weight: var(--fw-normal);
@@ -27,11 +27,11 @@ button {
 }
 
 .secondary {
-  padding: 0.75rem var(--bottom-xl);
+  padding: 12px var(--bottom-xl);
   border: 1px solid var(--clr-primary-dk);
   border-radius: 2.438rem;
   color: var(--clr-primary-dk);
-  column-gap: 0.625rem;
+  column-gap: 10px;
   font-weight: var(--fw-medium);
   line-height: var(--paragraph-xl);
   transition: 0.3s;

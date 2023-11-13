@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: end;
   user-select: none;
-
   p {
     color: var(--clr-gray-lt);
     font-family: var(--ff-gilroy);
@@ -25,6 +24,7 @@
     box-shadow: 0 0.125rem 1rem 0
       rgb(0 0 0 / 14.8%);
     gap: 10px;
+    padding: 20px;
 
     li {
       width: 140px;
