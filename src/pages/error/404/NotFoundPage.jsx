@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ArrowIcons from '../../../assets/icons/arrow-up-white.svg';
 import { Button } from '../../../components';
 import style from './not-found.scss';
@@ -14,12 +15,14 @@ export function NotFoundPage() {
         been removed, had its name changed, or is
         temporarily unavailable.
       </p>
-      <Button
-        className="btn"
-        btnClass="primary"
-        title="Back to home"
-        icon={<ArrowIcons />}
-      />
+      <Link to="/">
+        <Button
+          className="btn"
+          btnClass="primary"
+          title="Back to home"
+          icon={<ArrowIcons />}
+        />
+      </Link>
     </div>
   );
 }

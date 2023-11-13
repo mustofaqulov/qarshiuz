@@ -35,7 +35,7 @@ export function Footer() {
         >
           <span>
             <Link
-              to="/home"
+              to="/"
               className={classNames([style.logo])}
             >
               <Logo />
