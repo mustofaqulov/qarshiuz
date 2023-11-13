@@ -4,42 +4,48 @@
   padding: 25px 0;
 
   .nav-menu {
-    height: 100%;
-    display: flex;
-    align-items: start;
-    top: 0;
-    flex-direction: column;
-    background-color: #FFF;
     position: absolute;
     z-index: 999;
+    top: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: start;
     padding: 24px 116px 0 60px;
+    background-color: #fff;
     row-gap: 40px;
+
     .btn {
-      background-color: transparent;
-      border: 0;
       padding: 0;
+      border: 0;
+      background-color: transparent;
     }
+
     ul {
-      height: 196px;
-      justify-content: space-between;
       display: flex;
+      height: 196px;
       flex-direction: column;
+      justify-content: space-between;
       gap: 24px;
     }
   }
+
   .header-container {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 25px;
-    position: relative;
+
     .hamburger {
       display: none;
       cursor: pointer;
+
       button {
-        background-color: transparent;
         border: 0;
+        background-color: transparent;
       }
     }
+
     .nav {
       flex-grow: 1;
 
@@ -55,13 +61,12 @@
 
         &_link {
           padding: 14px 26px;
+          border: 1px solid transparent;
           cursor: pointer;
           font-size: var(--paragraph-lg);
-          border: 1px solid transparent;
           font-weight: var(--fw-normal);
           outline: none;
           transition: all 0.2s ease;
-          border: 1px solid transparent;
 
           &:hover {
             border: 1px solid var(--clr-gray-ltr);
@@ -77,8 +82,8 @@
     }
   }
 }
-.curing
-{
+
+.curing {
   overflow-y: hidden;
 }
 
@@ -88,20 +93,22 @@
   border-radius: 36px;
 }
 
-@media screen and (max-width: 1194px) {
+@media screen and (width <= 1194px) {
   .header {
     .header-container {
-      width: 100%;
       display: flex;
+      width: 100%;
       justify-content: space-between;
+
       .hamburger {
         display: block;
       }
+
       .nav {
         display: none;
       }
-      .header-btn > button
-      {
+
+      .header-btn > button {
         display: none;
       }
     }

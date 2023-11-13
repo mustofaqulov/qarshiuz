@@ -13,8 +13,9 @@
     display: flex;
     justify-content: space-between;
     padding: 62px 20px 80px;
-    user-select: none;
     gap: 50px;
+    user-select: none;
+
     .logo {
       cursor: pointer;
     }
@@ -164,19 +165,22 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   .footer {
     .footer-content {
       flex-direction: column;
       gap: 48px;
+
       .footer-info {
         flex-direction: row;
         justify-content: space-between;
       }
+
       .footer-links {
         width: 100%;
         max-width: 100%;
         gap: 48px;
+
         .navigation {
           width: 100%;
           justify-content: space-between;
