@@ -29,7 +29,7 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        row-gap: 25.008px;
+        row-gap: 25px;
 
         a {
           outline: none;
@@ -55,7 +55,7 @@
 
       .navigation {
         display: flex;
-        width: 659.008px;
+        width: 660px;
         align-items: start;
         justify-content: space-between;
         column-gap: 10px;
@@ -101,7 +101,7 @@
               bottom: 0;
               left: 0;
               width: 0%;
-              height: 1.088px;
+              height: 1px;
               background-color: var(
                 --clr-primary-lt
               );
@@ -137,7 +137,7 @@
             letter-spacing: 0.2px;
             line-height: var(--heading-md);
             text-decoration-line: underline;
-            text-decoration-thickness: 1.088px;
+            text-decoration-thickness: 1px;
             text-underline-offset: 3px;
             transition: 0.5s;
 
