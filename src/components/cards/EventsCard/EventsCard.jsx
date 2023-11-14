@@ -1,15 +1,31 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './events-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
-export function EventsCard({ user }) {
+export function EventsCard({
+  cardImg,
+  status,
+  date,
+  title,
+  location,
+}) {
   return (
     <div
       className={classNames(style['events-card'])}
     >
-      <img src="" alt="" />
+      <div
+        className={classNames(style['card-img'])}
+      >
+        <div
+          className={classNames(
+            style['card-color'],
+          )}
+        />
+        <img src={cardImg} alt="" />
+      </div>
       <div
         className={classNames(
           style['event-info'],
@@ -20,15 +36,15 @@ export function EventsCard({ user }) {
             style['event-date'],
           )}
         >
-          <span>Concert</span>
-          <span>Octaber 15, 2023</span>
+          <span>{status}</span>
+          <span>{date}</span>
         </div>
         <div
           className={classNames(
             style['event-about'],
           )}
         >
-          <h5>Solo concert of jony Karshi</h5>
+          <h5>{title}</h5>
           <div
             className={classNames(
               style['event-location'],
@@ -40,12 +56,11 @@ export function EventsCard({ user }) {
               )}
             >
               <LocationIcon />
-              <span>
-                Uzbekistan street, Karshi 180100,
-                Uzbekistan
-              </span>
+              <span>{location}</span>
             </div>
-            <SideArrowIcon />
+            <Link to="/events">
+              <SideArrowIcon />
+            </Link>
           </div>
         </div>
       </div>
@@ -54,8 +69,16 @@ export function EventsCard({ user }) {
 }
 
 EventsCard.defaultProps = {
-  user: '',
+  cardImg: '',
+  status: '',
+  date: '',
+  title: '',
+  location: '',
 };
 EventsCard.propType = {
-  user: PropTypes.string,
+  cardImg: PropTypes.string,
+  status: PropTypes.string,
+  date: PropTypes.string,
+  title: PropTypes.string,
+  location: PropTypes.string,
 };

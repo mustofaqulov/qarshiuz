@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import classNames from 'classnames';
 import style from './promo-slider.module.scss';
+import { promoSliderData } from '../../utils';
 
 export function PromoSlider() {
   return (
@@ -51,9 +52,15 @@ export function PromoSlider() {
           '--swiper-pagination-bottom': '1.25rem',
         }}
       >
-        <SwiperSlide>
-          <img src="" alt="" />
-        </SwiperSlide>
+        {promoSliderData.map(
+          ({ sliderImg, id }) => {
+            return (
+              <SwiperSlide key={id}>
+                <img src={sliderImg} alt="" />
+              </SwiperSlide>
+            );
+          },
+        )}
       </Swiper>
     </div>
   );
