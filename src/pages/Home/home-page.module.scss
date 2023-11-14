@@ -47,7 +47,6 @@
   .promo-about {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 16px;
     column-gap: 64px;
 
     p {
@@ -97,5 +96,72 @@
     font-weight: var(--fw-medium);
     letter-spacing: 0.48px;
     text-transform: uppercase;
+  }
+}
+
+@media only screen and (width <= 1023px) {
+  .home-page {
+    padding: 64px 0 120px;
+    row-gap: 120px;
+  }
+
+  .promo-section {
+    row-gap: 32px;
+
+    .region-name {
+      row-gap: 10px;
+
+      .regions {
+        strong {
+          font-family: var(--ff-gilroy);
+          font-size: var(--bottom-md);
+          font-weight: var(--fw-semi-bold);
+          text-transform: uppercase;
+        }
+      }
+
+      h1 {
+        font-family: var(--ff-red-hat);
+        font-size: var(--heading-2xl);
+        font-weight: var(--fw-medium);
+        letter-spacing: -1.92px;
+        text-transform: uppercase;
+      }
+    }
+
+    .promo-about {
+      column-gap: 24px;
+
+      p {
+        max-width: 537px;
+        font-family: var(--ff-gilroy);
+        font-size: var(--bottom-md);
+        font-weight: var(--fw-medium);
+      }
+
+      .promo-search {
+        row-gap: 10px;
+
+        .input-button {
+          column-gap: 10px;
+        }
+
+        .promo-category {
+          column-gap: 10px;
+        }
+      }
+    }
+  }
+
+  .slider-section {
+    row-gap: 32px;
+
+    h3 {
+      font-family: var(--ff-red-hat);
+      font-size: 48px;
+      font-weight: var(--fw-medium);
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+    }
   }
 }

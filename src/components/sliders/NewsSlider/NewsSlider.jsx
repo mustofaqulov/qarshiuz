@@ -43,12 +43,14 @@ export function NewsSlider() {
         }) => {
           return (
             <SwiperSlide key={id}>
-              <NewsCard
-                status={status}
-                title={title}
-                description={description}
-                cardImg={newsImg}
-              />
+              <Link to="/news">
+                <NewsCard
+                  status={status}
+                  title={title}
+                  description={description}
+                  cardImg={newsImg}
+                />
+              </Link>
             </SwiperSlide>
           );
         },

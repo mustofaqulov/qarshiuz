@@ -23,3 +23,37 @@
     height: 600px;
   }
 }
+
+@media only screen and (width <= 1023px) {
+  .promo-slide {
+    height: 360px;
+    border-radius: 0;
+
+    .slider-color {
+      height: 360px;
+      border-radius: 24px;
+    }
+
+    img {
+      height: 360px;
+      border-radius: 24px;
+    }
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .promo-slide {
+    height: 260px;
+    border-radius: 0;
+
+    .slider-color {
+      height: 260px;
+      border-radius: 14px;
+    }
+
+    img {
+      height: 260px;
+      border-radius: 14px;
+    }
+  }
+}

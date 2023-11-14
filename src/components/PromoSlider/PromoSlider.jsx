@@ -24,17 +24,18 @@ export function PromoSlider() {
         centeredSlides
         loop
         speed={1000}
-        pagination={{
-          clickable: true,
-        }}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
         breakpoints={{
+          200: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+          },
           768: {
             slidesPerView: 1.2,
-            spaceBetween: 30,
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 1,

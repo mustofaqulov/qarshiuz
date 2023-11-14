@@ -9,6 +9,7 @@ import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
 import { recommendationCardData } from '../../../utils';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
+import { Link } from 'react-router-dom';
 
 export function RecommendationSlider() {
   return (
@@ -41,11 +42,13 @@ export function RecommendationSlider() {
         ({ id, title, location, cardImg }) => {
           return (
             <SwiperSlide key={id}>
-              <CategoryCard
-                title={title}
-                location={location}
-                cardImg={cardImg}
-              />
+              <Link to="/category">
+                <CategoryCard
+                  title={title}
+                  location={location}
+                  cardImg={cardImg}
+                />
+              </Link>
             </SwiperSlide>
           );
         },

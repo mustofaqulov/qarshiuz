@@ -44,13 +44,15 @@ export function EventsSlider() {
         }) => {
           return (
             <SwiperSlide key={id}>
-              <EventsCard
-                status={status}
-                date={date}
-                title={title}
-                location={location}
-                cardImg={cardImg}
-              />
+              <Link to="/events">
+                <EventsCard
+                  status={status}
+                  date={date}
+                  title={title}
+                  location={location}
+                  cardImg={cardImg}
+                />
+              </Link>
             </SwiperSlide>
           );
         },

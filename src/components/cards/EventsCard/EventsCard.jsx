@@ -13,8 +13,7 @@ export function EventsCard({
   location,
 }) {
   return (
-    <Link
-      to="/events"
+    <div
       className={classNames(style['events-card'])}
     >
       <div
@@ -59,13 +58,11 @@ export function EventsCard({
               <LocationIcon />
               <span>{location}</span>
             </div>
-            <Link to="/events">
-              <SideArrowIcon />
-            </Link>
+            <SideArrowIcon />
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 
