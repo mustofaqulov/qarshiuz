@@ -19,6 +19,7 @@ module.exports = {
     'no-var': 'error',
     'prefer-const': 'warn',
     'import/prefer-default-export': 'off',
+    'import/no-unresolved': 'off',
     'react/button-has-type': 'off',
     'react-refresh/only-export-components': [
       'warn',
