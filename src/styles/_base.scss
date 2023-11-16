@@ -74,7 +74,7 @@ button {
   --fw-medium: 500;
   --fw-normal: 400;
 
-  @media only screen and(max-width: 834px) {
+  @media only screen and (width <= 834px) {
     --heading-2xl: 3rem;
     --heading-xl: 2.25rem;
     --heading-lg: 2rem;
@@ -86,7 +86,7 @@ button {
     --bottom-lg: 0.875rem;
   }
 
-  @media only screen and(max-width: 735px) {
+  @media only screen and (width <= 735px) {
     --heading-2xl: 2rem;
     --heading-xl: 1.5rem;
     --paragraph-2xl: 1.5rem;
