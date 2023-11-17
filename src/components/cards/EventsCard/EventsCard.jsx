@@ -73,7 +73,7 @@ EventsCard.defaultProps = {
   title: '',
   location: '',
 };
-EventsCard.propType = {
+EventsCard.propTypes = {
   cardImg: PropTypes.string,
   status: PropTypes.string,
   date: PropTypes.string,
