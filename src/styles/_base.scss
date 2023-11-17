@@ -1,5 +1,5 @@
 body {
-  font-family: var(--ff-gilroy);
+   font-family: var(--ff-gilroy);
 }
 
 h1,
@@ -8,88 +8,88 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--ff-red-hat);
+   font-family: var(--ff-red-hat);
 }
 
 li,
 a,
 button {
-  text-transform: uppercase;
+   text-transform: uppercase;
 }
 
 a {
-  color: inherit;
-  outline: none;
+   color: inherit;
+   outline: none;
 }
 
 input,
 button,
 textarea {
-  font-family: inherit;
+   font-family: inherit;
 }
 
 button {
-  cursor: pointer;
+   cursor: pointer;
 }
 
 :root {
-  /* ========== Colors ========== */
-  --bg-body: #fff;
-  --primary-black: #000;
-  --clr-primary-dk: #000;
-  --clr-primary-lt: #fff;
-  --clr-gray-dark: #626262;
-  --clr-gray-lt: #a9a9a9;
-  --clr-gray-ltr: #cacaca;
-  --clr-gray-ltst: #f3f3f3;
-  --silver: #bfbfbf;
+   /* ========== Colors ========== */
+   --bg-body: #fff;
+   --primary-black: #000;
+   --clr-primary-dk: #000;
+   --clr-primary-lt: #fff;
+   --clr-gray-dark: #626262;
+   --clr-gray-lt: #a9a9a9;
+   --clr-gray-ltr: #cacaca;
+   --clr-gray-ltst: #f3f3f3;
+   --silver: #bfbfbf;
 
-  /* ==========Font========== */
+   /* ==========Font========== */
 
-  --ff-red-hat: 'Red Hat Display', sans-serif;
-  --ff-gilroy: 'Gilroy', sans-serif;
+   --ff-red-hat: 'Red Hat Display', sans-serif;
+   --ff-gilroy: 'Gilroy', sans-serif;
 
-  /* ==========Size========== */
+   /* ==========Size========== */
 
-  --heading-2xl: 6rem;
-  --heading-xl: 4rem;
-  --heading-lg: 2rem;
-  --heading-md: 1.5rem;
-  --paragraph-2xl: 2rem;
-  --paragraph-xl: 1.25rem;
-  --paragraph-md: 1rem;
-  --paragraph-lg: 0.875rem;
-  --bottom-xl: 1.5rem;
-  --bottom-lg: 1.125rem;
-  --bottom-md: 1rem;
-  --bottom-sm: 0.875rem;
+   --heading-2xl: 6rem;
+   --heading-xl: 4rem;
+   --heading-lg: 2rem;
+   --heading-md: 1.5rem;
+   --paragraph-2xl: 2rem;
+   --paragraph-xl: 1.25rem;
+   --paragraph-md: 1rem;
+   --paragraph-lg: 0.875rem;
+   --bottom-xl: 1.5rem;
+   --bottom-lg: 1.125rem;
+   --bottom-md: 1rem;
+   --bottom-sm: 0.875rem;
 
-  /* ==========Weight========== */
-  --fw-bold: 700;
-  --fw-semi-bold: 600;
-  --fw-medium: 500;
-  --fw-normal: 400;
+   /* ==========Weight========== */
+   --fw-bold: 700;
+   --fw-semi-bold: 600;
+   --fw-medium: 500;
+   --fw-normal: 400;
 
-  @media only screen and(max-width: 834px) {
-    --heading-2xl: 3rem;
-    --heading-xl: 2.25rem;
-    --heading-lg: 2rem;
-    --paragraph-2xl: 1.5rem;
-    --paragraph-xl: 1.25rem;
-    --paragraph-lg: 1rem;
-    --paragraph-md: 0.875rem;
-    --bottom-xl: 1rem;
-    --bottom-lg: 0.875rem;
-  }
+   @media only screen and (max-width <=834px) {
+      --heading-2xl: 3rem;
+      --heading-xl: 2.25rem;
+      --heading-lg: 2rem;
+      --paragraph-2xl: 1.5rem;
+      --paragraph-xl: 1.25rem;
+      --paragraph-lg: 1rem;
+      --paragraph-md: 0.875rem;
+      --bottom-xl: 1rem;
+      --bottom-lg: 0.875rem;
+   }
 
-  @media only screen and(max-width: 735px) {
-    --heading-2xl: 2rem;
-    --heading-xl: 1.5rem;
-    --paragraph-2xl: 1.5rem;
-    --paragraph-xl: 1.25rem;
-    --paragraph-lg: 1rem;
-    --paragraph-md: 0.875rem;
-    --bottom-xl: 1rem;
-    --bottom-lg: 0.875rem;
-  }
+   @media only screen and (max-width <=735px) {
+      --heading-2xl: 2rem;
+      --heading-xl: 1.5rem;
+      --paragraph-2xl: 1.5rem;
+      --paragraph-xl: 1.25rem;
+      --paragraph-lg: 1rem;
+      --paragraph-md: 0.875rem;
+      --bottom-xl: 1rem;
+      --bottom-lg: 0.875rem;
+   }
 }
