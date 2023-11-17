@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { Autoplay } from 'swiper/modules';
 import {
@@ -9,7 +10,6 @@ import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
 import { recommendationCardData } from '../../../utils';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
-import { Link } from 'react-router-dom';
 
 export function RecommendationSlider() {
   return (
@@ -23,7 +23,7 @@ export function RecommendationSlider() {
       }}
       breakpoints={{
         0: {
-          slidesPerView: 1,
+          slidesPerView: 1.3,
         },
         768: {
           slidesPerView: 2,
