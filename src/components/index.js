@@ -1,12 +1,14 @@
 export { Button } from './Button/Button';
 export { CategoryCard } from './Cards/CategoryCard/CategoryCard';
 export { EventsSlider } from './Sliders/EventsSlider/EventsSlider';
+export { EventsCard } from './Cards/EventsCard/EventsCard';
 export { Footer } from './Footer/Footer';
-export { Input } from './Input/Input';
-export { Navbar } from './Navbar/Navbar';
+export { Header } from './Header/Header';
+export { MiniCategory } from './Cards/MiniCategory/MiniCategory';
 export { NewsSlider } from './Sliders/NewsSlider/NewsSlider';
 export { Pagination } from './Pagination/Pagination';
 export { PromoSlider } from './PromoSlider/PromoSlider';
 export { RecommendationSlider } from './Sliders/RecommendationSlider/RecSlider';
 export { Select } from './Select/Select';
 export { sliderData } from './Sliders/SliderData';
+export { SearchInput } from './Inputs/SearchInput/SearchInput';

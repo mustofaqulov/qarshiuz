@@ -20,10 +20,15 @@ const linksData = [
 export function Header() {
   const [menu, setMenu] = useState(false);
 
+  const navClasess = classNames(
+    style['nav-container'],
+    menu ? style['nav-close'] : style.nav,
+  );
   const setActive = ({ isActive }) =>
     isActive
       ? style.active
       : style['nav-list_link'];
+
   useEffect(() => {
     document.body.style.overflow = menu
       ? 'hidden'
@@ -31,41 +36,6 @@ export function Header() {
   }, [menu]);
   return (
     <header className={style.header}>
-      {menu && (
-        <div
-          className={classNames(
-            style['nav-menu'],
-          )}
-        >
-          <button
-            onClick={() => setMenu(false)}
-            className={classNames(style.btn)}
-          >
-            <CloseHamburger />
-          </button>
-          <ul className={style['nav-list']}>
-            {linksData.map(
-              ({ id, text, link }) => {
-                return (
-                  <li key={id}>
-                    <NavLink
-                      to={link}
-                      className={setActive}
-                    >
-                      {text}
-                    </NavLink>
-                  </li>
-                );
-              },
-            )}
-          </ul>
-          <Button
-            btnClass="primary"
-            title="Add new"
-            icon={<AddIcon />}
-          />
-        </div>
-      )}
       <div
         className={classNames(
           'container',
@@ -78,14 +48,26 @@ export function Header() {
           <button
             onClick={setMenu.bind(null, !menu)}
           >
-            <Hamburger />
+            <Hamburger
+              onClick={() => setMenu(true)}
+            />
           </button>
         </div>
+
         <Link to="/">
           <Logo />
         </Link>
-        <nav className={style.nav}>
-          <ul className={style['nav-list']}>
+
+        <nav className={classNames(navClasess)}>
+          <CloseHamburger
+            className={style['nav-close-icon']}
+            onClick={() => setMenu(false)}
+          />
+          <ul
+            className={classNames(
+              style['nav-list'],
+            )}
+          >
             {linksData.map(
               ({ id, text, link }) => {
                 return (
@@ -101,16 +83,32 @@ export function Header() {
               },
             )}
           </ul>
-        </nav>
-        <div className={style['header-btn']}>
           <Button
             btnClass="primary"
             title="Add new"
             icon={<AddIcon />}
           />
+          <div
+            className={classNames(
+              style['header-language'],
+            )}
+          >
+            <LanguageTab />
+          </div>
+        </nav>
+        <div className={style['header-btn']}>
           <LanguageTab />
         </div>
       </div>
+
+      {menu && (
+        <div
+          onClick={setMenu.bind(null, false)}
+          className={classNames(
+            style['header-background'],
+          )}
+        />
+      )}
     </header>
   );
 }

@@ -2,7 +2,7 @@
   width: 100%;
   padding-top: 96px;
 
-  .category-info {
+  .category-title {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -39,18 +39,20 @@
     .filter-button {
       display: flex;
       align-items: center;
+      justify-content: center;
+      padding: 13px 26px;
       border: 1px solid var(--clr-primary-dk);
       border-radius: 30px;
       column-gap: 16px;
     }
   }
 
-  .category-fiter-btn {
-    .btns {
-      display: flex;
-      padding-top: 16px;
-      column-gap: 16px;
-    }
+  .btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 16px;
+    gap: 16px;
   }
 
   .wrapper {
@@ -96,7 +98,10 @@
 
     .cards {
       display: flex;
+      width: 100%;
       flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 24px;
       gap: 48px 30px;
     }
   }

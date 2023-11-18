@@ -3,33 +3,6 @@
 .header {
   padding: 25px 0;
 
-  .nav-menu {
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: start;
-    padding: 24px 116px 0 60px;
-    background-color: #fff;
-    row-gap: 40px;
-
-    .btn {
-      padding: 0;
-      border: 0;
-      background-color: transparent;
-    }
-
-    ul {
-      display: flex;
-      height: 196px;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 24px;
-    }
-  }
-
   .header-container {
     position: relative;
     display: flex;
@@ -46,8 +19,20 @@
       }
     }
 
-    .nav {
+    .nav-close-icon {
+      display: none;
+    }
+
+    .nav-container {
+      display: flex;
       flex-grow: 1;
+      justify-content: end;
+    }
+
+    .nav {
+      display: flex;
+      flex-grow: 1;
+      justify-content: end;
 
       &-list {
         display: flex;
@@ -67,11 +52,6 @@
           font-weight: var(--fw-normal);
           outline: none;
           transition: all 0.2s ease;
-
-          &:hover {
-            border: 1px solid var(--clr-gray-ltr);
-            border-radius: 36px;
-          }
         }
       }
     }
@@ -83,8 +63,15 @@
   }
 }
 
-.curing {
-  overflow-y: hidden;
+.header-background {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  display: none;
+  background: rgba(13, 13, 13, 0.7);
 }
 
 .active {
@@ -93,7 +80,30 @@
   border-radius: 36px;
 }
 
+.header-language {
+  display: none;
+}
+
 @media screen and (width <= 1194px) {
+  .header-background {
+    display: block;
+  }
+
+  .active {
+    padding: 0 0 0 3px;
+    border: 0;
+    border-radius: 0;
+    border-left: 4px solid black;
+  }
+
+  .nav-close-icon {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
   .header {
     .header-container {
       display: flex;
@@ -104,13 +114,62 @@
         display: block;
       }
 
-      .nav {
+      .nav-container {
         display: none;
+        justify-content: start;
       }
 
-      .header-btn > button {
-        display: none;
+      .nav-close {
+        position: relative, absolute;
+        z-index: 99999;
+        top: -25px;
+        width: 100%;
+        left: 0;
+        max-width: 308px;
+        background: #fff;
+        user-select: none;
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        padding: 24px 22px 0 60px;
+        gap: 40px;
+
+        svg {
+          display: block;
+          cursor: pointer;
+        }
+
+        button {
+          display: flex;
+        }
+
+        .nav-list {
+          flex-direction: column;
+          align-items: start;
+          gap: 24px;
+
+          &_link {
+            padding: 0;
+          }
+        }
       }
     }
+  }
+}
+
+@media screen and (width <= 550px) {
+  .header .header-container {
+    .header-btn {
+      display: none;
+    }
+
+    .nav-close {
+      max-width: 198px;
+      padding-left: 24px;
+    }
+  }
+
+  .header-language {
+    display: block;
   }
 }

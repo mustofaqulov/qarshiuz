@@ -82,47 +82,48 @@ export function Footer() {
             <h3>
               Navigation <Arrow />
             </h3>
-            <ul>
-              <li>
-                <NavLink to="">Catalog</NavLink>
-              </li>
-              <li>
-                <NavLink to="">About Us</NavLink>
-              </li>
-              <li>
-                <NavLink to="">Events</NavLink>
-              </li>
-            </ul>
 
-            <ul>
-              <li>
-                <NavLink to="">Local new</NavLink>
-              </li>
-              <li>
-                <NavLink to="">
-                  Children&apos;s park
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="">
-                  Concert hall
-                </NavLink>
-              </li>
-            </ul>
-
-            <ul>
-              <li>
-                <NavLink to="">Library</NavLink>
-              </li>
-              <li>
-                <NavLink to="">
-                  Nightclubs
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="">Zoo</NavLink>
-              </li>
-            </ul>
+            <span>
+              <ul>
+                <li>
+                  <NavLink to="">Catalog</NavLink>
+                </li>
+                <li>
+                  <NavLink to="">
+                    About Us
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="">Events</NavLink>
+                </li>
+                <li>
+                  <NavLink to="">
+                    Local new
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="">
+                    Children&apos;s park
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="">
+                    Concert hall
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="">Library</NavLink>
+                </li>
+                <li>
+                  <NavLink to="">
+                    Nightclubs
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="">Zoo</NavLink>
+                </li>
+              </ul>
+            </span>
           </div>
           <div
             className={classNames([

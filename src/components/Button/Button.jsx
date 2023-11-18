@@ -15,6 +15,7 @@ export function Button({
     [style.sm]: btnClass === 'sm',
     [style['circle-btn']]:
       btnClass === 'circle-btn',
+    [style.close]: btnClass === 'close',
   });
 
   return (
@@ -27,7 +28,6 @@ export function Button({
     </button>
   );
 }
-
 Button.defaultProps = {
   btnClass: '',
   icon: null,
@@ -42,6 +42,8 @@ Button.propTypes = {
     'primary',
     'secondary',
     'circle-btn',
+    'sm',
+    'close',
   ]),
   icon: PropTypes.node,
   title: PropTypes.string,
