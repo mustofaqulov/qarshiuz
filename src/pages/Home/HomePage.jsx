@@ -14,7 +14,7 @@ import SelectIcon from '../../assets/icons/angle-down.svg';
 
 export function HomePage() {
   return (
-    <main
+    <div
       className={classNames(style['home-page'])}
     >
       <section
@@ -118,6 +118,6 @@ export function HomePage() {
           </section>
         );
       })}
-    </main>
+    </div>
   );
 }
