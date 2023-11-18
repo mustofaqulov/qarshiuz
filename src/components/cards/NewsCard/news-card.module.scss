@@ -1,5 +1,3 @@
-@import '../../../styles/style';
-
 .news-card {
   display: flex;
   width: 100%;
@@ -9,6 +7,7 @@
   row-gap: 24px;
 
   .card-img {
+    position: relative;
     overflow: hidden;
     width: 100%;
     border-radius: 16px;
@@ -29,6 +28,8 @@
     img {
       width: 100%;
       height: 260px;
+      object-fit: cover;
+      object-position: center center;
     }
   }
 
@@ -47,7 +48,7 @@
         font-size: var(--bottom-md);
         font-weight: var(--fw-medium);
         line-height: 24px;
-        text-transform: lowercase;
+        text-transform: capitalize;
       }
 
       .news-about {
@@ -96,5 +97,37 @@
   &:hover img {
     transform: scale(1.15);
     transition: 2s;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .news-card {
+    row-gap: 16px;
+
+    .card-img {
+      .card-color {
+        height: 230px;
+      }
+
+      img {
+        height: 230px;
+      }
+    }
+
+    .card-info {
+      row-gap: 16px;
+
+      .news-info {
+        row-gap: 8px;
+
+        .news-about {
+          row-gap: 16px;
+
+          h5 {
+            letter-spacing: -0.1px;
+          }
+        }
+      }
+    }
   }
 }

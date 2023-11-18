@@ -33,30 +33,15 @@ export function EventsSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      {eventsCardData.map(
-        ({
-          id,
-          status,
-          date,
-          title,
-          location,
-          cardImg,
-        }) => {
-          return (
-            <SwiperSlide key={id}>
-              <Link to="/events">
-                <EventsCard
-                  status={status}
-                  date={date}
-                  title={title}
-                  location={location}
-                  cardImg={cardImg}
-                />
-              </Link>
-            </SwiperSlide>
-          );
-        },
-      )}
+      {eventsCardData.map((cardInfo) => {
+        return (
+          <SwiperSlide key={cardInfo.id}>
+            <Link to="/events">
+              <EventsCard cardInfo={cardInfo} />
+            </Link>
+          </SwiperSlide>
+        );
+      })}
       <div className={classNames(style.buttons)}>
         <Link to="/events">
           <Button

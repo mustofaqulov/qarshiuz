@@ -36,6 +36,7 @@
     }
 
     h1 {
+      max-width: 1025px;
       font-family: var(--ff-red-hat);
       font-size: var(--heading-2xl);
       font-weight: var(--fw-medium);
@@ -52,13 +53,15 @@
     p {
       max-width: 537px;
       font-family: var(--ff-gilroy);
-      font-size: var(--bottom-md);
+      font-size: var(--paragraph-md);
       font-weight: var(--fw-medium);
+      line-height: 24px;
     }
 
     .promo-search {
       display: flex;
-      width: 540px;
+      width: 100%;
+      max-width: 540px;
       flex-direction: column;
       row-gap: 16px;
 
@@ -77,9 +80,15 @@
       }
 
       .promo-category {
-        display: flex;
-        align-items: center;
-        column-gap: 16px;
+        .desktop-btn {
+          display: flex;
+          align-items: center;
+          column-gap: 16px;
+        }
+
+        .mobile-btn {
+          display: none;
+        }
       }
     }
   }
@@ -112,6 +121,7 @@
       row-gap: 10px;
 
       h1 {
+        max-width: 538px;
         letter-spacing: 0.48px;
       }
     }
@@ -144,6 +154,81 @@
     h3 {
       font-size: var(--heading-lg);
       letter-spacing: 0.32px;
+    }
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .home-page {
+    padding: 48px 0 80px;
+    row-gap: 80px;
+  }
+
+  .promo-section {
+    row-gap: 36px;
+
+    .region-name {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 9px;
+
+      .regions {
+        justify-content: flex-start;
+        column-gap: 6px;
+
+        strong {
+          font-size: var(--paragraph-md);
+        }
+
+        svg {
+          width: 16px;
+        }
+      }
+
+      h1 {
+        max-width: 400px;
+        font-family: var(--ff-red-hat);
+        font-size: var(--heading-2xl);
+        letter-spacing: 0.32px;
+      }
+    }
+
+    .promo-about {
+      justify-content: flex-start;
+      flex-direction: column;
+      row-gap: 32px;
+
+      .promo-search {
+        row-gap: 12px;
+
+        .input-button {
+          button {
+            display: none;
+          }
+        }
+
+        .promo-category {
+          .desktop-btn {
+            display: none;
+          }
+
+          .mobile-btn {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .slider-section {
+    row-gap: 32px;
+
+    h3 {
+      font-size: var(--heading-xl);
+      letter-spacing: 0.24px;
     }
   }
 }

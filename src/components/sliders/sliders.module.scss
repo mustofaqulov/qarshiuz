@@ -26,3 +26,9 @@
     row-gap: 32px;
   }
 }
+
+@media only screen and (width <= 767px) {
+  .slider-btn {
+    display: none;
+  }
+}

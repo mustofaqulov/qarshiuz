@@ -10,7 +10,7 @@ import { NewsCard } from '../../Cards/NewsCard/NewsCard';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
-import { newsCardData } from '../../../utils';
+import { newsCardData } from '../../../utils/mock';
 
 export function NewsSlider() {
   return (
@@ -33,28 +33,15 @@ export function NewsSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      {newsCardData.map(
-        ({
-          id,
-          status,
-          title,
-          description,
-          newsImg,
-        }) => {
-          return (
-            <SwiperSlide key={id}>
-              <Link to="/news">
-                <NewsCard
-                  status={status}
-                  title={title}
-                  description={description}
-                  cardImg={newsImg}
-                />
-              </Link>
-            </SwiperSlide>
-          );
-        },
-      )}
+      {newsCardData.map((cardInfo) => {
+        return (
+          <SwiperSlide key={cardInfo.id}>
+            <Link to="/news">
+              <NewsCard cardInfo={cardInfo} />
+            </Link>
+          </SwiperSlide>
+        );
+      })}
       <div className={classNames(style.buttons)}>
         <Link to="/news">
           <Button

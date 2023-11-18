@@ -1,15 +1,11 @@
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './category-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
-export function CategoryCard({
-  cardImg,
-  title,
-  location,
-}) {
+export function CategoryCard({ cardInfo }) {
+  const { title, location, cardImg } = cardInfo;
   return (
     <div
       className={classNames(
@@ -60,9 +56,7 @@ export function CategoryCard({
             <LocationIcon />
             <span>{location}</span>
           </div>
-          <Link to="/category">
-            <SideArrowIcon />
-          </Link>
+          <SideArrowIcon />
         </div>
       </div>
     </div>
@@ -70,12 +64,12 @@ export function CategoryCard({
 }
 
 CategoryCard.defaultProps = {
-  cardImg: '',
-  title: '',
-  location: '',
+  cardInfo: null,
 };
-CategoryCard.propType = {
-  cardImg: PropTypes.string,
-  title: PropTypes.string,
-  location: PropTypes.string,
+CategoryCard.propTypes = {
+  cardInfo: PropTypes.shape({
+    title: PropTypes.string,
+    location: PropTypes.string,
+    cardImg: PropTypes.string,
+  }),
 };

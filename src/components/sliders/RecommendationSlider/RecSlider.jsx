@@ -7,7 +7,7 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
-import { recommendationCardData } from '../../../utils';
+import { recommendationCardData } from '../../../utils/mock';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
 
@@ -38,21 +38,15 @@ export function RecommendationSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      {recommendationCardData.map(
-        ({ id, title, location, cardImg }) => {
-          return (
-            <SwiperSlide key={id}>
-              <Link to="/category">
-                <CategoryCard
-                  title={title}
-                  location={location}
-                  cardImg={cardImg}
-                />
-              </Link>
-            </SwiperSlide>
-          );
-        },
-      )}
+      {recommendationCardData.map((cardInfo) => {
+        return (
+          <SwiperSlide key={cardInfo.id}>
+            <Link to="/category">
+              <CategoryCard cardInfo={cardInfo} />
+            </Link>
+          </SwiperSlide>
+        );
+      })}
       <div
         className={classNames(
           style['btn-slider'],

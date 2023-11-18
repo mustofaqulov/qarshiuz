@@ -6,13 +6,14 @@
   row-gap: 24px;
 
   .card-img {
+    position: relative;
     overflow: hidden;
     width: 100%;
     border-radius: 16px;
 
     .card-color {
       position: absolute;
-      z-index: 50;
+      z-index: 1;
       width: 100%;
       height: 260px;
       border-radius: 16px;
@@ -26,6 +27,8 @@
     img {
       width: 100%;
       height: 260px;
+      object-fit: cover;
+      object-position: center center;
     }
   }
 
@@ -41,10 +44,10 @@
 
       span {
         color: var(--clr-gray-lt);
-        font-size: var(--bottom-md);
+        font-size: var(--bottom-lg);
         font-weight: var(--fw-medium);
         line-height: 24px;
-        text-transform: none;
+        text-transform: capitalize;
       }
     }
 
@@ -85,5 +88,49 @@
   &:hover img {
     transform: scale(1.15);
     transition: 2s;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .events-card {
+    row-gap: 16px;
+
+    .card-img {
+      .card-color {
+        height: 230px;
+      }
+
+      img {
+        height: 230px;
+      }
+    }
+
+    .event-info {
+      row-gap: 18px;
+
+      .event-date {
+        span {
+          line-height: normal;
+        }
+      }
+
+      .event-about {
+        row-gap: 8px;
+
+        h5 {
+          letter-spacing: 0.2px;
+        }
+
+        .event-location {
+          .location-info {
+            column-gap: 6px;
+
+            span {
+              line-height: 18px;
+            }
+          }
+        }
+      }
+    }
   }
 }

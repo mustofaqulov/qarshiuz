@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import classNames from 'classnames';
 import style from './promo-slider.module.scss';
-import { promoSliderData } from '../../utils';
+import { promoSliderData } from '../../utils/mock';
 
 export function PromoSlider() {
   return (

@@ -10,10 +10,14 @@ import style from './pagination.module.scss';
 import PrevBtnIcon from '../../assets/icons/carousel-left-icon.svg';
 import NextBtnIcon from '../../assets/icons/carousel-right-icon.svg';
 import { Skeleton } from '../Skeleton/Skeleton';
-// import { eventsCardData } from '../../utils/mock/events-card.mock';
 
-export function Pagination({ component }) {
-  const [cardData, setCardData] = useState(null);
+export function Pagination({
+  component,
+  componentData,
+}) {
+  const [cardData, setCardData] = useState(
+    componentData,
+  );
   const [pageNumber, setPageNumber] = useState(0);
   const [isLoading, setIsLoading] =
     useState(true);
@@ -29,19 +33,8 @@ export function Pagination({ component }) {
 
   const displayUsers = cardData?.map(
     (cardInfo) => {
-      const {
-        status,
-        date,
-        title,
-        location,
-        cardImg,
-      } = cardInfo;
       return cloneElement(component, {
-        status,
-        date,
-        title,
-        location,
-        cardImg,
+        cardInfo,
       });
     },
   );
@@ -60,7 +53,7 @@ export function Pagination({ component }) {
           style['users-content'],
         )}
       >
-        {isLoading ? <Skeleton /> : displayUsers}
+        {displayUsers}
       </div>
       <ReactPaginate
         breakLabel="..."
