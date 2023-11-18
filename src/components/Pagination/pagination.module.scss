@@ -10,7 +10,10 @@
     width: 100%;
     justify-content: space-between;
     gap: 48px 30px;
-    grid-template-columns: repeat( auto-fit, minmax(327px, 1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(327px, 1fr)
+    );
   }
 
   .pagination-btn {
