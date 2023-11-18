@@ -6,11 +6,11 @@
   row-gap: 64px;
 
   .users-content {
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
     justify-content: space-between;
     gap: 48px 30px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .pagination-btn {
@@ -79,8 +79,8 @@
     row-gap: 48px;
 
     .users-content {
-      grid-template-columns: 1fr;
       gap: 24px 0;
+      grid-template-columns: 1fr;
     }
   }
 }
