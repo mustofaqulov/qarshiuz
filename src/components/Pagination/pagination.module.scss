@@ -10,7 +10,7 @@
     width: 100%;
     justify-content: space-between;
     gap: 48px 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(327px, 1fr));
   }
 
   .pagination-btn {
@@ -62,25 +62,6 @@
           }
         }
       }
-    }
-  }
-}
-
-@media only screen and (width <= 1023px) {
-  .pagination {
-    .users-content {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-}
-
-@media only screen and (width <= 767px) {
-  .pagination {
-    row-gap: 48px;
-
-    .users-content {
-      gap: 24px 0;
-      grid-template-columns: 1fr;
     }
   }
 }
