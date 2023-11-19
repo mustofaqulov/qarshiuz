@@ -98,13 +98,13 @@
               &::after {
                 position: absolute;
                 bottom: -1px;
-                content: '';
                 left: 0;
                 width: 0%;
                 height: 1px;
                 background-color: var(
                   --clr-primary-lt
                 );
+                content: '';
                 transition: 0.3s;
               }
             }
