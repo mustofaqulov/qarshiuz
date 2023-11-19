@@ -7,13 +7,13 @@ import {
   MiniCategory,
   sliderData,
 } from '../../components';
-import { smallBtnData } from '../../utils';
 import style from './home-page.module.scss';
 import SelectIcon from '../../assets/icons/angle-down.svg';
+import { smallBtnData } from '../../utils';
 
 export function HomePage() {
   return (
-    <main
+    <div
       className={classNames(style['home-page'])}
     >
       <section
@@ -26,7 +26,6 @@ export function HomePage() {
             style['region-name'],
           )}
         >
-          {/* <Select /> */}
           <div
             className={classNames(style.regions)}
           >
@@ -59,7 +58,7 @@ export function HomePage() {
                 style['input-button'],
               )}
             >
-              <SearchInput />
+              <SearchInput placeholder="Events" />
               <Button
                 btnClass="primary"
                 title="search"
@@ -77,6 +76,9 @@ export function HomePage() {
                       key={id}
                       btnClass="sm"
                       title={title}
+                      still={{
+                        padding: '6px 18px',
+                      }}
                     />
                   );
                 },
@@ -105,6 +107,6 @@ export function HomePage() {
           </section>
         );
       })}
-    </main>
+    </div>
   );
 }

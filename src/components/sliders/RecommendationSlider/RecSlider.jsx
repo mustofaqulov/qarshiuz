@@ -6,7 +6,7 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
-import { recommendationCardData } from '../../../utils';
+import { recommendationCardData } from '../../../utils/mock/recomendation.mock';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
 

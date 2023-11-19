@@ -6,8 +6,7 @@
 .footer {
   width: 100%;
   border-radius: 24px 24px 0 0;
-  margin-top: 128px;
-  background-color: var(--primary-black);
+  background-color: var(--clr-primary-dk);
 
   .footer-content {
     display: flex;
@@ -25,10 +24,9 @@
       flex-direction: column;
       row-gap: 88px;
 
-      span {
+      .content {
         display: flex;
         flex-direction: column;
-        align-items: start;
         row-gap: 25px;
 
         a {
@@ -73,15 +71,16 @@
         }
 
         ul {
-          display: flex;
+          display: grid;
           height: 120px;
-          flex-wrap: wrap;
-          gap: 96px var(--heading-md);
+          gap: var(--heading-md) 96px;
+          grid-template-columns: repeat(3, 1fr);
+
+          .hide {
+            display: none;
+          }
 
           li {
-            position: relative;
-            width: 100%;
-            max-width: 108px;
             color: var(--clr-primary-lt);
             cursor: pointer;
             font-family: var(--ff-gilroy);
@@ -89,27 +88,28 @@
             font-weight: var(--fw-medium);
             line-height: var(--heading-md);
             list-style: none;
-            transition: 0.3s;
 
             a {
+              position: relative;
               outline: none;
               text-transform: capitalize;
-            }
-
-            &::after {
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              width: 0%;
-              height: 1px;
-              background-color: var(
-                --clr-primary-lt
-              );
-              content: '';
               transition: 0.3s;
+
+              &::after {
+                position: absolute;
+                bottom: -1px;
+                content: '';
+                left: 0;
+                width: 0%;
+                height: 1px;
+                background-color: var(
+                  --clr-primary-lt
+                );
+                transition: 0.3s;
+              }
             }
 
-            &:hover {
+            &:hover a {
               &::after {
                 width: 100%;
               }
@@ -150,10 +150,10 @@
         .icons {
           display: flex;
           column-gap: var(--heading-md);
-          transition: 0.5s;
 
           svg {
             cursor: pointer;
+            transition: 0.3s;
 
             &:hover {
               transform: scale(1.2);
@@ -169,7 +169,7 @@
   .footer {
     .footer-content {
       flex-direction: column;
-      gap: 48px;
+      padding: 24px 60px 48px;
 
       .footer-info {
         flex-direction: row;
@@ -179,7 +179,7 @@
       .footer-links {
         width: 100%;
         max-width: 100%;
-        gap: 48px;
+        gap: 80px;
 
         .navigation {
           width: 100%;
@@ -190,21 +190,24 @@
   }
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 710px) {
   .footer {
     .footer-content {
       display: flex;
       align-items: center;
+      padding: 20px 24px;
 
       .logo {
         padding-bottom: 24px;
+        text-align: center;
       }
 
       .footer-info {
         flex-direction: column;
         gap: 0;
 
-        span {
+        .content {
+          display: flex;
           gap: 0;
         }
       }
@@ -212,9 +215,31 @@
       .footer-links {
         .navigation {
           flex-direction: column;
+          align-items: center;
+          gap: 50px;
+
+          ul {
+            width: 100%;
+            max-width: 300px;
+            height: 100%;
+            gap: 16px 63px;
+            grid-template-columns: repeat(2, 1fr);
+          }
 
           span {
             display: flex;
+          }
+        }
+
+        .services {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 37px;
+
+          .links {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
           }
         }
       }

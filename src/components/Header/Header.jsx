@@ -22,7 +22,7 @@ export function Header() {
 
   const navClasess = classNames(
     style['nav-container'],
-    menu ? style['nav-close'] : style.nav,
+    menu ? style['nav-menu'] : style.nav,
   );
   const setActive = ({ isActive }) =>
     isActive
@@ -49,7 +49,7 @@ export function Header() {
             onClick={setMenu.bind(null, !menu)}
           >
             <Hamburger
-              onClick={() => setMenu(true)}
+              onClick={() => setMenu(!menu)}
             />
           </button>
         </div>
@@ -61,7 +61,7 @@ export function Header() {
         <nav className={classNames(navClasess)}>
           <CloseHamburger
             className={style['nav-close-icon']}
-            onClick={() => setMenu(false)}
+            onClick={() => setMenu(!menu)}
           />
           <ul
             className={classNames(

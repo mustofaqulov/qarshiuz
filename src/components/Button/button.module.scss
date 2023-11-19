@@ -9,6 +9,7 @@ button {
   border: 0;
   font-family: var(--ff-gilroy);
   font-size: var(--paragraph-lg);
+  text-transform: uppercase;
 
   &:active {
     transform: scale(0.9);
@@ -16,7 +17,7 @@ button {
 }
 
 .primary {
-  padding: var(--paragraph-lg) 28px;
+  padding: 14px 24px;
   border-radius: 36px;
   background-color: var(--clr-primary-dk);
   color: var(--clr-primary-lt);
@@ -63,13 +64,14 @@ button {
 }
 
 .sm {
-  padding: 6px 18px;
+  padding: 10px 16px;
   border: 1px solid var(--clr-gray-ltr);
   border-radius: 30px;
   color: var(--clr-gray-ltr);
   font-family: var(--ff-gilroy);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
+  text-transform: capitalize;
   transition: 0.3s;
 
   &:hover {

@@ -11,6 +11,7 @@ import Telegram from '../../assets/icons/telegram-white.svg';
 import Vkontakte from '../../assets/icons/vkontakte-white.svg';
 import style from './footer.module.scss';
 import { routePaths } from '../../constants/routers';
+import { footerLinksData } from '../../utils/mock/footer-links.mock';
 
 export function Footer() {
   const { pathname } = useLocation();
@@ -33,7 +34,9 @@ export function Footer() {
             style['footer-info'],
           ])}
         >
-          <span>
+          <div
+            className={classNames(style.content)}
+          >
             <Link
               to="/home"
               className={classNames([style.logo])}
@@ -49,8 +52,10 @@ export function Footer() {
               © {new Date().getFullYear()}{' '}
               Qarshiuz. All rights reserved
             </p>
-          </span>
-          <span>
+          </div>
+          <div
+            className={classNames(style.content)}
+          >
             <p
               className={classNames([
                 style['phone-num'],
@@ -67,7 +72,7 @@ export function Footer() {
             >
               m. infoqarshi@gmail.com
             </p>
-          </span>
+          </div>
         </div>
         <div
           className={classNames([
@@ -85,43 +90,20 @@ export function Footer() {
 
             <span>
               <ul>
-                <li>
-                  <NavLink to="">Catalog</NavLink>
-                </li>
-                <li>
-                  <NavLink to="">
-                    About Us
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="">Events</NavLink>
-                </li>
-                <li>
-                  <NavLink to="">
-                    Local new
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="">
-                    Children&apos;s park
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="">
-                    Concert hall
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="">Library</NavLink>
-                </li>
-                <li>
-                  <NavLink to="">
-                    Nightclubs
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="">Zoo</NavLink>
-                </li>
+                {footerLinksData.map(
+                  ({ id, title, links }) => (
+                    <li
+                      className={classNames(
+                        style[links],
+                      )}
+                      key={id}
+                    >
+                      <NavLink to={title}>
+                        {title}
+                      </NavLink>
+                    </li>
+                  ),
+                )}
               </ul>
             </span>
           </div>

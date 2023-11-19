@@ -1,25 +1,19 @@
 body {
   font-family: var(--ff-gilroy);
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--ff-red-hat);
-}
-
-li,
-a,
-button {
-  text-transform: uppercase;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 a {
   color: inherit;
   outline: none;
+}
+
+main {
+  padding-top: 96px;
+  padding-bottom: 128px;
 }
 
 input,

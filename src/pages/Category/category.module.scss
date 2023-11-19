@@ -1,6 +1,5 @@
 .category {
   width: 100%;
-  padding-top: 96px;
 
   .category-title {
     display: flex;
@@ -85,7 +84,8 @@
         }
 
         span {
-          padding: 0 10px;
+          display: block;
+          padding: 5px 10px;
           border-radius: 33px;
           background: var(--clr-primary-dk);
           color: var(--clr-primary-lt);
@@ -100,7 +100,7 @@
       display: flex;
       width: 100%;
       flex-wrap: wrap;
-      justify-content: space-evenly;
+      justify-content: space-between;
       margin-top: 24px;
       gap: 48px 30px;
     }

@@ -5,12 +5,13 @@ import {
   SearchInput,
 } from '../../components';
 import { CategoryCard } from '../../components/Cards/CategoryCard/CategoryCard';
-import { recommendationCardData } from '../../utils';
+import { recommendationCardData } from '../../utils/mock/recomendation.mock';
 // import Sele
 import CategoryMenuIcon from '../../assets/icons/categorys-menu.svg';
 import ClouseIcon from '../../assets/icons/clouse-icon-white.svg';
 import FilterIcon from '../../assets/icons/filter-white.svg';
 import style from './category.module.scss';
+import { Pagination } from '../../components';
 
 const btnData = [
   {
@@ -90,6 +91,11 @@ export function CategoryPage() {
           title="Filter"
           btnClass="primary"
           icon={<FilterIcon />}
+          still={{
+            textTransform: 'Capitalize',
+            fontSize: '16px',
+            padding: '10px 16px',
+          }}
         />
         {btnData.map((btn) => (
           <Button
@@ -111,21 +117,9 @@ export function CategoryPage() {
           </div>
         </div>
         <div className={classNames(style.cards)}>
-          {recommendationCardData.map(
-            ({
-              id,
-              cardImg,
-              title,
-              location,
-            }) => (
-              <CategoryCard
-                key={id}
-                cardImg={cardImg}
-                title={title}
-                location={location}
-              />
-            ),
-          )}
+          <Pagination
+            component={<CategoryCard />}
+          />
         </div>
       </div>
     </div>

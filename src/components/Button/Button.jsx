@@ -8,6 +8,7 @@ export function Button({
   icon,
   title,
   onClick,
+  still,
 }) {
   const buttonClasses = classNames(style.btn, {
     [style.primary]: btnClass === 'primary',
@@ -23,6 +24,7 @@ export function Button({
       type={type}
       className={buttonClasses}
       onClick={onClick}
+      style={still}
     >
       {title} {icon}
     </button>
@@ -34,6 +36,7 @@ Button.defaultProps = {
   type: 'button',
   title: null,
   onClick: () => {},
+  still: {},
 };
 
 Button.propTypes = {
@@ -48,4 +51,5 @@ Button.propTypes = {
   icon: PropTypes.node,
   title: PropTypes.string,
   onClick: PropTypes.func,
+  still: PropTypes.object,
 };
