@@ -53,7 +53,7 @@ export function MiniCategory() {
       {cardsData.map(({ url, text }) => {
         return (
           <div
-            key={id}
+            key={text}
             className={style['cards-item']}
           >
             <div className={style['card-img']}>
@@ -72,7 +72,7 @@ export function MiniCategory() {
         <ul>
           {subList.map(({ text, path }) => {
             return (
-              <li key={id}>
+              <li key={path}>
                 <CornerLeft />
                 <Link to={path}>{text}</Link>
               </li>
