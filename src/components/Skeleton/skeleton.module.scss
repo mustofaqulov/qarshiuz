@@ -1,32 +1,36 @@
-.card-skeleton {
+.card-info {
   display: flex;
+  width: 100%;
   flex-direction: column;
   row-gap: 24px;
 
   .img-skeleton {
-    width: 420px;
-    height: 340px;
+    width: 100%;
+    max-width: 420px;
+    height: 300px;
     border-radius: 16px;
-    background: #ededed;
+    background: var(--bg-skeleton);
   }
 
-  .cards-info {
+  .card-about {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
 
     .title-skeleton {
-      width: 270px;
+      width: 100%;
+      max-width: 270px;
       height: 30px;
       border-radius: 10px;
-      background: #ededed;
+      background: var(--bg-skeleton);
     }
 
     .description-skeleton {
-      width: 420px;
+      width: 100%;
+      max-width: 420px;
       height: 72px;
       border-radius: 16px;
-      background: #ededed;
+      background: var(--bg-skeleton);
     }
   }
 
@@ -57,5 +61,47 @@
 
   100% {
     transform: translateX(100%);
+  }
+}
+
+@media only screen and (width <= 1023px) {
+  .card-skeleton {
+    .img-skeleton {
+      max-width: 340px;
+      height: 240px;
+    }
+
+    .cards-info {
+      .title-skeleton {
+        max-width: 240px;
+        height: 26px;
+      }
+
+      .description-skeleton {
+        max-width: 340px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .card-skeleton {
+    .img-skeleton {
+      max-width: 325px;
+      height: 220px;
+    }
+
+    .cards-info {
+      .title-skeleton {
+        max-width: 200px;
+        height: 20px;
+      }
+
+      .description-skeleton {
+        max-width: 325px;
+        height: 50px;
+      }
+    }
   }
 }

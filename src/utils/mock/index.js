@@ -3,3 +3,4 @@ export * from './promo-slider.mock';
 export * from './news-card.mock';
 export * from './small-btn.mock';
 export * from './events-card.mock';
+export * from './recomendation.mock';
