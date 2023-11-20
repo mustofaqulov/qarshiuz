@@ -5,7 +5,10 @@
 html,
 body {
   height: 100%;
-  font-family: var(--ff-gilroy);
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 .wrapper {
@@ -17,11 +20,28 @@ body {
 
 .main-content {
   flex: 1 1 auto;
+  padding-top: 96px;
+  padding-bottom: 128px;
 }
 
 .container {
   width: 100%;
   max-width: 1380px;
-  padding: 0 1.25rem;
+  padding-right: 20px;
+  padding-left: 20px;
   margin: 0 auto;
+}
+
+@media only screen and (width <= 1023px) {
+  .main-content {
+    padding-top: 64px;
+    padding-bottom: 120px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .main-content {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
 }

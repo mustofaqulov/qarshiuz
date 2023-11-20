@@ -1,18 +1,9 @@
 body {
   font-family: var(--ff-gilroy);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--ff-red-hat);
+  user-select: none;
 }
 
 li,
-a,
 button {
   text-transform: uppercase;
 }
@@ -39,6 +30,7 @@ button {
 :root {
   /* ========== Colors ========== */
   --bg-body: #fff;
+  --bg-skeleton: #ededed;
   --primary-black: #000;
   --clr-primary-dk: #000;
   --clr-primary-lt: #fff;
@@ -74,7 +66,7 @@ button {
   --fw-medium: 500;
   --fw-normal: 400;
 
-  @media only screen and(max-width: 834px) {
+  @media only screen and (width <= 1023px) {
     --heading-2xl: 3rem;
     --heading-xl: 2.25rem;
     --heading-lg: 2rem;
@@ -86,9 +78,10 @@ button {
     --bottom-lg: 0.875rem;
   }
 
-  @media only screen and(max-width: 735px) {
+  @media only screen and (width <= 767px) {
     --heading-2xl: 2rem;
     --heading-xl: 1.5rem;
+    --heading-md: 1.25rem;
     --paragraph-2xl: 1.5rem;
     --paragraph-xl: 1.25rem;
     --paragraph-lg: 1rem;
