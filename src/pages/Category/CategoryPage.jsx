@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import classNames from 'classnames';
-import {
-  Button,
-  SearchInput,
-} from '../../components';
 import { CategoryCard } from '../../components/Cards/CategoryCard/CategoryCard';
-import { recommendationCardData } from '../../utils/mock/recomendation.mock';
 // import Sele
 import CategoryMenuIcon from '../../assets/icons/categorys-menu.svg';
 import ClouseIcon from '../../assets/icons/clouse-icon-white.svg';
 import FilterIcon from '../../assets/icons/filter-white.svg';
 import style from './category.module.scss';
-import { Pagination } from '../../components';
+import {
+  Button,
+  Pagination,
+  SearchInput,
+} from '../../components';
 
 const btnData = [
   {

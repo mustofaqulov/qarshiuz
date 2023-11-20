@@ -6,10 +6,10 @@ import {
 import 'swiper/css';
 import style from '../sliders.module.scss';
 import { NewsCard } from '../../Cards/NewsCard/NewsCard';
-import { newsCardData } from '../../../utils';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
+import { newsCardData } from '../../../utils/mock';
 
 export function NewsSlider() {
   return (

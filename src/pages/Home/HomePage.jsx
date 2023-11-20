@@ -9,7 +9,7 @@ import {
 } from '../../components';
 import style from './home-page.module.scss';
 import SelectIcon from '../../assets/icons/angle-down.svg';
-import { smallBtnData } from '../../utils';
+import { smallBtnData } from '../../utils/mock';
 
 export function HomePage() {
   return (

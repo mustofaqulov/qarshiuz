@@ -64,6 +64,7 @@ button {
   --fw-medium: 500;
   --fw-normal: 400;
 
+  @media (width <=834px) {
   @media only screen and (width <= 834px) {
     --heading-2xl: 3rem;
     --heading-xl: 2.25rem;
@@ -86,4 +87,5 @@ button {
     --bottom-xl: 1rem;
     --bottom-lg: 0.875rem;
   }
+}
 }

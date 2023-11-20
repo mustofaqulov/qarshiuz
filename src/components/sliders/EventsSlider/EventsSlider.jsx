@@ -6,10 +6,10 @@ import 'swiper/css';
 import classNames from 'classnames';
 import style from '../sliders.module.scss';
 import { EventsCard } from '../../Cards/EventsCard/EventsCard';
-import { eventsCardData } from '../../../utils/mock/events-card.mock';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
+import { eventsCardData } from '../../../utils/mock';
 
 export function EventsSlider() {
   return (
