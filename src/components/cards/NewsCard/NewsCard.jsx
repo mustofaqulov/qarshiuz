@@ -3,12 +3,9 @@ import classNames from 'classnames';
 import style from './news-card.module.scss';
 import EyesBlackIcon from '../../../assets/icons/eye-black-icon.svg';
 
-export function NewsCard({
-  status,
-  title,
-  description,
-  cardImg,
-}) {
+export function NewsCard({ cardInfo }) {
+  const { status, title, description, newsImg } =
+    cardInfo;
   return (
     <div
       className={classNames(style['news-card'])}
@@ -21,7 +18,7 @@ export function NewsCard({
             style['card-color'],
           )}
         />
-        <img src={cardImg} alt="" />
+        <img src={newsImg} alt="" />
       </div>
       <div
         className={classNames(style['card-info'])}
@@ -62,14 +59,13 @@ export function NewsCard({
 }
 
 NewsCard.defaultProps = {
-  cardImg: '',
-  status: '',
-  description: '',
-  title: '',
+  cardInfo: null,
 };
-NewsCard.propType = {
-  cardImg: PropTypes.string,
-  status: PropTypes.string,
-  description: PropTypes.string,
-  title: PropTypes.string,
+NewsCard.propTypes = {
+  cardInfo: PropTypes.shape({
+    status: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    newsImg: PropTypes.string,
+  }),
 };

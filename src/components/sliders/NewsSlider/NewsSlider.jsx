@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import {
   Swiper,
@@ -9,6 +10,7 @@ import { NewsCard } from '../../Cards/NewsCard/NewsCard';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
+import { newsCardData } from '../../../utils/mock';
 
 export function NewsSlider() {
   return (
@@ -17,7 +19,7 @@ export function NewsSlider() {
       spaceBetween={30}
       breakpoints={{
         0: {
-          slidesPerView: 1,
+          slidesPerView: 1.3,
         },
         768: {
           slidesPerView: 2,
@@ -31,32 +33,23 @@ export function NewsSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      {newsCardData.map(
-        ({
-          id,
-          status,
-          title,
-          description,
-          newsImg,
-        }) => {
-          return (
-            <SwiperSlide key={id}>
-              <NewsCard
-                status={status}
-                title={title}
-                description={description}
-                cardImg={newsImg}
-              />
-            </SwiperSlide>
-          );
-        },
-      )}
+      {newsCardData.map((cardInfo) => {
+        return (
+          <SwiperSlide key={cardInfo.id}>
+            <Link to="/news">
+              <NewsCard cardInfo={cardInfo} />
+            </Link>
+          </SwiperSlide>
+        );
+      })}
       <div className={classNames(style.buttons)}>
-        <Button
-          title="view all news"
-          btnClass="secondary"
-          icon={<ArrowUpIcon />}
-        />
+        <Link to="/news">
+          <Button
+            title="view all news"
+            btnClass="secondary"
+            icon={<ArrowUpIcon />}
+          />
+        </Link>
         <SliderButtons />
       </div>
     </Swiper>

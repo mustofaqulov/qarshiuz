@@ -1,4 +1,4 @@
-export const newsSliderData = [
+export const newsCardData = [
   {
     id: 1,
     status: 'local',

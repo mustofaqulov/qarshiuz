@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import classNames from 'classnames';
 import style from './promo-slider.module.scss';
-import { promoSliderData } from '../../utils';
+import { promoSliderData } from '../../utils/mock';
 
 export function PromoSlider() {
   return (
@@ -24,17 +24,18 @@ export function PromoSlider() {
         centeredSlides
         loop
         speed={1000}
-        pagination={{
-          clickable: true,
-        }}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
         breakpoints={{
+          200: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+          },
           768: {
             slidesPerView: 1.2,
-            spaceBetween: 30,
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 1,
@@ -56,6 +57,11 @@ export function PromoSlider() {
           ({ sliderImg, id }) => {
             return (
               <SwiperSlide key={id}>
+                <div
+                  className={classNames(
+                    style['slider-color'],
+                  )}
+                />
                 <img src={sliderImg} alt="" />
               </SwiperSlide>
             );

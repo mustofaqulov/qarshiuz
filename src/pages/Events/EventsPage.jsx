@@ -4,7 +4,7 @@ import {
   Pagination,
   Select,
 } from '../../components';
-import style from './events.module.scss';
+import style from './events-page.module.scss';
 
 export function EventsPage() {
   return (

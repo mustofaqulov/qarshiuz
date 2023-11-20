@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { Autoplay } from 'swiper/modules';
 import {
@@ -6,7 +7,7 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
-import { recommendationCardData } from '../../../utils';
+import { recommendationCardData } from '../../../utils/mock';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
 
@@ -22,7 +23,7 @@ export function RecommendationSlider() {
       }}
       breakpoints={{
         0: {
-          slidesPerView: 1,
+          slidesPerView: 1.3,
         },
         768: {
           slidesPerView: 2,
@@ -37,19 +38,15 @@ export function RecommendationSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      {recommendationCardData.map(
-        ({ id, title, location, cardImg }) => {
-          return (
-            <SwiperSlide key={id}>
-              <CategoryCard
-                title={title}
-                location={location}
-                cardImg={cardImg}
-              />
-            </SwiperSlide>
-          );
-        },
-      )}
+      {recommendationCardData.map((cardInfo) => {
+        return (
+          <SwiperSlide key={cardInfo.id}>
+            <Link to="/category">
+              <CategoryCard cardInfo={cardInfo} />
+            </Link>
+          </SwiperSlide>
+        );
+      })}
       <div
         className={classNames(
           style['btn-slider'],

@@ -60,6 +60,12 @@ button {
   &:hover {
     background-color: var(--clr-primary-dk);
     color: var(--clr-primary-lt);
+
+    svg {
+      path {
+        fill: white;
+      }
+    }
   }
 }
 

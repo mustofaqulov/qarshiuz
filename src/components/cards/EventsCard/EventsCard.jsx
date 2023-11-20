@@ -1,17 +1,17 @@
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './events-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 
-export function EventsCard({
-  cardImg,
-  status,
-  date,
-  title,
-  location,
-}) {
+export function EventsCard({ cardInfo }) {
+  const {
+    status,
+    date,
+    title,
+    location,
+    cardImg,
+  } = cardInfo;
   return (
     <div
       className={classNames(style['events-card'])}
@@ -58,9 +58,7 @@ export function EventsCard({
               <LocationIcon />
               <span>{location}</span>
             </div>
-            <Link to="/events">
-              <SideArrowIcon />
-            </Link>
+            <SideArrowIcon />
           </div>
         </div>
       </div>
@@ -69,16 +67,14 @@ export function EventsCard({
 }
 
 EventsCard.defaultProps = {
-  cardImg: '',
-  status: '',
-  date: '',
-  title: '',
-  location: '',
+  cardInfo: null,
 };
 EventsCard.propTypes = {
-  cardImg: PropTypes.string,
-  status: PropTypes.string,
-  date: PropTypes.string,
-  title: PropTypes.string,
-  location: PropTypes.string,
+  cardInfo: PropTypes.shape({
+    status: PropTypes.string,
+    date: PropTypes.number,
+    title: PropTypes.string,
+    location: PropTypes.string,
+    cardImg: PropTypes.string,
+  }),
 };

@@ -6,14 +6,15 @@ import {
   Select,
   MiniCategory,
   sliderData,
+  PromoButtonsSlide,
 } from '../../components';
-import { smallBtnData } from '../../utils';
+import { smallBtnData } from '../../utils/mock';
 import style from './home-page.module.scss';
 import SelectIcon from '../../assets/icons/angle-down.svg';
 
 export function HomePage() {
   return (
-    <main
+    <div
       className={classNames(style['home-page'])}
     >
       <section
@@ -34,8 +35,7 @@ export function HomePage() {
             <SelectIcon />
           </div>
           <h1>
-            Information portal <br /> of Qarshi
-            city
+            Information portal of Qarshi city
           </h1>
         </div>
         <div
@@ -70,17 +70,30 @@ export function HomePage() {
                 style['promo-category'],
               )}
             >
-              {smallBtnData.map(
-                ({ title, id }) => {
-                  return (
-                    <Button
-                      key={id}
-                      btnClass="sm"
-                      title={title}
-                    />
-                  );
-                },
-              )}
+              <div
+                className={classNames(
+                  style['desktop-btn'],
+                )}
+              >
+                {smallBtnData.map(
+                  ({ title, id }) => {
+                    return (
+                      <Button
+                        key={id}
+                        btnClass="sm"
+                        title={title}
+                      />
+                    );
+                  },
+                )}
+              </div>
+              <div
+                className={classNames(
+                  style['mobile-btn'],
+                )}
+              >
+                <PromoButtonsSlide />
+              </div>
             </div>
           </div>
         </div>
@@ -105,6 +118,6 @@ export function HomePage() {
           </section>
         );
       })}
-    </main>
+    </div>
   );
 }
