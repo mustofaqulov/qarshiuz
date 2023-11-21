@@ -1,4 +1,4 @@
-.events-page {
+.news-page {
   display: flex;
   flex-direction: column;
   row-gap: 64px;
@@ -20,7 +20,7 @@
       max-width: 450px;
       align-self: flex-end;
       font-family: var(--ff-gilroy);
-      font-size: var(--bottom-md);
+      font-size: var(--paragraph-md);
       font-weight: var(--fw-medium);
       line-height: 24px;
     }
@@ -41,7 +41,7 @@
 }
 
 @media only screen and (width <= 1023px) {
-  .events-page {
+  .news-page {
     row-gap: 48px;
 
     .promo-section {
@@ -61,7 +61,7 @@
 }
 
 @media only screen and (width <= 767px) {
-  .events-page {
+  .news-page {
     row-gap: 32px;
 
     .promo-section {

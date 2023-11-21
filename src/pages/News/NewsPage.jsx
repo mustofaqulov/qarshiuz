@@ -1,23 +1,23 @@
 import classNames from 'classnames';
-import style from './events-page.module.scss';
+import style from './news-page.module.scss';
 import {
-  EventsCard,
+  NewsCard,
   Pagination,
   Select,
 } from '../../components';
-import { eventsCardData } from '../../utils/mock';
+import { newsCardData } from '../../utils/mock';
 
-export function EventsPage() {
+export function NewsPage() {
   return (
     <div
-      className={classNames(style['events-page'])}
+      className={classNames(style['news-page'])}
     >
       <section
         className={classNames(
           style['promo-section'],
         )}
       >
-        <h1>don't miss city events!</h1>
+        <h1>The latest news from your city!</h1>
         <p>
           Discover the diversity of our city,
           where history, culture, nature and
@@ -34,8 +34,8 @@ export function EventsPage() {
         </div>
         <div className={classNames(style.cards)}>
           <Pagination
-            component={<EventsCard />}
-            componentData={eventsCardData}
+            component={<NewsCard />}
+            componentData={newsCardData}
           />
         </div>
       </section>
