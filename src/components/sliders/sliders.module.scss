@@ -1,7 +1,7 @@
 .sliders {
   display: flex;
   flex-direction: column;
-  row-gap: 3.75rem;
+  row-gap: 60px;
 }
 
 .buttons {
@@ -12,11 +12,23 @@
 
 .slider-btn {
   display: flex;
-  column-gap: 1.5rem;
+  column-gap: 24px;
 }
 
 .btn-slider {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+@media only screen and (width <= 1023px) {
+  .sliders {
+    row-gap: 32px;
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .slider-btn {
+    display: none;
+  }
 }

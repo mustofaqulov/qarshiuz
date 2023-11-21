@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   Swiper,
   SwiperSlide,
@@ -18,7 +19,7 @@ export function EventsSlider() {
       spaceBetween={30}
       breakpoints={{
         0: {
-          slidesPerView: 1,
+          slidesPerView: 1.3,
         },
         768: {
           slidesPerView: 2,
@@ -32,34 +33,23 @@ export function EventsSlider() {
       speed={1000}
       className={classNames(style.sliders)}
     >
-      {eventsCardData.map(
-        ({
-          id,
-          status,
-          date,
-          title,
-          location,
-          cardImg,
-        }) => {
-          return (
-            <SwiperSlide key={id}>
-              <EventsCard
-                status={status}
-                date={date}
-                title={title}
-                location={location}
-                cardImg={cardImg}
-              />
-            </SwiperSlide>
-          );
-        },
-      )}
+      {eventsCardData.map((cardInfo) => {
+        return (
+          <SwiperSlide key={cardInfo.id}>
+            <Link to="/events">
+              <EventsCard cardInfo={cardInfo} />
+            </Link>
+          </SwiperSlide>
+        );
+      })}
       <div className={classNames(style.buttons)}>
-        <Button
-          title="view all news"
-          btnClass="secondary"
-          icon={<ArrowUpIcon />}
-        />
+        <Link to="/events">
+          <Button
+            title="view all events"
+            btnClass="secondary"
+            icon={<ArrowUpIcon />}
+          />
+        </Link>
         <SliderButtons />
       </div>
     </Swiper>

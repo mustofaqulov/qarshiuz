@@ -9,6 +9,6 @@ export { NewsSlider } from './Sliders/NewsSlider/NewsSlider';
 export { Pagination } from './Pagination/Pagination';
 export { PromoSlider } from './PromoSlider/PromoSlider';
 export { RecommendationSlider } from './Sliders/RecommendationSlider/RecSlider';
+export { SearchInput } from './Inputs/SearchInput/SearchInput';
 export { Select } from './Select/Select';
 export { sliderData } from './Sliders/SliderData';
-export { SearchInput } from './Inputs/SearchInput/SearchInput';

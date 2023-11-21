@@ -38,7 +38,7 @@ export function Footer() {
             className={classNames(style.content)}
           >
             <Link
-              to="/home"
+              to="/"
               className={classNames([style.logo])}
             >
               <Logo />

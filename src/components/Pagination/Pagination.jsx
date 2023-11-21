@@ -1,49 +1,49 @@
 import classNames from 'classnames';
-import { useState, cloneElement } from 'react';
+import {
+  useState,
+  cloneElement,
+  useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 import style from './pagination.module.scss';
 import PrevBtnIcon from '../../assets/icons/carousel-left-icon.svg';
 import NextBtnIcon from '../../assets/icons/carousel-right-icon.svg';
-import { eventsCardData } from '../../utils/mock/events-card.mock';
+import { Skeleton } from '../Skeleton/Skeleton';
 
-export function Pagination({ component }) {
-  const [users, setUsers] = useState(
-    eventsCardData,
+export function Pagination({
+  component,
+  componentData,
+}) {
+  const [cardData, setCardData] = useState(
+    componentData,
   );
   const [pageNumber, setPageNumber] = useState(0);
+  const [isLoading, setIsLoading] =
+    useState(true);
 
-  const usersPerPage = 15;
-  const pagesVisited = pageNumber * usersPerPage;
-
-  const displayUsers = users
-    .slice(
-      pagesVisited,
-      pagesVisited + usersPerPage,
-    )
-    .map((cardInfo) => {
-      const {
-        status,
-        date,
-        title,
-        location,
-        cardImg,
-      } = cardInfo;
-      return cloneElement(component, {
-        status,
-        date,
-        title,
-        location,
-        cardImg,
+  useEffect(() => {
+    fetch('')
+      .then((response) => response.json())
+      .then((data) => {
+        setCardData(data);
+        setIsLoading(false);
       });
-    });
+  }, [pageNumber]);
 
-  const pageCount = Math.ceil(
-    users.length / usersPerPage,
+  const displayUsers = cardData?.map(
+    (cardInfo) => {
+      return cloneElement(component, {
+        cardInfo,
+      });
+    },
   );
 
+  const pageCount = 10;
+
   const changePage = ({ selected }) => {
-    setPageNumber(selected);
+    setPageNumber(selected + 1);
+    setIsLoading(true);
   };
 
   return (

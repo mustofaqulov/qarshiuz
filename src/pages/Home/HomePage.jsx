@@ -3,7 +3,6 @@ import {
   Button,
   SearchInput,
   PromoSlider,
-  Select,
   MiniCategory,
   sliderData,
 } from '../../components';
@@ -33,8 +32,7 @@ export function HomePage() {
             <SelectIcon />
           </div>
           <h1>
-            Information portal <br /> of Qarshi
-            city
+            Information portal of Qarshi city
           </h1>
         </div>
         <div
@@ -76,9 +74,6 @@ export function HomePage() {
                       key={id}
                       btnClass="sm"
                       title={title}
-                      still={{
-                        padding: '6px 18px',
-                      }}
                     />
                   );
                 },
