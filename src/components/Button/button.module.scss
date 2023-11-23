@@ -9,6 +9,7 @@ button {
   border: 0;
   font-family: var(--ff-gilroy);
   font-size: var(--paragraph-lg);
+  text-transform: uppercase;
 
   &:active {
     transform: scale(0.9);
@@ -16,29 +17,22 @@ button {
 }
 
 .primary {
-  padding: var(--paragraph-lg) 1.75rem;
-  border-radius: 2.25rem;
+  padding: 14px 24px;
+  border-radius: 36px;
   background-color: var(--clr-primary-dk);
   color: var(--clr-primary-lt);
   font-weight: var(--fw-normal);
   gap: var(--bottom-md);
   text-transform: uppercase;
   transition: 0.2s;
-
-  &:hover {
-    svg {
-      transform: rotate(90deg);
-      transition: 0.3s;
-    }
-  }
 }
 
 .secondary {
-  padding: 0.75rem var(--bottom-xl);
+  padding: 12px var(--bottom-xl);
   border: 1px solid var(--clr-primary-dk);
   border-radius: 2.438rem;
   color: var(--clr-primary-dk);
-  column-gap: 0.625rem;
+  column-gap: 10px;
   font-weight: var(--fw-medium);
   line-height: var(--paragraph-xl);
   transition: 0.3s;
@@ -54,29 +48,30 @@ button {
   border: 1px solid var(--clr-primary-dk);
   border-radius: 50%;
   background-color: var(--clr-primary-lt);
-  color: var(--clr-primary-dk);
   transition: 0.3s;
+
+  svg {
+    fill: var(--clr-primary-dk);
+  }
 
   &:hover {
     background-color: var(--clr-primary-dk);
-    color: var(--clr-primary-lt);
 
     svg {
-      path {
-        fill: white;
-      }
+      fill: var(--clr-primary-lt);
     }
   }
 }
 
 .sm {
-  padding: 6px 18px;
+  padding: 10px 16px;
   border: 1px solid var(--clr-gray-ltr);
   border-radius: 30px;
   color: var(--clr-gray-ltr);
   font-family: var(--ff-gilroy);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
+  text-transform: capitalize;
   transition: 0.3s;
 
   &:hover {
@@ -87,5 +82,12 @@ button {
   &.active {
     background-color: var(--clr-primary-dk);
     color: var(--clr-primary-lt);
+  }
+}
+
+@media screen and (width <= 550px) {
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
   }
 }

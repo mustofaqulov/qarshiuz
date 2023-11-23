@@ -1,11 +1,9 @@
 body {
   font-family: var(--ff-gilroy);
-  user-select: none;
-}
 
-li,
-button {
-  text-transform: uppercase;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 img {
@@ -15,6 +13,11 @@ img {
 a {
   color: inherit;
   outline: none;
+}
+
+main {
+  padding-top: 96px;
+  padding-bottom: 128px;
 }
 
 input,

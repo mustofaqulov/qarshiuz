@@ -1,8 +1,11 @@
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { Button } from '../Button/Button';
 import AddIcon from '../../assets/icons/add-icon-white.svg';
 import Logo from '../../assets/icons/logo.svg';
+import Hamburger from '../../assets/icons/navbar-hamburger.svg';
+import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
 import style from './header.module.scss';
 import { LanguageTab } from '../LanguageTab/LanguageTab';
 
@@ -15,11 +18,22 @@ const linksData = [
 ].reverse();
 
 export function Header() {
+  const [menu, setMenu] = useState(false);
+
+  const navClasess = classNames(
+    style['nav-container'],
+    menu ? style['nav-menu'] : style.nav,
+  );
   const setActive = ({ isActive }) =>
     isActive
       ? style.active
       : style['nav-list_link'];
 
+  useEffect(() => {
+    document.body.style.overflow = menu
+      ? 'hidden'
+      : 'auto';
+  }, [menu]);
   return (
     <header className={style.header}>
       <div
@@ -28,11 +42,32 @@ export function Header() {
           style['header-container'],
         )}
       >
+        <div
+          className={classNames(style.hamburger)}
+        >
+          <button
+            onClick={setMenu.bind(null, !menu)}
+          >
+            <Hamburger
+              onClick={() => setMenu(!menu)}
+            />
+          </button>
+        </div>
+
         <Link to="/">
           <Logo />
         </Link>
-        <nav className={style.nav}>
-          <ul className={style['nav-list']}>
+
+        <nav className={classNames(navClasess)}>
+          <CloseHamburger
+            className={style['nav-close-icon']}
+            onClick={() => setMenu(!menu)}
+          />
+          <ul
+            className={classNames(
+              style['nav-list'],
+            )}
+          >
             {linksData.map(
               ({ id, text, link }) => {
                 return (
@@ -48,16 +83,32 @@ export function Header() {
               },
             )}
           </ul>
-        </nav>
-        <div className={style['header-btn']}>
           <Button
             btnClass="primary"
             title="Add new"
             icon={<AddIcon />}
           />
+          <div
+            className={classNames(
+              style['header-language'],
+            )}
+          >
+            <LanguageTab />
+          </div>
+        </nav>
+        <div className={style['header-btn']}>
           <LanguageTab />
         </div>
       </div>
+
+      {menu && (
+        <div
+          onClick={setMenu.bind(null, false)}
+          className={classNames(
+            style['header-background'],
+          )}
+        />
+      )}
     </header>
   );
 }
