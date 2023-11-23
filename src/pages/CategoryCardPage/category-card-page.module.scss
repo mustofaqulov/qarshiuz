@@ -1,0 +1,310 @@
+.category-about {
+  display: flex;
+  flex-direction: column;
+  row-gap: 96px;
+
+  p {
+    font-family: var(--ff-gilroy);
+    font-size: var(--paragraph-xl);
+    font-weight: var(--fw-normal);
+    line-height: 180%;
+    text-align: justify;
+  }
+
+  h6 {
+    color: rgb(0 0 0 / 40%);
+    font-family: var(--ff-gilroy);
+    font-size: var(--paragraph-md);
+    font-weight: var(--fw-medium);
+    line-height: 24px;
+  }
+
+  .map {
+    overflow: hidden;
+    width: 100%;
+    max-width: 860px;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    h1 {
+      font-family: var(--ff-red-hat);
+      font-size: var(--heading-xl);
+      font-weight: var(--fw-medium);
+      letter-spacing: 0.64px;
+      text-transform: uppercase;
+    }
+
+    .card-status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 15px;
+
+      .img-color {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 860px;
+        height: 460px;
+        border-radius: 16px;
+
+        .color {
+          position: absolute;
+          z-index: 3;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            rgb(0 0 0 / 10%) 0%,
+            rgb(0 0 0 / 10%) 100%
+          );
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+            transition: 2s;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        width: 100%;
+        max-width: 412px;
+        flex-direction: column;
+        row-gap: 32px;
+
+        h5 {
+          font-family: var(--ff-gilroy);
+          font-size: var(--heading-lg);
+          font-weight: var(--fw-semi-bold);
+          letter-spacing: 0.32px;
+          text-transform: uppercase;
+        }
+
+        .info-status {
+          display: flex;
+          flex-direction: column;
+          row-gap: 24px;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+
+            li {
+              display: flex;
+              align-items: center;
+              column-gap: 8px;
+
+              p,
+              a {
+                font-family: var(--ff-gilroy);
+                font-size: var(--paragraph-md);
+                font-weight: var(--fw-medium);
+                letter-spacing: 0.2px;
+              }
+            }
+          }
+
+          .rating {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            .rating-status {
+              display: flex;
+              flex-direction: column;
+              row-gap: 16px;
+
+              h6 {
+                color: black;
+                font-family: var(--ff-gilroy);
+                font-size: var(--paragraph-lg);
+                font-weight: var(--fw-medium);
+                letter-spacing: 0.2px;
+                text-transform: capitalize;
+              }
+
+              .status {
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+
+                strong {
+                  font-family: var(--ff-gilroy);
+                  font-size: var(--heading-lg);
+                  font-weight: var(
+                    --fw-semi-bold
+                  );
+                  letter-spacing: 0.2px;
+                }
+
+                .stars {
+                  display: flex;
+                  column-gap: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card-about {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+
+    h3 {
+      font-family: var(--ff-gilroy);
+      font-size: var(--heading-md);
+      font-weight: var(--fw-medium);
+      letter-spacing: 0.24px;
+    }
+
+    .card-description {
+      display: flex;
+      width: 100%;
+      max-width: 860px;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    .card-address {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    .card-establishment {
+      display: flex;
+      width: 100%;
+      max-width: 860px;
+      flex-direction: column;
+      row-gap: 24px;
+
+      .establishment-about {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+      }
+
+      .social-network {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        .networks {
+          display: flex;
+          column-gap: 24px;
+        }
+      }
+
+      .hashtags {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .other-cards {
+    h2 {
+      margin-bottom: 36px;
+      font-family: var(--ff-gilroy);
+      font-size: var(--heading-lg);
+      font-weight: var(--fw-semi-bold);
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media only screen and (width <= 767px) {
+  .category-about {
+    row-gap: 80px;
+
+    .card-info {
+      row-gap: 32px;
+
+      h1 {
+        letter-spacing: 0.32px;
+      }
+
+      .card-status {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 24px;
+
+        .img-color {
+          height: 300px;
+        }
+
+        .info {
+          row-gap: 24px;
+
+          .info-status {
+            row-gap: 20px;
+
+            ul {
+              row-gap: 16px;
+            }
+
+            .rating {
+              .rating-status {
+                row-gap: 8px;
+
+                .status {
+                  column-gap: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card-about {
+      row-gap: 80px;
+
+      .card-description {
+        row-gap: 16px;
+      }
+
+      .card-address {
+        row-gap: 16px;
+      }
+
+      .card-establishment {
+        row-gap: 16px;
+      }
+    }
+
+    .other-cards {
+      h2 {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

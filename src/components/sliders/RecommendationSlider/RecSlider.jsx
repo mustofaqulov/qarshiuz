@@ -41,7 +41,7 @@ export function RecommendationSlider() {
       {recommendationCardData.map((cardInfo) => {
         return (
           <SwiperSlide key={cardInfo.id}>
-            <Link to="/category">
+            <Link to="/categorycard">
               <CategoryCard cardInfo={cardInfo} />
             </Link>
           </SwiperSlide>
