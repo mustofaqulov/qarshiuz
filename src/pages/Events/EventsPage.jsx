@@ -1,18 +1,16 @@
 import classNames from 'classnames';
+import style from './events-page.module.scss';
 import {
   EventsCard,
   Pagination,
   Select,
 } from '../../components';
-import style from './events-page.module.scss';
+import { eventsCardData } from '../../utils/mock';
 
 export function EventsPage() {
   return (
     <div
-      className={classNames(
-        style.container,
-        style['events-page'],
-      )}
+      className={classNames(style['events-page'])}
     >
       <section
         className={classNames(
@@ -37,6 +35,7 @@ export function EventsPage() {
         <div className={classNames(style.cards)}>
           <Pagination
             component={<EventsCard />}
+            componentData={eventsCardData}
           />
         </div>
       </section>

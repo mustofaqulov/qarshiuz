@@ -9,20 +9,25 @@ import {
 } from '../pages';
 
 export function Router() {
+  const {
+    HOME,
+    CATEGORY,
+    EVENTS,
+    NEWS,
+    NOT_FOUND,
+  } = routePaths;
   return (
     <Routes>
+      <Route path={HOME} element={<HomePage />} />
       <Route
-        path={routePaths.HOME}
-        element={<HomePage />}
-      />
-      <Route
-        path={routePaths.CATEGORY}
+        path={CATEGORY}
         element={<CategoryPage />}
       />
       <Route
-        path={routePaths.EVENTS}
+        path={EVENTS}
         element={<EventsPage />}
       />
+      <Route path={NEWS} element={<NewsPage />} />
       <Route
         path={routePaths.NEWS}
         element={<NewsPage />}

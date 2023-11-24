@@ -1,5 +1,9 @@
 .news-page {
-  .news-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+
+  .promo-section {
     display: flex;
     flex-direction: column;
     row-gap: 36px;

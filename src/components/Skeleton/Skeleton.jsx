@@ -4,9 +4,7 @@ import style from './skeleton.module.scss';
 export function Skeleton() {
   return (
     <div
-      className={classNames(
-        style['card-skeleton'],
-      )}
+      className={classNames(style['card-info'])}
     >
       <div
         className={classNames(
@@ -16,7 +14,7 @@ export function Skeleton() {
       />
       <div
         className={classNames(
-          style['cards-info'],
+          style['card-about'],
         )}
       >
         <div
