@@ -6,6 +6,10 @@ html,
 body {
   height: 100%;
   font-family: var(--ff-gilroy);
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .wrapper {
