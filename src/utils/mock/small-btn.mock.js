@@ -8,6 +8,22 @@ export const smallBtnData = [
     title: 'Banks',
   },
   {
+    id: 4,
+    title: 'Museum',
+  },
+  {
+    id: 3,
+    title: 'Bars',
+  },
+  {
+    id: 2,
+    title: 'Banks',
+  },
+  {
+    id: 1,
+    title: 'Events',
+  },
+  {
     id: 3,
     title: 'Bars',
   },
