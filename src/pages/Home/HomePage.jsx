@@ -5,7 +5,6 @@ import {
   PromoSlider,
   MiniCategory,
   sliderData,
-  PromoButtonsSlide,
 } from '../../components';
 import style from './home-page.module.scss';
 import SelectIcon from '../../assets/icons/angle-down.svg';
@@ -68,30 +67,17 @@ export function HomePage() {
                 style['promo-category'],
               )}
             >
-              <div
-                className={classNames(
-                  style['desktop-btn'],
-                )}
-              >
-                {smallBtnData
-                  .slice(0, 4)
-                  .map(({ title, id }) => {
-                    return (
-                      <Button
-                        key={id}
-                        btnClass="sm"
-                        title={title}
-                      />
-                    );
-                  })}
-              </div>
-              <div
-                className={classNames(
-                  style['mobile-btn'],
-                )}
-              >
-                <PromoButtonsSlide />
-              </div>
+              {smallBtnData.map(
+                ({ title, id }) => {
+                  return (
+                    <Button
+                      key={id}
+                      btnClass="sm"
+                      title={title}
+                    />
+                  );
+                },
+              )}
             </div>
           </div>
         </div>
