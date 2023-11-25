@@ -4,6 +4,5 @@ export const routePaths = {
   EVENTS: '/events',
   NEWS: '/news',
   LOGIN: '/login',
-  NEWS: '/news',
   NOT_FOUND: '/*',
 };
