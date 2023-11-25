@@ -17,7 +17,7 @@ export function EventsPage() {
           style['promo-section'],
         )}
       >
-        <h1>don't miss city events!</h1>
+        <h1>don&rsquo;t miss city events!</h1>
         <p>
           Discover the diversity of our city,
           where history, culture, nature and

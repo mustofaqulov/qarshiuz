@@ -5,9 +5,10 @@
 html,
 body {
   height: 100%;
+  font-family: var(--ff-gilroy);
 
-  &::-webkit-scrollbar {
-    width: 0;
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
