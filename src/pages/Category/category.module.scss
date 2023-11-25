@@ -10,8 +10,8 @@
       width: 100%;
       color: var(--clr-primary-dk);
       font-family: var(--ff-gilroy);
-      font-size: 64px;
-      font-weight: 500;
+      font-size: var(--heading-xl);
+      font-weight: var(--fw-medium);
       letter-spacing: 0.64px;
       line-height: 120%;
       text-transform: uppercase;
@@ -22,8 +22,8 @@
       max-width: 450px;
       color: var(--clr-primary-dk);
       font-family: var(--ff-gilroy);
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: var(--fw-medium);
       line-height: 24px;
     }
   }
@@ -75,11 +75,9 @@
         h3 {
           color: var(--clr-primary-dk);
           font-family: var(--ff-gilroy);
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 500;
+          font-size: var(--heading-md);
+          font-weight: var(--fw-medium);
           letter-spacing: -0.12px;
-          line-height: normal;
           text-transform: uppercase;
         }
 
@@ -91,7 +89,7 @@
           color: var(--clr-primary-lt);
           font-family: var(--ff-gilroy);
           font-size: 20px;
-          font-weight: 500;
+          font-weight: var(--fw-medium);
         }
       }
     }

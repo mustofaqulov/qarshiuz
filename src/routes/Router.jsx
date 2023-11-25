@@ -29,7 +29,11 @@ export function Router() {
       />
       <Route path={NEWS} element={<NewsPage />} />
       <Route
-        path={NOT_FOUND}
+        path={routePaths.NEWS}
+        element={<NewsPage />}
+      />
+      <Route
+        path={routePaths.NOT_FOUND}
         element={<NotFoundPage />}
       />
     </Routes>
