@@ -79,13 +79,13 @@
       }
 
       .promo-category {
-        .desktop-btn {
+        .btn-desktop {
           display: flex;
           align-items: center;
           column-gap: 16px;
         }
 
-        .mobile-btn {
+        .btn-mobile {
           display: none;
         }
       }
@@ -213,7 +213,7 @@
             display: none;
           }
 
-          .mobile-btn {
+          .btn-mobile {
             display: flex;
             align-items: center;
             column-gap: 8px;

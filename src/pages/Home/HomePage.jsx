@@ -70,7 +70,7 @@ export function HomePage() {
             >
               <div
                 className={classNames(
-                  style['desktop-btn'],
+                  style['btn-desktop'],
                 )}
               >
                 {smallBtnData
@@ -87,7 +87,7 @@ export function HomePage() {
               </div>
               <div
                 className={classNames(
-                  style['mobile-btn'],
+                  style['btn-mobile'],
                 )}
               >
                 <PromoButtonsSlide />
