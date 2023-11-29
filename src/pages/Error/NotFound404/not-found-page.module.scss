@@ -1,9 +1,9 @@
 .notfound-wrapper {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
 
   h1 {
     color: var(--bg-footer);
