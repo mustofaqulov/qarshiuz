@@ -1,0 +1,88 @@
+.add-new-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .add-section {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    .add-title {
+      display: flex;
+      max-width: 460px;
+      flex-direction: column;
+      gap: 48px;
+
+      h1 {
+        color: var(--primary-black);
+        font-family: var(--ff-red-hat);
+        font-size: var(--heading-xl);
+        text-align: end;
+        font-weight: var(--fw-medium);
+        letter-spacing: 0.64px;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: var(--primary-black);
+        font-family: var(--ff-gilroy);
+        font-size: 1rem;
+        font-weight: var(--fw-medium);
+        line-height: 24px;
+      }
+    }
+
+    .contact-us {
+      display: flex;
+      width: 100%;
+      max-width: 181px;
+      flex-direction: column;
+
+      h4 {
+        margin-bottom: 16px;
+        color: var(--primary-black);
+        font-family: var(--ff-gilroy);
+        font-size: var(--paragraph-xl);
+        font-weight: var(--fw-medium);
+      }
+
+      p {
+        color: var(--primary-black);
+        font-family: var(--ff-gilroy);
+        font-size: 1rem;
+        font-weight: var(--fw-normal);
+        line-height: 24px;
+      }
+
+      .socials {
+        display: flex;
+        flex-direction: column;
+        margin-top: 36px;
+        gap: 16px;
+
+        h5 {
+          color: var(--primary-black);
+          font-family: var(--ff-gilroy);
+          font-size: 1.25rem;
+          font-weight: var(--fw-medium);
+        }
+
+        .social-icons {
+          display: flex;
+          gap: 24px;
+
+          svg {
+            transition: 0.3s;
+
+            &:hover {
+              cursor: pointer;
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
