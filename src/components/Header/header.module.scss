@@ -1,9 +1,10 @@
 @import '../../styles/style';
 
 .header {
-  position: fixed;
+  position: sticky;
   z-index: 9999;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 25px 0;
   background-color: var(--clr-primary-lt);

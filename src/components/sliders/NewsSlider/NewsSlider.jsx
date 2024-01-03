@@ -6,7 +6,7 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import style from '../sliders.module.scss';
-import { NewsCard } from '../../Cards/NewsCard/NewsCard';
+import { NewsCard } from '../../cards/NewsCard/NewsCard';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
