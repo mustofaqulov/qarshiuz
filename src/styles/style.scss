@@ -5,23 +5,23 @@
 html,
 body {
   height: 100%;
+  font-family: var(--ff-gilroy);
 
-  &::-webkit-scrollbar {
-    width: 0;
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
 .wrapper {
   display: flex;
-  overflow: hidden;
   min-height: 100vh;
   flex-direction: column;
 }
 
 .main-content {
-  flex: 1 1 auto;
-  padding-top: 96px;
-  padding-bottom: 128px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .container {
@@ -30,18 +30,4 @@ body {
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
-}
-
-@media only screen and (width <= 1023px) {
-  .main-content {
-    padding-top: 64px;
-    padding-bottom: 120px;
-  }
-}
-
-@media only screen and (width <= 767px) {
-  .main-content {
-    padding-top: 48px;
-    padding-bottom: 80px;
-  }
 }

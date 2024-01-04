@@ -1,10 +1,11 @@
 .select {
   position: absolute;
+  z-index: 99;
+  right: 0;
   display: flex;
   width: 16.25rem;
   flex-direction: column;
   align-items: end;
-  column-gap: var(--bottom-lg);
   user-select: none;
 
   p {
@@ -16,22 +17,25 @@
 
   ul {
     display: flex;
+    height: 172px;
     flex-direction: column;
-    padding: var(--paragraph-xl);
+    padding: 20px;
     border: 0.063rem solid var(--clr-gray-ltst);
     border-radius: 0.375rem;
     background-color: var(--clr-primary-lt);
-    box-shadow: 0 0.125rem 1rem 0 rgb(0 0 0 / 6%);
+    box-shadow: 0 0.125rem 1rem 0
+      rgb(0 0 0 / 14.8%);
+    gap: 10px;
 
     li {
-      width: 9rem;
+      width: 140px;
+      height: 20px;
       color: var(--clr-primary-dk);
       cursor: pointer;
       font-family: var(--ff-gilroy);
       font-size: var(--paragraph-lg);
       font-weight: var(--fw-medium);
       letter-spacing: 0.07px;
-      line-height: 1rem;
 
       button {
         width: 100%;

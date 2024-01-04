@@ -6,7 +6,7 @@ import {
 import 'swiper/css';
 import classNames from 'classnames';
 import style from '../sliders.module.scss';
-import { EventsCard } from '../../Cards/EventsCard/EventsCard';
+import { EventsCard } from '../../cards/EventsCard/EventsCard';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';

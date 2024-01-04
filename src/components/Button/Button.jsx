@@ -8,6 +8,7 @@ export function Button({
   icon,
   title,
   onClick,
+  still,
 }) {
   const buttonClasses = classNames(style.btn, {
     [style.primary]: btnClass === 'primary',
@@ -15,6 +16,7 @@ export function Button({
     [style.sm]: btnClass === 'sm',
     [style['circle-btn']]:
       btnClass === 'circle-btn',
+    [style.close]: btnClass === 'close',
   });
 
   return (
@@ -22,18 +24,19 @@ export function Button({
       type={type}
       className={buttonClasses}
       onClick={onClick}
+      style={still}
     >
       {title} {icon}
     </button>
   );
 }
-
 Button.defaultProps = {
   btnClass: '',
   icon: null,
   type: 'button',
   title: null,
   onClick: () => {},
+  still: {},
 };
 
 Button.propTypes = {
@@ -42,8 +45,11 @@ Button.propTypes = {
     'primary',
     'secondary',
     'circle-btn',
+    'sm',
+    'close',
   ]),
   icon: PropTypes.node,
   title: PropTypes.string,
   onClick: PropTypes.func,
+  still: PropTypes.object,
 };

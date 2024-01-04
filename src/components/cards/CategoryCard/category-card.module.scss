@@ -1,6 +1,7 @@
 .category-card {
   display: flex;
   width: 100%;
+  max-width: 420px;
   flex-direction: column;
   font-family: var(--ff-gilroy);
   row-gap: 24px;
@@ -49,6 +50,7 @@
         height: 340px;
         object-fit: cover;
         object-position: center center;
+        transition: 2s;
       }
     }
   }
@@ -90,7 +92,6 @@
       .card-img {
         img {
           transform: scale(1.15);
-          transition: 2s;
         }
       }
     }

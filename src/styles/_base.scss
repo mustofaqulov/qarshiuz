@@ -3,6 +3,11 @@ body {
   user-select: none;
 }
 
+li,
+button {
+  text-transform: uppercase;
+}
+
 img {
   display: block;
 }
@@ -10,6 +15,11 @@ img {
 a {
   color: inherit;
   outline: none;
+}
+
+main {
+  padding-top: 96px;
+  padding-bottom: 128px;
 }
 
 input,

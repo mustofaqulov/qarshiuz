@@ -3,14 +3,13 @@ import {
   Button,
   SearchInput,
   PromoSlider,
-  Select,
   MiniCategory,
   sliderData,
   PromoButtonsSlide,
 } from '../../components';
-import { smallBtnData } from '../../utils/mock';
 import style from './home-page.module.scss';
 import SelectIcon from '../../assets/icons/angle-down.svg';
+import { smallBtnData } from '../../utils/mock';
 
 export function HomePage() {
   return (
@@ -27,7 +26,6 @@ export function HomePage() {
             style['region-name'],
           )}
         >
-          {/* <Select /> */}
           <div
             className={classNames(style.regions)}
           >
@@ -59,7 +57,7 @@ export function HomePage() {
                 style['input-button'],
               )}
             >
-              <SearchInput />
+              <SearchInput placeholder="Events" />
               <Button
                 btnClass="primary"
                 title="search"
