@@ -6,7 +6,6 @@ import {
   NotFoundPage,
   CategoryPage,
   NewsPage,
-  AddNewPage,
 } from '../pages';
 
 export function Router() {
@@ -15,7 +14,6 @@ export function Router() {
     CATEGORY,
     EVENTS,
     NEWS,
-    ADDNEW,
     NOT_FOUND,
   } = routePaths;
   return (
