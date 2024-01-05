@@ -29,6 +29,7 @@
       height: 260px;
       object-fit: cover;
       object-position: center center;
+      transition: 2s;
     }
   }
 
@@ -87,7 +88,6 @@
 
   &:hover img {
     transform: scale(1.15);
-    transition: 2s;
   }
 }
 
