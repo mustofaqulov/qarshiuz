@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 import { CategoryCard } from '../../components/Cards/CategoryCard/CategoryCard';
-// import Sele
 import CategoryMenuIcon from '../../assets/icons/categorys-menu.svg';
 import ClouseIcon from '../../assets/icons/clouse-icon-white.svg';
 import FilterIcon from '../../assets/icons/filter-white.svg';
-import style from './category.module.scss';
+import style from './category-page.module.scss';
 import { recommendationCardData } from '../../utils/mock';
 import {
   Button,
