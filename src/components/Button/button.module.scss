@@ -61,6 +61,7 @@ button {
       fill: var(--clr-primary-dk);
     }
   }
+
   &:active {
     background-color: var(--clr-primary-dk);
 
@@ -109,8 +110,8 @@ button {
   }
 
   &:active {
-    color: var(--clr-primary-lt);
     background-color: var(--clr-primary-dk);
+    color: var(--clr-primary-lt);
   }
 }
 
