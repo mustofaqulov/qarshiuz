@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useId } from 'react';
 import CornerLeft from '../../../assets/icons/corner-left.svg';
 import style from './small-card.module.scss';
 
@@ -38,22 +37,21 @@ const cardsData = [
   },
 ];
 const subList = [
-  { text: 'Chayxana', path: '/' },
-  { text: 'Chayxana', path: '/' },
-  { text: 'Chayxana', path: '/' },
-  { text: 'Chayxana', path: '/' },
-  { text: 'Chayxana', path: '/' },
-  { text: 'Chayxana', path: '/' },
-  { text: 'Chayxana', path: '/' },
+  { text: 'Chayxana', path: '/', id: 0 },
+  { text: 'Chayxana', path: '/', id: 1 },
+  { text: 'Chayxana', path: '/', id: 2 },
+  { text: 'Chayxana', path: '/', id: 3 },
+  { text: 'Chayxana', path: '/', id: 4 },
+  { text: 'Chayxana', path: '/', id: 5 },
+  { text: 'Chayxana', path: '/', id: 6 },
 ];
 export function MiniCategory() {
-  const id = useId();
   return (
     <div className={style['cards-wrapper']}>
-      {cardsData.map(({ url, text }) => {
+      {cardsData.map(({ url, text, id }) => {
         return (
           <div
-            key={text}
+            key={id}
             className={style['cards-item']}
           >
             <div className={style['card-img']}>
@@ -70,9 +68,9 @@ export function MiniCategory() {
           <span>in Restaurants</span>
         </p>
         <ul>
-          {subList.map(({ text, path }) => {
+          {subList.map(({ text, path, id }) => {
             return (
-              <li key={path}>
+              <li key={id}>
                 <CornerLeft />
                 <Link to={path}>{text}</Link>
               </li>
