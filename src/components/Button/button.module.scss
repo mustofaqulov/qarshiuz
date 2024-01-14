@@ -55,6 +55,14 @@ button {
   }
 
   &:hover {
+    background-color: var(--bg-skeleton);
+
+    svg {
+      fill: var(--clr-primary-dk);
+    }
+  }
+
+  &:active {
     background-color: var(--clr-primary-dk);
 
     svg {
@@ -80,6 +88,28 @@ button {
   }
 
   &.active {
+    background-color: var(--clr-primary-dk);
+    color: var(--clr-primary-lt);
+  }
+}
+
+.md {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  border-radius: 100%;
+  color: var(--clr-primary-dk);
+  font-family: var(--ff-gilroy);
+  font-size: var(--paragraph-lg);
+  font-weight: var(--fw-medium);
+  transition: 0.2s;
+
+  &:hover {
+    background-color: var(--bg-skeleton);
+  }
+
+  &:active {
     background-color: var(--clr-primary-dk);
     color: var(--clr-primary-lt);
   }
