@@ -81,6 +81,7 @@
           }
 
           li {
+            width: max-content;
             color: var(--clr-primary-lt);
             cursor: pointer;
             font-family: var(--ff-gilroy);
