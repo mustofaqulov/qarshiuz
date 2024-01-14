@@ -11,7 +11,10 @@ export function EventsCard({ cardInfo }) {
     title,
     location,
     cardImg,
+    postId,
+    id,
   } = cardInfo;
+  // console.log(cardInfo, postId);
   return (
     <div
       className={classNames(style['events-card'])}
@@ -36,7 +39,9 @@ export function EventsCard({ cardInfo }) {
             style['event-date'],
           )}
         >
+          <b>{id}</b>
           <span>{status}</span>
+          <strong>{postId}</strong>
           <span>{date}</span>
         </div>
         <div
