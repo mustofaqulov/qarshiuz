@@ -6,8 +6,6 @@
 
   .cards-item {
     width: 190px;
-    border: 1px solid black;
-    padding: 0px;
     color: var(--primary-black);
     cursor: pointer;
     text-align: center;
@@ -46,14 +44,49 @@
     }
   }
 
-  ul {
-    display: grid;
-    margin-top: 36px;
-    gap: 24px 8px;
-    grid-template-columns: repeat(
-      auto-fill,
-      170px
-    );
+  .subcategory {
+    padding: 0 40px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    p {
+      strong {
+        margin: 0 8px;
+        font-size: var(--bottom-lg);
+        font-weight: var(--fw-medium);
+      }
+
+      span {
+        color: var(--silver);
+        font-size: var(--bottom-md);
+        font-weight: var(--fw-medium);
+      }
+    }
+
+    ul {
+      display: grid;
+      margin-top: 36px;
+      gap: 24px 8px;
+      grid-template-columns: repeat(
+        auto-fill,
+        170px
+      );
+
+      li {
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--silver);
+        }
+
+        a {
+          margin-left: 8px;
+          font-size: var(--bottom-md);
+          font-weight: var(--fw-medium);
+          text-transform: capitalize;
+        }
+      }
+    }
   }
 }
 
@@ -70,11 +103,19 @@
     .cards-item {
       width: 150px;
       height: 140px;
-      padding: 0px;
       color: var(--primary-black);
       cursor: pointer;
       text-align: center;
       transition: all 0.5s;
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      &:hover {
+        color: var(--clr-gray-lt);
+      }
+
       .card-img {
         overflow: hidden;
         width: 100px;
@@ -115,7 +156,6 @@
     .cards-item {
       width: 80px;
       height: 100px;
-      padding: 0px;
       color: var(--primary-black);
       cursor: pointer;
       text-align: center;
