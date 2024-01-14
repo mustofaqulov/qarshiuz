@@ -42,16 +42,6 @@ export function PromoSlider() {
             spaceBetween: 0,
           },
         }}
-        style={{
-          '--swiper-pagination-color': '#FFF',
-          '--swiper-pagination-bullet-inactive-color':
-            '#FFF',
-          '--swiper-pagination-bullet-inactive-opacity':
-            '0.7',
-          '--swiper-pagination-bullet-size':
-            '8px',
-          '--swiper-pagination-bottom': '1.25rem',
-        }}
       >
         {promoSliderData.map(
           ({ sliderImg, id }) => {
