@@ -49,7 +49,8 @@
 
         &_link {
           padding: 14px 26px;
-          border: 1px solid transparent;
+          border: 2px solid transparent;
+          border-radius: 36px;
           cursor: pointer;
           font-size: var(--paragraph-lg);
           font-weight: var(--fw-normal);
@@ -59,7 +60,6 @@
 
           &:hover {
             border-color: var(--clr-primary-dk);
-            border-radius: 36px;
           }
         }
       }
@@ -84,7 +84,7 @@
 
 .active {
   padding: 14px 26px;
-  border: 1px solid var(--clr-primary-dk);
+  border: 2px solid var(--clr-primary-dk);
   border-radius: 36px;
   font-size: 14px;
   text-transform: uppercase;

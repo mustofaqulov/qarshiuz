@@ -5,6 +5,7 @@ import {
   EventsPage,
   NotFoundPage,
   CategoryPage,
+  CategoryCardPage,
   NewsPage,
 } from '../pages';
 
@@ -14,6 +15,7 @@ export function Router() {
     CATEGORY,
     EVENTS,
     NEWS,
+    CATEGORYCARD,
     NOT_FOUND,
   } = routePaths;
   return (
@@ -29,11 +31,11 @@ export function Router() {
       />
       <Route path={NEWS} element={<NewsPage />} />
       <Route
-        path={routePaths.NEWS}
-        element={<NewsPage />}
+        path={CATEGORYCARD}
+        element={<CategoryCardPage />}
       />
       <Route
-        path={routePaths.NOT_FOUND}
+        path={NOT_FOUND}
         element={<NotFoundPage />}
       />
     </Routes>

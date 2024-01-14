@@ -50,6 +50,7 @@
         height: 340px;
         object-fit: cover;
         object-position: center center;
+        transition: 2s;
       }
     }
   }
@@ -91,7 +92,6 @@
       .card-img {
         img {
           transform: scale(1.15);
-          transition: 2s;
         }
       }
     }
