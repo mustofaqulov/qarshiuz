@@ -83,13 +83,6 @@ export function Header() {
               },
             )}
           </ul>
-          <NavLink to="/add-new">
-            <Button
-              btnClass="primary"
-              title="Add new"
-              icon={<AddIcon />}
-            />
-          </NavLink>
           <div
             className={classNames(
               style['header-language'],
