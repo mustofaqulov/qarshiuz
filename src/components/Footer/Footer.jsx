@@ -8,6 +8,7 @@ import Logo from '../../assets/icons/logo-white.svg';
 import Facebook from '../../assets/icons/facebook-white.svg';
 import Telegram from '../../assets/icons/telegram-white.svg';
 import Vkontakte from '../../assets/icons/vkontakte-white.svg';
+import Email from '../../assets/icons/email.svg';
 import style from './footer.module.scss';
 import { routePaths } from '../../constants/routers';
 import { footerLinksData } from '../../utils/mock/footer-links.mock';
@@ -69,7 +70,7 @@ export function Footer() {
                 style['footer-text'],
               ])}
             >
-              m. infoqarshi@gmail.com
+              <Email />
             </p>
           </div>
         </div>
