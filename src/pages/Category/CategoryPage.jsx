@@ -90,7 +90,7 @@ export function CategoryPage() {
           title="Filter"
           btnClass="primary"
           icon={<FilterIcon />}
-          still={{
+          styleBtn={{
             textTransform: 'Capitalize',
             fontSize: '16px',
             padding: '10px 16px',

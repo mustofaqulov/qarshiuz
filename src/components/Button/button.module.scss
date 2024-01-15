@@ -12,7 +12,7 @@ button {
   text-transform: uppercase;
 
   &:active {
-    transform: scale(0.9);
+    transform: scale(0.969);
   }
 }
 
@@ -83,8 +83,8 @@ button {
   transition: 0.3s;
 
   &:hover {
-    background-color: var(--clr-gray-ltst);
-    color: var(--clr-gray-lt);
+    background-color: var(--clr-primary-dk);
+    color: var(--clr-primary-lt);
   }
 
   &.active {
