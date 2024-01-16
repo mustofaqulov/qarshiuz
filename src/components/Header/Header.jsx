@@ -9,10 +9,9 @@ import { LanguageTab } from '../LanguageTab/LanguageTab';
 
 const linksData = [
   { id: 1, text: 'Home', link: '/' },
-  { id: 2, text: 'Category', link: '/category' },
-  { id: 3, text: 'Events', link: '/events' },
-  { id: 4, text: 'News', link: '/news' },
-  { id: 5, text: 'About Us', link: '/about' },
+  { id: 2, text: 'Events', link: '/events' },
+  { id: 3, text: 'News', link: '/news' },
+  { id: 4, text: 'About Us', link: '/about' },
 ].reverse();
 
 export function Header() {
