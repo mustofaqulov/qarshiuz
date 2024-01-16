@@ -36,14 +36,14 @@
         height: 100%;
         border: 0;
         background-color: transparent;
-        text-align: start;
-        transition: 0.2s;
         color: var(--clr-primary-dk);
         cursor: pointer;
         font-family: var(--ff-gilroy);
         font-size: var(--paragraph-lg);
         font-weight: var(--fw-medium);
         letter-spacing: 0.07px;
+        text-align: start;
+        transition: 0.2s;
 
         &:hover {
           color: var(--clr-gray-lt);
