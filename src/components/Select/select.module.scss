@@ -30,18 +30,18 @@
     li {
       width: 100px;
       height: 20px;
-      color: var(--clr-primary-dk);
-      cursor: pointer;
-      font-family: var(--ff-gilroy);
-      font-size: var(--paragraph-lg);
-      font-weight: var(--fw-medium);
-      letter-spacing: 0.07px;
 
       button {
         width: 100%;
         height: 100%;
         border: 0;
         background-color: transparent;
+        color: var(--clr-primary-dk);
+        cursor: pointer;
+        font-family: var(--ff-gilroy);
+        font-size: var(--paragraph-lg);
+        font-weight: var(--fw-medium);
+        letter-spacing: 0.07px;
         text-align: start;
         transition: 0.2s;
 
