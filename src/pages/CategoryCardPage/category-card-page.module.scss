@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .category-about {
   display: flex;
   flex-direction: column;
@@ -77,12 +79,12 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
+          transition: 1s;
         }
 
         &:hover {
           img {
             transform: scale(1.1);
-            transition: 2s;
           }
         }
       }
@@ -123,6 +125,17 @@
                 font-size: var(--paragraph-md);
                 font-weight: var(--fw-medium);
                 letter-spacing: 0.2px;
+              }
+            }
+
+            .times {
+              column-gap: 30px;
+
+              .work-times {
+                display: flex;
+                align-items: center;
+                column-gap: 8px;
+                cursor: pointer;
               }
             }
           }
@@ -240,7 +253,7 @@
   }
 }
 
-@media only screen and (width <= 767px) {
+@media only screen and (width <= 700px) {
   .category-about {
     row-gap: 80px;
 

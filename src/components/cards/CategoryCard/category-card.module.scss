@@ -1,7 +1,6 @@
 .category-card {
   display: flex;
   width: 100%;
-  max-width: 420px;
   flex-direction: column;
   font-family: var(--ff-gilroy);
   row-gap: 24px;
@@ -10,20 +9,14 @@
     position: relative;
     overflow: hidden;
 
-    .status-name {
+    .status {
       position: absolute;
-      z-index: 999;
+      z-index: 51;
       top: 20px;
-      right: 20px;
-      padding: 6px 16px;
-      border-radius: 36px;
-      background: var(--bg-body);
-
-      span {
-        font-size: var(--bottom-sm);
-        font-weight: var(--fw-medium);
-        text-transform: uppercase;
-      }
+      left: 20px;
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
     }
 
     .card-img {
@@ -50,7 +43,7 @@
         height: 340px;
         object-fit: cover;
         object-position: center center;
-        transition: 2s;
+        transition: 1s;
       }
     }
   }
