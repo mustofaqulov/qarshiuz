@@ -1,4 +1,5 @@
 .news-page {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 64px;
@@ -94,12 +95,13 @@
 
     .news-description-text {
       p {
+        width: 100%;
+        max-width: 450px;
         color: var(--primary-black);
         font-family: var(--ff-gilroy);
         font-size: var(--paragraph-xl);
         font-weight: var(--fw-normal);
         line-height: 180%;
-        text-overflow: ellipsis;
       }
 
       p:nth-child(2) {
@@ -116,8 +118,20 @@
     font-size: var(--heading-lg);
     font-weight: var(--fw-semi-bold);
     letter-spacing: 0.2px;
-    text-overflow: ellipsis;
     text-transform: uppercase;
+  }
+
+  .cards-sorted {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    .sorted {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      margin-bottom: 40px;
+    }
   }
 }
 

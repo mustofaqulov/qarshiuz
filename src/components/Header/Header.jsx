@@ -1,8 +1,6 @@
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Button } from '../Button/Button';
-import AddIcon from '../../assets/icons/add-icon-white.svg';
 import Logo from '../../assets/icons/logo.svg';
 import Hamburger from '../../assets/icons/navbar-hamburger.svg';
 import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
@@ -11,16 +9,15 @@ import { LanguageTab } from '../LanguageTab/LanguageTab';
 
 const linksData = [
   { id: 1, text: 'Home', link: '/' },
-  { id: 2, text: 'Category', link: '/category' },
-  { id: 3, text: 'Events', link: '/events' },
-  { id: 4, text: 'News', link: '/news' },
-  { id: 5, text: 'About Us', link: '/about' },
+  { id: 2, text: 'Events', link: '/events' },
+  { id: 3, text: 'News', link: '/news' },
+  { id: 4, text: 'About Us', link: '/about' },
 ].reverse();
 
 export function Header() {
   const [menu, setMenu] = useState(false);
 
-  const navClasess = classNames(
+  const navClasses = classNames(
     style['nav-container'],
     menu ? style['nav-menu'] : style.nav,
   );
@@ -58,7 +55,7 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav className={classNames(navClasess)}>
+        <nav className={classNames(navClasses)}>
           <CloseHamburger
             className={style['nav-close-icon']}
             onClick={() => setMenu(!menu)}
@@ -83,13 +80,6 @@ export function Header() {
               },
             )}
           </ul>
-          <NavLink to="/add-new">
-            <Button
-              btnClass="primary"
-              title="Add new"
-              icon={<AddIcon />}
-            />
-          </NavLink>
           <div
             className={classNames(
               style['header-language'],
