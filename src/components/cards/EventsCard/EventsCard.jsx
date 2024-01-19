@@ -72,7 +72,7 @@ EventsCard.defaultProps = {
 EventsCard.propTypes = {
   cardInfo: PropTypes.shape({
     status: PropTypes.string,
-    date: PropTypes.number,
+    date: PropTypes.string,
     title: PropTypes.string,
     location: PropTypes.string,
     cardImg: PropTypes.string,

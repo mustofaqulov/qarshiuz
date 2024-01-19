@@ -50,7 +50,12 @@ const btnData = [
 export function CategoryPage() {
   const [close, setClose] = useState(false);
   return (
-    <div className={classNames(style.category)}>
+    <div
+      className={classNames(
+        style.category,
+        style.container,
+      )}
+    >
       <div
         className={classNames(
           style['category-title'],

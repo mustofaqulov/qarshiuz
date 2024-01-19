@@ -29,15 +29,15 @@ export function PromoSlider() {
           disableOnInteraction: false,
         }}
         breakpoints={{
-          200: {
+          0: {
             slidesPerView: 1.1,
             spaceBetween: 10,
           },
-          768: {
+          700: {
             slidesPerView: 1.2,
             spaceBetween: 10,
           },
-          1024: {
+          992: {
             slidesPerView: 1,
             spaceBetween: 0,
           },

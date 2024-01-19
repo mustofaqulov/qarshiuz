@@ -1,3 +1,5 @@
+@import '../../styles/style';
+
 .events-page {
   position: relative;
   display: flex;
@@ -20,8 +22,7 @@
     p {
       max-width: 450px;
       align-self: flex-end;
-      font-family: var(--ff-gilroy);
-      font-size: var(--bottom-md);
+      font-size: var(--paragraph-md);
       font-weight: var(--fw-medium);
       line-height: 24px;
     }
@@ -30,18 +31,18 @@
   .cards-sorted {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 36px;
 
     .sorted {
       display: flex;
       width: 100%;
       justify-content: flex-end;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
   }
 }
 
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 992px) {
   .events-page {
     row-gap: 48px;
 
@@ -54,6 +55,8 @@
     }
 
     .cards-sorted {
+      row-gap: 24px;
+
       .sorted {
         margin-bottom: 24px;
       }
@@ -61,7 +64,7 @@
   }
 }
 
-@media only screen and (width <= 767px) {
+@media only screen and (width <= 700px) {
   .events-page {
     row-gap: 32px;
 
