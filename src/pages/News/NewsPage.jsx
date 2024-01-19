@@ -32,12 +32,10 @@ export function NewsPage() {
         <div className={classNames(style.sorted)}>
           <Select />
         </div>
-        <div className={classNames(style.cards)}>
-          <Pagination
-            component={<NewsCard />}
-            componentData={newsCardData}
-          />
-        </div>
+        <Pagination
+          component={<NewsCard />}
+          componentData={newsCardData}
+        />
       </section>
     </div>
   );

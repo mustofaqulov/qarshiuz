@@ -32,12 +32,12 @@ export function EventsPage() {
         <div className={classNames(style.sorted)}>
           <Select />
         </div>
-        <div className={classNames(style.cards)}>
-          <Pagination
-            component={<EventsCard />}
-            componentData={eventsCardData}
-          />
-        </div>
+        <Pagination
+          component={<EventsCard />}
+          componentData={eventsCardData}
+        />
+        {/* <div className={classNames(style.cards)}>
+        </div> */}
       </section>
     </div>
   );

@@ -3,6 +3,7 @@ import style from './category-card-page.module.scss';
 import {
   Button,
   RecommendationSlider,
+  SubTag,
 } from '../../components';
 
 import LocationIcon from '../../assets/icons/location-border.svg';
@@ -14,6 +15,7 @@ import ArrowUpIcon from '../../assets/icons/arrow-up.svg';
 import FaceBookBlackIcon from '../../assets/icons/facebook-black.svg';
 import TelegramBlackIcon from '../../assets/icons/telegram-black.svg';
 import VkontakteBlackIcon from '../../assets/icons/vkontakte-black.svg';
+import SelectIcon from '../../assets/icons/select-icon.svg';
 import CategoryCardMap from '../../assets/img/category-card-map.png';
 import { establishmentData } from '../../utils/mock';
 
@@ -22,6 +24,7 @@ export function CategoryCardPage() {
     <div
       className={classNames(
         style['category-about'],
+        style.container,
       )}
     >
       <div
@@ -61,9 +64,24 @@ export function CategoryCardPage() {
                     street, Karshi
                   </p>
                 </li>
-                <li>
-                  <BriefcaseIcon />
-                  <p>Mon-Sat, 08:00- 20:00 </p>
+                <li
+                  className={classNames(
+                    style.times,
+                  )}
+                >
+                  <div
+                    className={classNames(
+                      style['work-times'],
+                    )}
+                  >
+                    <BriefcaseIcon />
+                    <p>Mon-Sat, 08:00- 20:00 </p>
+                    <SelectIcon />
+                  </div>
+                  <SubTag
+                    tagClass="close-tag"
+                    title="yopiq"
+                  />
                 </li>
                 <li>
                   <GlobalIcon />

@@ -68,30 +68,17 @@ export function HomePage() {
                 style['promo-category'],
               )}
             >
-              <div
-                className={classNames(
-                  style['desktop-btn'],
-                )}
-              >
-                {smallBtnData.map(
-                  ({ title, id }) => {
-                    return (
-                      <Button
-                        key={id}
-                        btnClass="sm"
-                        title={title}
-                      />
-                    );
-                  },
-                )}
-              </div>
-              <div
-                className={classNames(
-                  style['mobile-btn'],
-                )}
-              >
-                <PromoButtonsSlide />
-              </div>
+              {smallBtnData.map(
+                ({ title, id }) => {
+                  return (
+                    <Button
+                      key={id}
+                      btnClass="sm"
+                      title={title}
+                    />
+                  );
+                },
+              )}
             </div>
           </div>
         </div>
