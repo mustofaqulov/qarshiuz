@@ -18,6 +18,7 @@
     .hamburger {
       display: none;
       cursor: pointer;
+      user-select: none;
 
       button {
         border: 0;
@@ -108,6 +109,7 @@
 
   .nav-close-icon {
     display: block;
+    user-select: none;
   }
 
   .nav {
