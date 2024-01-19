@@ -18,11 +18,12 @@ body.active-modal {
 
 .modal-search,
 .overlay-modals {
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   z-index: 10000;
+  width: 100vw;
+  height: 100vh;
   inset: 0;
+
   .overlay-modals {
     background: rgb(49 49 49 / 80%);
   }
