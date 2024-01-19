@@ -10,8 +10,16 @@ import {
 import style from './home-page.module.scss';
 import SelectIcon from '../../assets/icons/angle-down.svg';
 import { smallBtnData } from '../../utils/mock';
+import { useEffect, useState } from 'react';
+import { Modals } from '../../components/Modals/SearchModals/Modals';
 
 export function HomePage() {
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = isOpen
+      ? 'hidden'
+      : 'auto';
+  }, [isOpen]);
   return (
     <div
       className={classNames(style['home-page'])}
@@ -57,7 +65,18 @@ export function HomePage() {
                 style['input-button'],
               )}
             >
-              <SearchInput placeholder="Events" />
+              <Modals
+                open={isOpen}
+                close={() => setIsOpen(false)}
+              />
+              <div
+                className={style['btn-box']}
+                onClick={() => setIsOpen(true)}
+              >
+                <label for="btn">
+                  <SearchInput placeholder="Events" />
+                </label>
+              </div>
               <Button
                 btnClass="primary"
                 title="search"
