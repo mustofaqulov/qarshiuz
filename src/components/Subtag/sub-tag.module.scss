@@ -1,0 +1,33 @@
+.sub-tag {
+  padding: 6px 18px;
+  border: 1px solid var(--clr-gray-ltr);
+  border-radius: 33px;
+  background: none;
+  color: var(--clr-gray-ltr);
+  cursor: pointer;
+  font-size: var(--bottom-sm);
+  font-weight: var(--fw-medium);
+  text-transform: capitalize;
+}
+
+.close-tag {
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: #ff5656;
+  color: var(--clr-primary-lt);
+  font-size: var(--bottom-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.status-name {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: var(--bg-body);
+  font-size: var(--bottom-sm);
+  font-weight: var(--fw-medium);
+  text-transform: capitalize;
+}

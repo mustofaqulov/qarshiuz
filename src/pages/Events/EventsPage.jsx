@@ -15,6 +15,7 @@ export function EventsPage() {
       <section
         className={classNames(
           style['promo-section'],
+          style.container,
         )}
       >
         <h1>don&rsquo;t miss city events!</h1>
@@ -27,17 +28,18 @@ export function EventsPage() {
       <section
         className={classNames(
           style['cards-sorted'],
+          style.container,
         )}
       >
         <div className={classNames(style.sorted)}>
           <Select />
         </div>
-        <div className={classNames(style.cards)}>
-          <Pagination
-            component={<EventsCard />}
-            componentData={eventsCardData}
-          />
-        </div>
+        <Pagination
+          component={<EventsCard />}
+          componentData={eventsCardData}
+        />
+        {/* <div className={classNames(style.cards)}>
+        </div> */}
       </section>
     </div>
   );

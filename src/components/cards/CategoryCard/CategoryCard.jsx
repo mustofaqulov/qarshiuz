@@ -3,9 +3,17 @@ import classNames from 'classnames';
 import style from './category-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
+import FlashIcon from '../../../assets/icons/flash-icon.svg';
+import { SubTag } from '../../Subtag/Subtag';
 
 export function CategoryCard({ cardInfo }) {
-  const { title, location, cardImg } = cardInfo;
+  const {
+    title,
+    location,
+    cardImg,
+    closeStatus,
+  } = cardInfo;
+
   return (
     <div
       className={classNames(
@@ -17,12 +25,20 @@ export function CategoryCard({ cardInfo }) {
           style['category-status'],
         )}
       >
-        <div
-          className={classNames(
-            style['status-name'],
+        <div className={classNames(style.status)}>
+          <SubTag
+            tagClass="status-name"
+            icon={<FlashIcon />}
+            title="top"
+          />
+          {closeStatus === 'yopiq' ? (
+            <SubTag
+              tagClass="close-tag"
+              title={closeStatus}
+            />
+          ) : (
+            []
           )}
-        >
-          <span>top</span>
         </div>
         <div
           className={classNames(
@@ -71,5 +87,6 @@ CategoryCard.propTypes = {
     title: PropTypes.string,
     location: PropTypes.string,
     cardImg: PropTypes.string,
+    closeStatus: PropTypes.string,
   }),
 };

@@ -21,13 +21,13 @@
   justify-content: flex-end;
 }
 
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 992px) {
   .sliders {
     row-gap: 32px;
   }
 }
 
-@media only screen and (width <= 767px) {
+@media only screen and (width <= 700px) {
   .slider-btn {
     display: none;
   }

@@ -50,7 +50,12 @@ const btnData = [
 export function CategoryPage() {
   const [close, setClose] = useState(false);
   return (
-    <div className={classNames(style.category)}>
+    <div
+      className={classNames(
+        style.category,
+        style.container,
+      )}
+    >
       <div
         className={classNames(
           style['category-title'],
@@ -90,7 +95,7 @@ export function CategoryPage() {
           title="Filter"
           btnClass="primary"
           icon={<FilterIcon />}
-          still={{
+          styleBtn={{
             textTransform: 'Capitalize',
             fontSize: '16px',
             padding: '10px 16px',

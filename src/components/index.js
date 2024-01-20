@@ -15,3 +15,4 @@ export { PromoSlider } from './PromoSlider/PromoSlider';
 export { RecommendationSlider } from './Sliders/RecommendationSlider/RecSlider';
 export { sliderData } from './Sliders/SliderData';
 export { Footer } from './Footer/Footer';
+export { SubTag } from './Subtag/Subtag';

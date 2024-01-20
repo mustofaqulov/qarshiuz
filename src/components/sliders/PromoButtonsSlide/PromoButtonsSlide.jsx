@@ -11,8 +11,8 @@ export function PromoButtonsSlide() {
   return (
     <Swiper
       modules={[Scrollbar]}
-      slidesPerView={3}
-      spaceBetween={30}
+      slidesPerView={5}
+      spaceBetween={15}
       speed={1000}
       scrollbar
     >
