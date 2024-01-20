@@ -69,7 +69,7 @@ button {
   --fw-medium: 500;
   --fw-normal: 400;
 
-  @media only screen and (width <= 1023px) {
+  @media only screen and (width <= 992px) {
     --heading-2xl: 3rem;
     --heading-xl: 2.25rem;
     --heading-lg: 2rem;
@@ -81,7 +81,7 @@ button {
     --bottom-lg: 0.875rem;
   }
 
-  @media only screen and (width <= 767px) {
+  @media only screen and (width <= 700px) {
     --heading-2xl: 2rem;
     --heading-xl: 1.5rem;
     --heading-md: 1.25rem;
@@ -91,5 +91,19 @@ button {
     --paragraph-md: 0.875rem;
     --bottom-xl: 1rem;
     --bottom-lg: 0.875rem;
+  }
+}
+
+@media only screen and (width <= 992px) {
+  main {
+    padding-top: 64px;
+    padding-bottom: 120px;
+  }
+}
+
+@media only screen and (width <= 700px) {
+  main {
+    padding-top: 48px;
+    padding-bottom: 80px;
   }
 }
