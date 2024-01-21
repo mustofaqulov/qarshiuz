@@ -49,9 +49,6 @@ const btnData = [
 
 export function CategoryPage() {
    const [close, setClose] = useState(false);
-   useEffect(() => {
-      scroll(0, -100)
-   }, [])
    return (
       <div
          className={classNames(

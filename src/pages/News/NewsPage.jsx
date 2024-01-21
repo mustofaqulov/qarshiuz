@@ -9,9 +9,6 @@ import {
 import { newsCardData } from '../../utils/mock';
 
 export function NewsPage() {
-   useEffect(() => {
-      scroll(0, -100)
-   }, [])
    return (
       <div
          className={classNames(style['news-page'])}

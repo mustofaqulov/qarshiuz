@@ -9,9 +9,6 @@ import {
 import { eventsCardData } from '../../utils/mock';
 
 export function EventsPage() {
-   useEffect(() => {
-      scroll(0, -100)
-   }, [])
    return (
       <div
          className={classNames(style['events-page'])}

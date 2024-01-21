@@ -21,9 +21,6 @@ import CategoryCardMap from '../../assets/img/category-card-map.png';
 import { establishmentData } from '../../utils/mock';
 
 export function CategoryCardPage() {
-   useEffect(() => {
-      scroll(0, -100)
-   }, [])
    return (
       <div
          className={classNames(

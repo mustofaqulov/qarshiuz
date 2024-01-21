@@ -12,9 +12,6 @@ import style from './home-page.module.scss';
 import { smallBtnData } from '../../utils/mock';
 
 export function HomePage() {
-   useEffect(() => {
-      scroll(0, -100)
-   }, [])
    return (
       <div
          className={classNames(style['home-page'])}
