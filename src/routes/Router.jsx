@@ -15,7 +15,7 @@ export function Router() {
     CATEGORY,
     EVENTS,
     NEWS,
-    CATEGORYCARD,
+    CATEGORY_CARD,
     NOT_FOUND,
   } = routePaths;
   return (
@@ -31,7 +31,7 @@ export function Router() {
       />
       <Route path={NEWS} element={<NewsPage />} />
       <Route
-        path={CATEGORYCARD}
+        path={CATEGORY_CARD}
         element={<CategoryCardPage />}
       />
       <Route
