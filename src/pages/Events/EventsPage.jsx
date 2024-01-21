@@ -15,6 +15,7 @@ export function EventsPage() {
       <section
         className={classNames(
           style['promo-section'],
+          style.container,
         )}
       >
         <h1>don&rsquo;t miss city events!</h1>
@@ -27,6 +28,7 @@ export function EventsPage() {
       <section
         className={classNames(
           style['cards-sorted'],
+          style.container,
         )}
       >
         <div className={classNames(style.sorted)}>

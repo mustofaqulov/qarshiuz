@@ -1,4 +1,4 @@
-@import '../../styles/style';
+// @import '../../styles/style';
 
 .promo-slide {
   position: relative;
@@ -26,7 +26,7 @@
   }
 }
 
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 992px) {
   .promo-slide {
     height: 360px;
     border-radius: 0;
@@ -43,7 +43,7 @@
   }
 }
 
-@media only screen and (width <= 767px) {
+@media only screen and (width <= 700px) {
   .promo-slide {
     height: 260px;
     border-radius: 0;

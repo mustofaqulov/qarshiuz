@@ -25,11 +25,11 @@ export function RecommendationSlider() {
         0: {
           slidesPerView: 1.3,
         },
-        768: {
+        700: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
-        1024: {
+        992: {
           slidesPerView: 3,
           spaceBetween: 30,
         },

@@ -64,7 +64,7 @@
   }
 }
 
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 992px) {
   .card-skeleton {
     .img-skeleton {
       max-width: 340px;
@@ -85,7 +85,7 @@
   }
 }
 
-@media only screen and (width <= 767px) {
+@media only screen and (width <= 700px) {
   .card-skeleton {
     .img-skeleton {
       max-width: 325px;
