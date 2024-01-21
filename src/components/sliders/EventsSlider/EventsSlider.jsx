@@ -6,9 +6,9 @@ import {
 import 'swiper/css';
 import classNames from 'classnames';
 import style from '../sliders.module.scss';
-import { EventsCard } from '../../cards/EventsCard/EventsCard';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
+import { EventsCard } from '../../Cards/EventsCard/EventsCard';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
 import { eventsCardData } from '../../../utils/mock';
 

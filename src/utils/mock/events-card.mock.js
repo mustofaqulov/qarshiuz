@@ -60,7 +60,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi11.jpg',
   },
   {
-    id: 1,
+    id: 7,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -70,7 +70,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi.jpg',
   },
   {
-    id: 2,
+    id: 8,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -80,7 +80,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi9.jpg',
   },
   {
-    id: 3,
+    id: 9,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -90,7 +90,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_2.jpg',
   },
   {
-    id: 4,
+    id: 10,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -100,7 +100,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_skyline.jpg',
   },
   {
-    id: 5,
+    id: 11,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -110,7 +110,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_1.jpg',
   },
   {
-    id: 6,
+    id: 12,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -120,7 +120,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi11.jpg',
   },
   {
-    id: 1,
+    id: 13,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -130,7 +130,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi.jpg',
   },
   {
-    id: 2,
+    id: 14,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -140,7 +140,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi9.jpg',
   },
   {
-    id: 3,
+    id: 15,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -150,7 +150,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_2.jpg',
   },
   {
-    id: 4,
+    id: 16,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -160,7 +160,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_skyline.jpg',
   },
   {
-    id: 5,
+    id: 17,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -170,7 +170,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_1.jpg',
   },
   {
-    id: 6,
+    id: 18,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -180,7 +180,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi11.jpg',
   },
   {
-    id: 1,
+    id: 19,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -190,7 +190,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi.jpg',
   },
   {
-    id: 2,
+    id: 20,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -200,7 +200,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi9.jpg',
   },
   {
-    id: 3,
+    id: 21,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -210,7 +210,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_2.jpg',
   },
   {
-    id: 4,
+    id: 22,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -220,7 +220,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_skyline.jpg',
   },
   {
-    id: 5,
+    id: 23,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
@@ -230,7 +230,7 @@ export const eventsCardData = [
       'https://www.uzbek-travel.com/images/uz/Cities/Karshi/qarshi_1.jpg',
   },
   {
-    id: 6,
+    id: 24,
     status: 'concert',
     date: 'Octaber 15, 2023',
     title: 'Solo concert of jony Karshi',
