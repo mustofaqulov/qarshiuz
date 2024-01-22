@@ -1,4 +1,4 @@
-@import '../../styles/style';
+// @import '../../styles/style';
 
 .header {
   position: sticky;
@@ -173,7 +173,7 @@
   }
 }
 
-@media screen and (width <= 550px) {
+@media screen and (width <= 700px) {
   .header .header-container {
     .header-btn {
       display: none;
