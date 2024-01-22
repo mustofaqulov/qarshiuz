@@ -5,10 +5,9 @@ import {
   PromoSlider,
   MiniCategory,
   sliderData,
-  PromoButtonsSlide,
+  SubTag,
 } from '../../components';
 import style from './home-page.module.scss';
-import SelectIcon from '../../assets/icons/angle-down.svg';
 import { smallBtnData } from '../../utils/mock';
 import { useEffect, useState } from 'react';
 import { Modals } from '../../components/Modals/SearchModals/Modals';
@@ -31,79 +30,79 @@ export function HomePage() {
       >
         <div
           className={classNames(
-            style['region-name'],
+            style['promo-about'],
+            style.container,
           )}
         >
-          <div
-            className={classNames(style.regions)}
-          >
-            <strong>Kashqadarya region</strong>
-            <SelectIcon />
-          </div>
           <h1>
             Information portal of Qarshi city
           </h1>
-        </div>
-        <div
-          className={classNames(
-            style['promo-about'],
-          )}
-        >
-          <p>
-            A portal that helps you find places in
-            the city. You can get information
-            about pharmacies, hospitals,
-            restaurants and cafes
-          </p>
           <div
-            className={classNames(
-              style['promo-search'],
-            )}
+            className={classNames(style.about)}
           >
+            <p>
+              A portal that helps you find places
+              in the city. You can get information
+              about pharmacies, hospitals,
+              restaurants and cafes
+            </p>
             <div
               className={classNames(
-                style['input-button'],
+                style['promo-search'],
               )}
             >
-              <Modals
-                open={isOpen}
-                close={() => setIsOpen(false)}
-              />
               <div
-                className={style['btn-box']}
-                onClick={() => setIsOpen(true)}
+                className={classNames(
+                  style['input-button'],
+                )}
               >
-                <label for="btn">
-                  <SearchInput placeholder="Events" />
-                </label>
+                <Modals
+                  open={isOpen}
+                  close={() => setIsOpen(false)}
+                />
+                <div
+                  className={style['btn-box']}
+                  onClick={() => setIsOpen(true)}
+                >
+                  <label for="btn">
+                    <SearchInput placeholder="Events" />
+                  </label>
+                </div>
+                <Button
+                  btnClass="primary"
+                  title="search"
+                />
               </div>
-              <Button
-                btnClass="primary"
-                title="search"
-              />
-            </div>
-            <div
-              className={classNames(
-                style['promo-category'],
-              )}
-            >
-              {smallBtnData.map(
-                ({ title, id }) => {
-                  return (
-                    <Button
-                      key={id}
-                      btnClass="sm"
-                      title={title}
-                    />
-                  );
-                },
-              )}
+              <div
+                className={classNames(
+                  style['promo-category'],
+                )}
+              >
+                {smallBtnData.map(
+                  ({ title, id }) => {
+                    return (
+                      <SubTag
+                        key={id}
+                        tagClass="sub-tag"
+                        title={title}
+                      />
+                    );
+                  },
+                )}
+              </div>
             </div>
           </div>
         </div>
-        <PromoSlider />
+        <div
+          className={classNames(
+            style['promo-slider'],
+            style.container,
+          )}
+        >
+          <PromoSlider />
+        </div>
       </section>
-      <section className="category">
+      <section className="container">
         <MiniCategory />
       </section>
       {sliderData.map((slider) => {
@@ -113,6 +112,7 @@ export function HomePage() {
             key={id}
             className={classNames(
               style['slider-section'],
+              style.container,
             )}
           >
             <h3>{title}</h3>

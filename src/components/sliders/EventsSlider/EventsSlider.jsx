@@ -6,10 +6,10 @@ import {
 import 'swiper/css';
 import classNames from 'classnames';
 import style from '../sliders.module.scss';
-import { EventsCard } from '../../cards/EventsCard/EventsCard';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
+import { EventsCard } from '../../Cards/EventsCard/EventsCard';
 import { eventsCardData } from '../../../utils/mock';
 
 export function EventsSlider() {
@@ -21,11 +21,11 @@ export function EventsSlider() {
         0: {
           slidesPerView: 1.3,
         },
-        768: {
+        700: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
-        1024: {
+        992: {
           slidesPerView: 3,
           spaceBetween: 30,
         },
