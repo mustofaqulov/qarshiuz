@@ -6,7 +6,7 @@ import {
   SwiperSlide,
 } from 'swiper/react';
 import 'swiper/css';
-import { CategoryCard } from '../../cards/CategoryCard/CategoryCard';
+import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
 import { recommendationCardData } from '../../../utils/mock/recomendation.mock';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import style from '../sliders.module.scss';
@@ -25,11 +25,11 @@ export function RecommendationSlider() {
         0: {
           slidesPerView: 1.3,
         },
-        768: {
+        700: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
-        1024: {
+        992: {
           slidesPerView: 3,
           spaceBetween: 30,
         },

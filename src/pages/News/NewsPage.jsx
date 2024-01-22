@@ -15,6 +15,7 @@ export function NewsPage() {
       <section
         className={classNames(
           style['promo-section'],
+          style.container,
         )}
       >
         <h1>The latest news from your city!</h1>
@@ -27,6 +28,7 @@ export function NewsPage() {
       <section
         className={classNames(
           style['cards-sorted'],
+          style.container,
         )}
       >
         <div className={classNames(style.sorted)}>
