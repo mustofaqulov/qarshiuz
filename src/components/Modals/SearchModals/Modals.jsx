@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import style from './modals.module.scss';
 import { Button } from '../../Button/Button';
 import Search from '../../../assets/icons/search.svg';
@@ -28,7 +29,7 @@ export function Modals({ open, close }) {
     <div className={style['modal-search']}>
       <div
         onClick={close}
-        className={style['overlay-modals']}
+        className={style['overlay-modal']}
       >
         {}
       </div>
@@ -126,3 +127,13 @@ export function Modals({ open, close }) {
     </div>
   );
 }
+
+Modals.defaultProps = {
+  open: '',
+  close: '',
+};
+
+Modals.propTypes = {
+  open: PropTypes.func,
+  close: PropTypes.func,
+};
