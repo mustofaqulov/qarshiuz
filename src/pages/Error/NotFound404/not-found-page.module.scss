@@ -43,10 +43,12 @@
   .notfound-wrapper {
     h1 {
       font-size: 132px;
+      line-height: normal;
     }
 
     h2 {
       font-size: var(--heading-md);
+      line-height: normal;
     }
   }
 }
