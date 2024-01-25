@@ -38,3 +38,15 @@
     margin-top: 64px;
   }
 }
+
+@media only screen and (width <= 500px) {
+  .notfound-wrapper {
+    h1 {
+      font-size: 132px;
+    }
+
+    h2 {
+      font-size: var(--heading-md);
+    }
+  }
+}
