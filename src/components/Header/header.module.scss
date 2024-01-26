@@ -6,47 +6,34 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 25px 0;
+  padding: 26px 0;
   background-color: var(--clr-primary-lt);
 
   .header-container {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 25px;
+    justify-content: space-between;
 
     .hamburger {
       display: none;
-      cursor: pointer;
       user-select: none;
-
-      button {
-        border: 0;
-        background-color: transparent;
-      }
     }
 
-    .nav-close-icon {
-      display: none;
-    }
-
-    .nav-container {
-      display: flex;
-      flex-grow: 1;
-      justify-content: end;
-      gap: 24px;
+    button {
+      border: 0;
     }
 
     .nav {
+      .nav-close-btn {
+        display: none;
+        padding: 0;
+      }
+
       &-list {
         display: flex;
-        flex-direction: row-reverse;
         align-items: center;
         gap: 6px;
-
-        &_item {
-          margin: 0 24px;
-        }
 
         &_link {
           padding: 14px 26px;
@@ -59,6 +46,11 @@
           text-transform: uppercase;
           transition: all 0.2s ease;
 
+          &.active {
+            border: 2px solid
+              var(--clr-primary-dk);
+          }
+
           &:hover {
             border-color: var(--clr-primary-dk);
           }
@@ -66,9 +58,9 @@
       }
     }
 
-    .header-btn {
+    div:last-child {
       display: flex;
-      gap: 25px;
+      gap: 24px;
     }
   }
 }
@@ -83,111 +75,78 @@
   background-color: rgb(13 13 13 / 70%);
 }
 
-.active {
-  padding: 14px 26px;
-  border: 2px solid var(--clr-primary-dk);
-  border-radius: 36px;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.header-language {
-  display: none;
-}
-
-@media screen and (width <= 1194px) {
+@media screen and (width <=850px) {
   .header-background {
     display: block;
   }
 
-  .active {
-    padding: 0 0 0 3px;
-    border: 0;
-    border-radius: 0;
-    border-left: 4px solid var(--clr-primary-dk);
-  }
-
-  .nav-close-icon {
-    display: block;
-    user-select: none;
-  }
-
-  .nav {
-    display: none;
-  }
-
   .header {
+    padding: 16px 0;
+
     .header-container {
       display: flex;
       width: 100%;
-      justify-content: space-between;
 
       .hamburger {
         display: block;
+        cursor: pointer;
       }
 
-      .nav-container {
-        display: none;
-        justify-content: start;
-      }
-
-      .nav-menu {
+      .nav {
         position: absolute;
         z-index: 99999;
         top: 0;
         left: 0;
-        display: flex;
-        width: 100%;
-        max-width: 388px;
+        width: 35%;
         height: 100vh;
-        flex-direction: column;
-        align-items: start;
-        padding: 24px 22px 0 60px;
+        padding: 24px 0 0 60px;
         background-color: var(--clr-primary-lt);
-        gap: 40px;
+        transform: skew(10deg) translateX(-200%);
+        transition: 0.45s ease;
         user-select: none;
 
-        svg {
+        .nav-close-btn {
           display: block;
-          cursor: pointer;
-        }
-
-        button {
-          display: flex;
+          margin-bottom: 40px;
         }
 
         .nav-list {
-          flex-direction: column-reverse;
-          align-items: start;
+          flex-direction: column;
+          align-items: flex-start;
           gap: 24px;
 
           &_link {
             padding: 0;
 
-            &:hover {
-              border-color: transparent;
+            &.active {
+              padding: 0 0 0 3px;
+              border: 0;
               border-radius: 0;
+              border-left: 4px solid
+                var(--clr-primary-dk);
             }
           }
         }
+      }
+
+      .nav-menu {
+        transform: skew(0deg) translateX(0)
+          scale(1);
       }
     }
   }
 }
 
-@media screen and (width <= 550px) {
-  .header .header-container {
-    .header-btn {
-      display: none;
-    }
+@media screen and (width <=550px) {
+  .header {
+    .header-container {
+      display: flex;
+      justify-content: space-between;
 
-    .nav-menu {
-      max-width: 198px;
-      padding-left: 24px;
+      .nav-menu {
+        width: 55%;
+        padding: 22px 0 0 20px;
+      }
     }
-  }
-
-  .header-language {
-    display: block;
   }
 }
