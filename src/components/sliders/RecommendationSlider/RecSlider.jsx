@@ -7,8 +7,10 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import { CategoryCard } from '../../Cards/CategoryCard/CategoryCard';
-import { recommendationCardData } from '../../../utils/mock/recomendation.mock';
 import { SliderButtons } from '../SliderButton/SliderButtons';
+import { Button } from '../../Button/Button';
+import { recommendationCardData } from '../../../utils/mock/recomendation.mock';
+import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
 import style from '../sliders.module.scss';
 
 export function RecommendationSlider() {
@@ -52,6 +54,13 @@ export function RecommendationSlider() {
           style['btn-slider'],
         )}
       >
+        <Link to="/category">
+          <Button
+            title="view all news"
+            btnClass="secondary"
+            icon={<ArrowUpIcon />}
+          />
+        </Link>
         <SliderButtons />
       </div>
     </Swiper>

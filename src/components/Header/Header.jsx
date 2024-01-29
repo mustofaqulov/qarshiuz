@@ -5,7 +5,6 @@ import Logo from '../../assets/icons/logo.svg';
 import Hamburger from '../../assets/icons/navbar-hamburger.svg';
 import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
 import style from './header.module.scss';
-import { LanguageTab } from '../LanguageTab/LanguageTab';
 
 const linksData = [
   { id: 1, text: 'Home', link: '/' },
@@ -80,17 +79,7 @@ export function Header() {
               },
             )}
           </ul>
-          <div
-            className={classNames(
-              style['header-language'],
-            )}
-          >
-            <LanguageTab />
-          </div>
         </nav>
-        <div className={style['header-btn']}>
-          <LanguageTab />
-        </div>
       </div>
 
       {menu && (
