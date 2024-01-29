@@ -1,79 +1,79 @@
 @import '../../styles/style';
 
 .news-page {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 64px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   row-gap: 64px;
 
-  .promo-section {
-    display: flex;
-    flex-direction: column;
-    row-gap: 36px;
-
-    h1 {
-      font-family: var(--ff-red-hat);
-      font-size: var(--heading-xl);
-      font-weight: var(--fw-medium);
-      letter-spacing: 0.64px;
-      text-transform: uppercase;
-    }
-
-    p {
-      max-width: 450px;
-      align-self: flex-end;
-      font-size: var(--paragraph-md);
-      font-weight: var(--fw-medium);
-      line-height: 24px;
-    }
-  }
-
-  .cards-sorted {
-    display: flex;
-    flex-direction: column;
-    row-gap: 36px;
-
-    .sorted {
+   .promo-section {
       display: flex;
-      width: 100%;
-      justify-content: flex-end;
-      margin-bottom: 36px;
-    }
-  }
-}
-
-@media screen and (width <= 992px) {
-  .news-page {
-    row-gap: 48px;
-
-    .promo-section {
-      row-gap: 24px;
+      flex-direction: column;
+      row-gap: 36px;
 
       h1 {
-        letter-spacing: 0.36px;
+         font-family: var(--ff-red-hat);
+         font-size: var(--heading-xl);
+         font-weight: var(--fw-medium);
+         letter-spacing: 0.64px;
+         text-transform: uppercase;
       }
-    }
 
-    .cards-sorted {
-      row-gap: 24px;
+      p {
+         max-width: 450px;
+         align-self: flex-end;
+         font-size: var(--paragraph-md);
+         font-weight: var(--fw-medium);
+         line-height: 24px;
+      }
+   }
+
+   .cards-sorted {
+      display: flex;
+      flex-direction: column;
+      row-gap: 36px;
 
       .sorted {
-        margin-bottom: 24px;
+         display: flex;
+         width: 100%;
+         justify-content: flex-end;
+         margin-bottom: 36px;
       }
-    }
-  }
+   }
 }
 
-@media screen and (width <= 700px) {
-  .news-page {
-    row-gap: 32px;
+@media screen and (width <=992px) {
+   .news-page {
+      row-gap: 48px;
 
-    .promo-section {
+      .promo-section {
+         row-gap: 24px;
+
+         h1 {
+            letter-spacing: 0.36px;
+         }
+      }
+
+      .cards-sorted {
+         row-gap: 24px;
+
+         .sorted {
+            margin-bottom: 24px;
+         }
+      }
+   }
+}
+
+@media screen and (width <=700px) {
+   .news-page {
       row-gap: 32px;
 
-      h1 {
-        letter-spacing: 0.32px;
+      .promo-section {
+         row-gap: 32px;
+
+         h1 {
+            letter-spacing: 0.32px;
+         }
       }
-    }
-  }
+   }
 }

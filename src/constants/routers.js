@@ -3,8 +3,7 @@ export const routePaths = {
   CATEGORY: '/category',
   EVENTS: '/events',
   NEWS: '/news',
-  ABOUT: '/about',
-  CATEGORYCARD: '/category-card',
+  CATEGORY_CARD: '/category-card',
   LOGIN: '/login',
   NOT_FOUND: '/*',
 };
