@@ -5,10 +5,10 @@ export const locales = {
   },
   ru: {
     lang: 'ru',
-    title: 'RUS',
+    title: 'RU',
   },
   uz: {
     lang: 'uz',
-    title: 'UZB',
+    title: 'UZ',
   },
 };
