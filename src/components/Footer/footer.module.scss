@@ -139,14 +139,14 @@
     }
   }
 
-  @media screen and (width >= 930px) {
+  @media screen and (width <= 930px) {
     .footer-content {
       grid-template-areas: 'logo phone' 'right right' 'navigation navigation' 'links icons';
       grid-template-rows: 45px 100px 200px;
     }
   }
 
-  @media screen and (width >= 689px) {
+  @media screen and (width <= 689px) {
     .logo {
       margin: 0 auto;
     }
