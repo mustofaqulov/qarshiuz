@@ -10,8 +10,8 @@
     padding-top: 62px;
     padding-bottom: 62px;
     grid-template-areas: 'logo navigation navigation' 'right navigation navigation' 'phone links icons';
-    user-select: none;
     grid-template-rows: 45px 180px;
+    user-select: none;
 
     .logo {
       cursor: pointer;
@@ -62,32 +62,31 @@
           line-height: var(--heading-md);
           list-style: none;
 
-         a {
-              position: relative;
-              outline: none;
-              text-transform: capitalize;
+          a {
+            position: relative;
+            outline: none;
+            text-transform: capitalize;
+            transition: 0.3s;
+
+            &::after {
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              width: 0%;
+              height: 1px;
+              background-color: var(
+                --clr-primary-lt
+              );
+              content: '';
               transition: 0.3s;
-
-              &::after {
-                position: absolute;
-                bottom: -4px;
-                left: 0;
-                width: 0%;
-                height: 1px;
-                background-color: var(
-                  --clr-primary-lt
-                );
-                content: '';
-                transition: 0.3s;
-              }
             }
+          }
 
-            &:hover a {
-              &::after {
-                width: 100%;
-              }
+          &:hover a {
+            &::after {
+              width: 100%;
             }
-
+          }
         }
       }
     }
@@ -140,14 +139,14 @@
     }
   }
 
-  @media screen and (max-width: 930px) {
+  @media screen and (width >= 930px) {
     .footer-content {
       grid-template-areas: 'logo phone' 'right right' 'navigation navigation' 'links icons';
       grid-template-rows: 45px 100px 200px;
     }
   }
 
-  @media screen and (max-width: 689px) {
+  @media screen and (width >= 689px) {
     .logo {
       margin: 0 auto;
     }
