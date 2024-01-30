@@ -143,10 +143,19 @@
     .footer-content {
       grid-template-areas: 'logo phone' 'right right' 'navigation navigation' 'links icons';
       grid-template-rows: 45px 100px 200px;
+
+      .links {
+        column-gap: 32px;
+        text-wrap: nowrap;
+      }
+      
+      .icons {
+        margin: 0 auto;
+      }
     }
   }
 
-  @media screen and (width <= 689px) {
+  @media screen and (width <= 600px) {
     .logo {
       margin: 0 auto;
     }
