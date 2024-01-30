@@ -178,4 +178,16 @@
       grid-template-rows: 80px 240px 40px 80px 100px;
     }
   }
+
+  .footer .footer-content {
+    justify-content: center;
+    grid-template-areas:
+      'logo'
+      'navigation'
+      'phone'
+      'right'
+      'links'
+      'icons';
+    grid-template-rows: 80px 240px 40px 80px 100px;
+  }
 }
