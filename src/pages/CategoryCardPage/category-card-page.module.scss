@@ -54,7 +54,7 @@
       justify-content: space-between;
       column-gap: 15px;
 
-      .img-color {
+      .card-img {
         position: relative;
         overflow: hidden;
         width: 100%;
@@ -62,7 +62,7 @@
         height: 460px;
         border-radius: 16px;
 
-        .color {
+        .blur {
           position: absolute;
           z-index: 3;
           width: 100%;

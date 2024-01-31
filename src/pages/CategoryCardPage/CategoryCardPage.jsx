@@ -53,13 +53,11 @@ export function CategoryCardPage() {
           >
             <div
               className={classNames(
-                style['img-color'],
+                style['card-img'],
               )}
             >
               <div
-                className={classNames(
-                  style.color,
-                )}
+                className={classNames(style.blur)}
               />
               <img
                 src="https://www.uzbek-travel.com/images/uz/Cities/Karshi/karshi9.jpg"
@@ -96,9 +94,7 @@ export function CategoryCardPage() {
                       aria-hidden="true"
                     >
                       <BriefcaseIcon />
-                      <p>
-                        Mon-Sat, 08:00- 20:00{' '}
-                      </p>
+                      <p>Mon-Sat, 08:00- 20:00</p>
                       <SelectIcon />
                     </div>
                     <SubTag
