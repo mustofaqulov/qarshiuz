@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import { useEffect } from 'react';
 import style from './category-card-page.module.scss';
 import {
   Button,
