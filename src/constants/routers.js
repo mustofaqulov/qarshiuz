@@ -4,6 +4,7 @@ export const routePaths = {
   EVENTS: '/events',
   NEWS: '/news',
   CATEGORY_CARD: '/category-card',
+  ABOUT: '/about',
   LOGIN: '/login',
   NOT_FOUND: '/*',
 };
