@@ -31,6 +31,7 @@ export function Button({
     </button>
   );
 }
+
 Button.defaultProps = {
   btnClass: '',
   icon: null,
