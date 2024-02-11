@@ -1,3 +1,4 @@
+// import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import {
   Button,
@@ -48,7 +49,12 @@ export function HomePage() {
                   style['input-button'],
                 )}
               >
-                <SearchInput placeholder="Events" />
+                <div className={style['btn-box']}>
+                  <SearchInput
+                    placeholder="Events"
+                    modalOpen={true}
+                  />
+                </div>
                 <Button
                   btnClass="primary"
                   title="search"

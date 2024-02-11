@@ -35,12 +35,22 @@
       justify-content: space-between;
       column-gap: 24px;
 
-      p {
-        max-width: 537px;
-        font-family: var(--ff-gilroy);
-        font-size: var(--paragraph-md);
-        font-weight: var(--fw-medium);
-        line-height: 24px;
+      .input-button {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 16px;
+
+        .btn-box {
+          width: 100%;
+        }
+
+        form {
+          flex-grow: 1;
+
+          input {
+            background: none;
+          }
+        }
       }
 
       .promo-search {
