@@ -3,9 +3,9 @@
   width: 100%;
   flex-direction: column;
   border-radius: 16px;
+  cursor: pointer;
   font-family: var(--ff-gilroy);
   row-gap: 24px;
-  cursor: pointer;
 
   .card-img {
     position: relative;
@@ -101,7 +101,7 @@
   }
 }
 
-@media only screen and (width <= 700px) {
+@media only screen and (width <=700px) {
   .news-card {
     row-gap: 16px;
 

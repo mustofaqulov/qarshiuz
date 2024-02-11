@@ -38,7 +38,7 @@ Button.defaultProps = {
   type: 'button',
   title: null,
   onClick: () => {},
-  styleBtn: {},
+  styleBtn: null,
 };
 
 Button.propTypes = {
