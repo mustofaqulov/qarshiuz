@@ -5,17 +5,17 @@ import uz from '../assets/icons/uz.svg';
 export const locales = {
   en: {
     lang: 'en',
-    title: 'ENG',
+    title: 'English',
     icon: gb,
   },
   ru: {
     lang: 'ru',
-    title: 'RUS',
+    title: 'Russian',
     icon: ru,
   },
   uz: {
     lang: 'uz',
-    title: 'UZB',
+    title: 'Uzbek',
     icon: uz,
   },
 };
