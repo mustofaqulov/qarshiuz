@@ -20,16 +20,20 @@ const linksData = [
 ];
 
 export function Header() {
-   const [menu, setMenu] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] =
+    useState(false);
+  const navClasses = classNames(
+    style.nav,
+    isOpenMenu ? style['nav-menu'] : '',
+  );
+  const activeClass = ({ isActive }) =>
+    classNames(
+      style['nav-list_link'],
+      isActive ? style.active : '',
+    );
 
-   const navClasses = classNames(
-      style['nav-container'],
-      menu ? style['nav-menu'] : style.nav,
-   );
-   const setActive = ({ isActive }) =>
-      isActive
-         ? style.active
-         : style['nav-list_link'];
+  const navMenu = useRef();
+  const hamburger = useRef();
 
   useEffect(() => {
     document.body.style.overflow = isOpenMenu
@@ -77,9 +81,6 @@ export function Header() {
           <Hamburger />
         </button>
 
-        <Link to="/">
-          <Logo />
-        </Link>
         <Link to="/">
           <Logo />
         </Link>
