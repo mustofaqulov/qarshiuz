@@ -1,4 +1,4 @@
-@import '../../styles/style';
+// @import '../../styles/style';
 
 .header {
   position: sticky;
@@ -18,6 +18,7 @@
     .hamburger {
       display: none;
       cursor: pointer;
+      user-select: none;
 
       button {
         border: 0;
@@ -108,6 +109,7 @@
 
   .nav-close-icon {
     display: block;
+    user-select: none;
   }
 
   .nav {
@@ -173,7 +175,7 @@
   }
 }
 
-@media screen and (width <= 550px) {
+@media screen and (width <= 700px) {
   .header .header-container {
     .header-btn {
       display: none;

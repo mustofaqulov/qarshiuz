@@ -1,0 +1,53 @@
+.time-modal {
+  display: flex;
+  width: 100%;
+  max-width: 585px;
+  flex-direction: column;
+  border-radius: 18px;
+  background: white;
+
+  .modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 27px;
+    border-bottom: 1px solid var(--clr-gray-ltr);
+
+    h5 {
+      font-size: var(--heading-md);
+      font-weight: var(--fw-medium);
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .times {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 15px;
+    row-gap: 12px;
+
+    .time-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+
+      strong {
+        color: var(--clr-primary-dk);
+        font-size: var(--paragraph-md);
+        font-weight: var(--fw-medium);
+        text-transform: capitalize;
+      }
+
+      .time {
+        color: var(--clr-primary-dk);
+        font-size: var(--paragraph-md);
+        font-weight: var(--fw-medium);
+        text-transform: capitalize;
+      }
+    }
+  }
+}

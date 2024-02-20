@@ -2,7 +2,6 @@ export const recommendationCardData = [
   {
     id: 1,
     title: 'Aroma',
-    closeStatus: 'yopiq',
     location:
       'Uzbekistan street, Karshi 180100, Uzbekistan',
     cardImg:
@@ -11,7 +10,6 @@ export const recommendationCardData = [
   {
     id: 2,
     title: 'Aroma',
-    closeStatus: 'ochiq',
     location:
       'Uzbekistan street, Karshi 180100, Uzbekistan',
     cardImg:
@@ -20,7 +18,6 @@ export const recommendationCardData = [
   {
     id: 3,
     title: 'Aroma',
-    closeStatus: 'yopiq',
     location:
       'Uzbekistan street, Karshi 180100, Uzbekistan',
     cardImg:
@@ -29,7 +26,6 @@ export const recommendationCardData = [
   {
     id: 4,
     title: 'Aroma',
-    closeStatus: 'yopiq',
     location:
       'Uzbekistan street, Karshi 180100, Uzbekistan',
     cardImg:
@@ -38,7 +34,6 @@ export const recommendationCardData = [
   {
     id: 5,
     title: 'Aroma',
-    closeStatus: 'yopiq',
     location:
       'Uzbekistan street, Karshi 180100, Uzbekistan',
     cardImg:
@@ -47,7 +42,6 @@ export const recommendationCardData = [
   {
     id: 6,
     title: 'Aroma',
-    closeStatus: 'ochiq',
     location:
       'Uzbekistan street, Karshi 180100, Uzbekistan',
     cardImg:
