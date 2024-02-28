@@ -5,14 +5,13 @@ import {
   useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
+import ReactPaginate from 'react-paginate';
 import style from './pagination.module.scss';
 import PrevBtnIcon from '../../assets/icons/carousel-left-icon.svg';
 import NextBtnIcon from '../../assets/icons/carousel-right-icon.svg';
-import { Button } from '../Button/Button';
 import { Skeleton } from '../Skeleton/Skeleton';
 
-export function Pagination(props) {
-  const { component } = props;
+export function Pagination({ component }) {
   const [cardData, setCardData] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] =
@@ -28,18 +27,11 @@ export function Pagination(props) {
         setIsLoading(false);
       });
   }, [pageNumber]);
+  const pageCount = 100;
 
-  const changePageNumberBtn = (e) => {
-    setPageNumber(e.target.innerText);
-  };
-  const nextPageBtn = () => {
-    setPageNumber(1 * pageNumber + 1);
-  };
-  const prevPageBtn = () => {
-    if (pageNumber <= 1) {
-      return;
-    }
-    setPageNumber(pageNumber - 1);
+  const changePage = ({ selected }) => {
+    setIsLoading(true);
+    setPageNumber(selected + 1);
   };
   const displayUsers = cardData?.map(
     (cardInfo) => {
@@ -49,7 +41,7 @@ export function Pagination(props) {
     },
   );
 
-  const arr = [1, 2, 3, 4, 5];
+  const arr = [1, 2, 3, 4, 5, 6];
   return (
     <div className={classNames(style.pagination)}>
       <div
@@ -61,54 +53,10 @@ export function Pagination(props) {
           ? arr.map((i) => <Skeleton key={i} />)
           : displayUsers}
       </div>
-      <div className={classNames(style.buttons)}>
-        <div
-          className={classNames(
-            style['prev-btn'],
-          )}
-        >
-          <Button
-            btnClass="circle-btn"
-            icon={<PrevBtnIcon />}
-            onClick={prevPageBtn}
-          />
-        </div>
-        <div
-          className={classNames(
-            style['number-btn'],
-          )}
-        >
-          <Button
-            btnClass="circle-btn"
-            title={1}
-            onClick={changePageNumberBtn}
-          />
-          <Button
-            btnClass="circle-btn"
-            title={2}
-            onClick={changePageNumberBtn}
-          />
-          <Button
-            btnClass="circle-btn"
-            title={3}
-            onClick={changePageNumberBtn}
-          />
-        </div>
-        <div
-          className={classNames(
-            style['next-btn'],
-          )}
-        >
-          <Button
-            icon={<NextBtnIcon />}
-            btnClass="circle-btn"
-            onClick={nextPageBtn}
-          />
-        </div>
-      </div>
-      {/* <ReactPaginate
+
+      <ReactPaginate
         breakLabel="..."
-        pageRangeDisplayed={4}
+        pageRangeDisplayed={3}
         marginPagesDisplayed={0}
         previousLabel={<PrevBtnIcon />}
         nextLabel={<NextBtnIcon />}
@@ -129,14 +77,14 @@ export function Pagination(props) {
         activeClassName={classNames(
           style['pagination-active'],
         )}
-      /> */}
+      />
     </div>
   );
 }
 
 Pagination.defaultProps = {
-  component: '',
+  component: null,
 };
 Pagination.propTypes = {
-  component: PropTypes.string,
+  component: PropTypes.node,
 };

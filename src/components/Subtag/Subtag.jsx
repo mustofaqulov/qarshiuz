@@ -32,6 +32,7 @@ SubTag.propTypes = {
   tagClass: PropTypes.oneOf([
     'sub-tag',
     'close-tag',
+    'status-name',
   ]),
   title: PropTypes.string,
   icon: PropTypes.node,
