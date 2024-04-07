@@ -209,6 +209,57 @@ const category = [
   },
 ];
 
+const cardsData = [
+  {
+    id: 1,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+  {
+    id: 2,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+  {
+    id: 3,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+  {
+    id: 4,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+  {
+    id: 5,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+  {
+    id: 6,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+  {
+    id: 7,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+  {
+    id: 8,
+    url: 'https://img.freepik.com/free-photo/dinner-table-with-foods-soft-drinks-restaurant_114579-3319.jpg?w=740&t=st=1699409221~exp=1699409821~hmac=76e264ce58a42b99c06e557ca8a431a7706958a02bd297318e7f467adb34e705 ',
+    text: 'Restaurant',
+  },
+];
+const subList = [
+  { text: 'Chayxana', path: '/', id: 0 },
+  { text: 'Chayxana', path: '/', id: 1 },
+  { text: 'Chayxana', path: '/', id: 2 },
+  { text: 'Chayxana', path: '/', id: 3 },
+  { text: 'Chayxana', path: '/', id: 4 },
+  { text: 'Chayxana', path: '/', id: 5 },
+  { text: 'Chayxana', path: '/', id: 6 },
+];
 export function MiniCategory() {
  const [selectedImage, setSelectedImage] =
    useState(null);

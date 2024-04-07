@@ -3,6 +3,7 @@
   width: 100%;
   flex-direction: column;
   border-radius: 16px;
+  cursor: pointer;
   font-family: var(--ff-gilroy);
   row-gap: 24px;
 
@@ -30,7 +31,7 @@
       height: 260px;
       object-fit: cover;
       object-position: center center;
-      transition: 2s;
+      transition: 1s;
     }
   }
 
@@ -100,7 +101,7 @@
   }
 }
 
-@media only screen and (width <= 767px) {
+@media only screen and (width <=700px) {
   .news-card {
     row-gap: 16px;
 

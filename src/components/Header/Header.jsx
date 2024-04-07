@@ -1,37 +1,68 @@
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+  useRef,
+} from 'react';
 import Logo from '../../assets/icons/logo.svg';
 import Hamburger from '../../assets/icons/navbar-hamburger.svg';
 import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
+import SearchIcon from '../../assets/icons/search.svg';
 import style from './header.module.scss';
 import { LanguageTab } from '../LanguageTab/LanguageTab';
 
 const linksData = [
   { id: 1, text: 'Home', link: '/' },
-  { id: 2, text: 'Category', link: '/category' },
-  { id: 3, text: 'Events', link: '/events' },
-  { id: 4, text: 'News', link: '/news' },
-  { id: 5, text: 'About Us', link: '/about' },
-].reverse();
+  { id: 2, text: 'Events', link: '/events' },
+  { id: 3, text: 'News', link: '/news' },
+  { id: 4, text: 'About Us', link: '/about' },
+];
 
 export function Header() {
-  const [menu, setMenu] = useState(false);
-
+  const [isOpenMenu, setIsOpenMenu] =
+    useState(false);
   const navClasses = classNames(
-    style['nav-container'],
-    menu ? style['nav-menu'] : style.nav,
+    style.nav,
+    isOpenMenu ? style['nav-menu'] : '',
   );
-  const setActive = ({ isActive }) =>
-    isActive
-      ? style.active
-      : style['nav-list_link'];
+  const activeClass = ({ isActive }) =>
+    classNames(
+      style['nav-list_link'],
+      isActive ? style.active : '',
+    );
+
+  const navMenu = useRef();
+  const hamburger = useRef();
 
   useEffect(() => {
-    document.body.style.overflow = menu
+    document.body.style.overflow = isOpenMenu
       ? 'hidden'
       : 'auto';
-  }, [menu]);
+  }, [isOpenMenu]);
+
+  const handleOtherClicks = ({ target }) => {
+    if (
+      !navMenu.current.contains(target) &&
+      !hamburger.current.contains(target)
+    ) {
+      setIsOpenMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener(
+      'click',
+      handleOtherClicks,
+    );
+    return () => {
+      window.removeEventListener(
+        'click',
+        handleOtherClicks,
+      );
+    };
+  }, []);
+
   return (
     <header className={style.header}>
       <div
@@ -40,68 +71,78 @@ export function Header() {
           style['header-container'],
         )}
       >
-        <div
+        <button
+          onClick={() => {
+            setIsOpenMenu(true);
+          }}
           className={classNames(style.hamburger)}
+          ref={hamburger}
         >
-          <button
-            onClick={setMenu.bind(null, !menu)}
-          >
-            <Hamburger
-              onClick={() => setMenu(!menu)}
-            />
-          </button>
-        </div>
+          <Hamburger />
+        </button>
 
         <Link to="/">
           <Logo />
         </Link>
 
-        <nav className={classNames(navClasses)}>
-          <CloseHamburger
-            className={style['nav-close-icon']}
-            onClick={() => setMenu(!menu)}
-          />
-          <ul
-            className={classNames(
-              style['nav-list'],
-            )}
-          >
-            {linksData.map(
-              ({ id, text, link }) => {
-                return (
-                  <li key={id}>
-                    <NavLink
-                      to={link}
-                      className={setActive}
-                    >
-                      {text}
-                    </NavLink>
-                  </li>
-                );
-              },
-            )}
-          </ul>
+        <nav className={navClasses}>
           <div
             className={classNames(
-              style['header-language'],
+              style['nav-content'],
             )}
+            ref={navMenu}
           >
-            <LanguageTab />
+            <button
+              onClick={() => setIsOpenMenu(false)}
+              className={style['nav-close-btn']}
+            >
+              <CloseHamburger />
+            </button>
+            <ul
+              className={classNames(
+                style['nav-list'],
+              )}
+            >
+              {linksData.map(
+                ({ id, text, link }) => {
+                  return (
+                    <li key={id}>
+                      <botton
+                        onClick={setIsOpenMenu.bind(
+                          null,
+                          !isOpenMenu,
+                        )}
+                      >
+                        <NavLink
+                          to={link}
+                          className={activeClass}
+                        >
+                          {text}
+                        </NavLink>
+                      </botton>
+                    </li>
+                  );
+                },
+              )}
+            </ul>
           </div>
         </nav>
-        <div className={style['header-btn']}>
+        <div>
+          <button>
+            <SearchIcon />
+          </button>
           <LanguageTab />
         </div>
       </div>
-
-      {menu && (
-        <div
-          onClick={setMenu.bind(null, false)}
+      {/* {isOpenMenu && (
+        <button
+          onClick={() => setIsOpenMenu(false)}
           className={classNames(
             style['header-background'],
           )}
+          aria-label="Close"
         />
-      )}
+      )} */}
     </header>
   );
 }

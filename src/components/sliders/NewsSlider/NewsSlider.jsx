@@ -6,7 +6,7 @@ import {
 } from 'swiper/react';
 import 'swiper/css';
 import style from '../sliders.module.scss';
-import { NewsCard } from '../../cards/NewsCard/NewsCard';
+import { NewsCard } from '../../Cards/NewsCard/NewsCard';
 import { SliderButtons } from '../SliderButton/SliderButtons';
 import { Button } from '../../Button/Button';
 import ArrowUpIcon from '../../../assets/icons/arrow-up.svg';
@@ -21,11 +21,11 @@ export function NewsSlider() {
         0: {
           slidesPerView: 1.3,
         },
-        768: {
+        700: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
-        1024: {
+        992: {
           slidesPerView: 3,
           spaceBetween: 30,
         },

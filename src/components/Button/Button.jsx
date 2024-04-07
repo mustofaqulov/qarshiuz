@@ -31,13 +31,14 @@ export function Button({
     </button>
   );
 }
+
 Button.defaultProps = {
   btnClass: '',
   icon: null,
   type: 'button',
   title: null,
   onClick: () => {},
-  styleBtn: {},
+  styleBtn: null,
 };
 
 Button.propTypes = {

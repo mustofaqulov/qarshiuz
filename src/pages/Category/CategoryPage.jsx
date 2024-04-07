@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { CategoryCard } from '../../components/Cards/CategoryCard/CategoryCard';
 import CategoryMenuIcon from '../../assets/icons/categorys-menu.svg';
@@ -50,7 +50,12 @@ const btnData = [
 export function CategoryPage() {
   const [close, setClose] = useState(false);
   return (
-    <div className={classNames(style.category)}>
+    <div
+      className={classNames(
+        style.category,
+        style.container,
+      )}
+    >
       <div
         className={classNames(
           style['category-title'],
