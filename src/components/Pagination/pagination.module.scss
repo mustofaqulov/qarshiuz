@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 64px;
+  user-select: none;
 
   .users-content {
     display: grid;
@@ -22,49 +23,59 @@
     max-width: 424px;
     align-items: center;
     justify-content: space-between;
-    user-select: none;
 
-    .pagination-active a {
-      border: 0;
-      background-color: #000;
-      color: white;
+    .prev-btn,
+    .next-btn {
+      a {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        border-radius: 100%;
+        background: white;
+        cursor: pointer;
 
-      svg {
-        path {
-          fill: white;
+        svg {
+          path {
+            fill: black;
+          }
+        }
+
+        &:hover {
+          background: black;
+          color: white;
+
+          svg {
+            path {
+              fill: white;
+            }
+          }
         }
       }
     }
 
     .page-num {
-      padding: 8px 12px;
+      display: flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      border: 0;
       border-radius: 100%;
       cursor: pointer;
-      font-family: var(--ff-gilroy);
-      font-size: var(--paragraph-lg);
-      font-weight: var(--fw-medium);
 
       &:hover {
-        background-color: #000;
-        color: var(--clr-primary-lt);
+        background: black;
+        color: white;
       }
     }
+  }
 
-    .next-btn a,
-    .prev-btn a {
-      padding: 12px;
-      border: 1px solid black;
-      border-radius: 100%;
-
-      &:hover {
-        background-color: #000;
-
-        svg {
-          path {
-            fill: white;
-          }
-        }
-      }
-    }
+  .pagination-active {
+    border-radius: 100%;
+    background: black;
+    color: white;
   }
 }

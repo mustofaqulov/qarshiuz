@@ -11,26 +11,28 @@ import PrevBtnIcon from '../../assets/icons/carousel-left-icon.svg';
 import NextBtnIcon from '../../assets/icons/carousel-right-icon.svg';
 import { Skeleton } from '../Skeleton/Skeleton';
 
-export function Pagination({
-  component,
-  componentData,
-}) {
-  const [cardData, setCardData] = useState(
-    componentData,
-  );
-  const [pageNumber, setPageNumber] = useState(0);
+export function Pagination({ component }) {
+  const [cardData, setCardData] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] =
     useState(true);
 
   useEffect(() => {
-    fetch('')
+    fetch(
+      `https://jsonplaceholder.typicode.com/comments?postId=${pageNumber}`,
+    )
       .then((response) => response.json())
       .then((data) => {
         setCardData(data);
         setIsLoading(false);
       });
   }, [pageNumber]);
+  const pageCount = 100;
 
+  const changePage = ({ selected }) => {
+    setIsLoading(true);
+    setPageNumber(selected + 1);
+  };
   const displayUsers = cardData?.map(
     (cardInfo) => {
       return cloneElement(component, {
@@ -39,13 +41,7 @@ export function Pagination({
     },
   );
 
-  const pageCount = 10;
-
-  const changePage = ({ selected }) => {
-    setPageNumber(selected + 1);
-    setIsLoading(true);
-  };
-
+  const arr = [1, 2, 3, 4, 5, 6];
   return (
     <div className={classNames(style.pagination)}>
       <div
@@ -53,11 +49,14 @@ export function Pagination({
           style['users-content'],
         )}
       >
-        {displayUsers}
+        {isLoading === true
+          ? arr.map((i) => <Skeleton key={i} />)
+          : displayUsers}
       </div>
+
       <ReactPaginate
         breakLabel="..."
-        pageRangeDisplayed={4}
+        pageRangeDisplayed={3}
         marginPagesDisplayed={0}
         previousLabel={<PrevBtnIcon />}
         nextLabel={<NextBtnIcon />}
@@ -84,8 +83,8 @@ export function Pagination({
 }
 
 Pagination.defaultProps = {
-  component: '',
+  component: null,
 };
 Pagination.propTypes = {
-  component: PropTypes.string,
+  component: PropTypes.node,
 };
