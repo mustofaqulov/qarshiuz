@@ -9,6 +9,7 @@
     color: var(--primary-black);
     cursor: pointer;
     text-align: center;
+    margin: 0 auto;
     transition: all 0.5s;
 
     &:hover img {
@@ -73,6 +74,17 @@
       );
 
       li {
+        display: flex;
+        align-items: center;
+
+        a {
+          margin: 0 8px;
+          font-size: var(--bottom-lg) !important;
+          font-weight: var(--fw-medium);
+        }
+
+        // font-size: var(--bottom-lg);
+        // font-weight: var(--fw-medium);
         transition: all 0.5s;
 
         &:hover {
@@ -146,52 +158,59 @@
 @media screen and (width <= 540px) {
   .cards-wrapper {
     display: grid;
-    justify-content: center;
-    gap: 24px 4px;
+    gap: 24px 10px;
     grid-template-columns: repeat(
       auto-fill,
-      80px
+      105px
     );
 
-    .cards-item {
-      width: 80px;
-      height: 100px;
-      color: var(--primary-black);
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.5s;
-
-      &:hover img {
-        transform: scale(1.1);
+    .subcategory {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
       }
+    }
+  }
 
-      &:hover {
-        color: var(--clr-gray-lt);
-      }
+  .cards-item {
+    width: 80px;
+    height: 100px;
+    color: var(--primary-black);
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.5s;
 
-      .card-img {
-        overflow: hidden;
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    &:hover {
+      color: var(--clr-gray-lt);
+    }
+
+    .card-img {
+      overflow: hidden;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+
+      img {
         width: 64px;
         height: 64px;
         border-radius: 16px;
-        margin: 0 auto;
-        margin-bottom: 15px;
-
-        img {
-          width: 64px;
-          height: 64px;
-          border-radius: 16px;
-          background: lightgray 50% / cover
-            no-repeat;
-          transition: 0.5s;
-        }
+        background: lightgray 50% / cover
+          no-repeat;
+        transition: 0.5s;
       }
+    }
 
-      p {
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 0.24px;
-      }
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.24px;
     }
   }
 }
