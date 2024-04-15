@@ -1,10 +1,6 @@
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
-import {
-  useEffect,
-  useState,
-  useRef,
-} from 'react';
+import { useState } from 'react';
 import Logo from '../../assets/icons/logo.svg';
 import Hamburger from '../../assets/icons/navbar-hamburger.svg';
 import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
@@ -32,36 +28,9 @@ export function Header() {
       isActive ? style.active : '',
     );
 
-  const navMenu = useRef();
-  const hamburger = useRef();
-
-  useEffect(() => {
-    document.body.style.overflow = isOpenMenu
-      ? 'hidden'
-      : 'auto';
-  }, [isOpenMenu]);
-
-  const handleOtherClicks = ({ target }) => {
-    if (
-      !navMenu.current.contains(target) &&
-      !hamburger.current.contains(target)
-    ) {
-      setIsOpenMenu(false);
-    }
+  const handleOtherClicks = () => {
+    setIsOpenMenu((isOpen) => !isOpen);
   };
-
-  useEffect(() => {
-    window.addEventListener(
-      'click',
-      handleOtherClicks,
-    );
-    return () => {
-      window.removeEventListener(
-        'click',
-        handleOtherClicks,
-      );
-    };
-  }, []);
 
   return (
     <header className={style.header}>
@@ -72,11 +41,8 @@ export function Header() {
         )}
       >
         <button
-          onClick={() => {
-            setIsOpenMenu(true);
-          }}
+          onClick={handleOtherClicks}
           className={classNames(style.hamburger)}
-          ref={hamburger}
         >
           <Hamburger />
         </button>
@@ -90,7 +56,6 @@ export function Header() {
             className={classNames(
               style['nav-content'],
             )}
-            ref={navMenu}
           >
             <button
               onClick={() => setIsOpenMenu(false)}
@@ -107,7 +72,7 @@ export function Header() {
                 ({ id, text, link }) => {
                   return (
                     <li key={id}>
-                      <botton
+                      <button
                         onClick={setIsOpenMenu.bind(
                           null,
                           !isOpenMenu,
@@ -119,7 +84,7 @@ export function Header() {
                         >
                           {text}
                         </NavLink>
-                      </botton>
+                      </button>
                     </li>
                   );
                 },

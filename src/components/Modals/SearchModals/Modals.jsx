@@ -1,28 +1,27 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import style from './modals.module.scss';
-import { Button } from '../../Button/Button';
 import Search from '../../../assets/icons/search.svg';
+import { Button } from '../../Button/Button';
 
+const categories = [
+  {
+    url: 'https://img.freepik.com/free-photo/3d-rendering-modern-loft-gym-and-fitness_105762-2020.jpg?w=1060&t=st=1705419173~exp=1705419773~hmac=a47d1c5a5de535ddda09960f33b3d9f78666b0bb53ebdbee50ae869e4536d420 ',
+    text: 'Sport club',
+    id: 1,
+  },
+  {
+    url: 'https://img.freepik.com/free-photo/3d-rendering-modern-loft-gym-and-fitness_105762-2020.jpg?w=1060&t=st=1705419173~exp=1705419773~hmac=a47d1c5a5de535ddda09960f33b3d9f78666b0bb53ebdbee50ae869e4536d420 ',
+    text: 'Sport club',
+    id: 2,
+  },
+  {
+    url: 'https://img.freepik.com/free-photo/3d-rendering-modern-loft-gym-and-fitness_105762-2020.jpg?w=1060&t=st=1705419173~exp=1705419773~hmac=a47d1c5a5de535ddda09960f33b3d9f78666b0bb53ebdbee50ae869e4536d420 ',
+    text: 'Sport club',
+    id: 3,
+  },
+];
 export function Modals({ open, close }) {
-  const categories = [
-    {
-      url: 'https://img.freepik.com/free-photo/3d-rendering-modern-loft-gym-and-fitness_105762-2020.jpg?w=1060&t=st=1705419173~exp=1705419773~hmac=a47d1c5a5de535ddda09960f33b3d9f78666b0bb53ebdbee50ae869e4536d420 ',
-      text: 'Sport club',
-      id: 1,
-    },
-    {
-      url: 'https://img.freepik.com/free-photo/3d-rendering-modern-loft-gym-and-fitness_105762-2020.jpg?w=1060&t=st=1705419173~exp=1705419773~hmac=a47d1c5a5de535ddda09960f33b3d9f78666b0bb53ebdbee50ae869e4536d420 ',
-      text: 'Sport club',
-      id: 2,
-    },
-    {
-      url: 'https://img.freepik.com/free-photo/3d-rendering-modern-loft-gym-and-fitness_105762-2020.jpg?w=1060&t=st=1705419173~exp=1705419773~hmac=a47d1c5a5de535ddda09960f33b3d9f78666b0bb53ebdbee50ae869e4536d420 ',
-      text: 'Sport club',
-      id: 3,
-    },
-  ];
-
   if (!open) return null;
 
   return (

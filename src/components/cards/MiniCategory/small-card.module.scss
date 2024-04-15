@@ -6,9 +6,11 @@
 
   .cards-item {
     width: 190px;
+    border: none;
     margin: 0 auto;
     color: var(--primary-black);
     cursor: pointer;
+    outline: none;
     text-align: center;
     transition: all 0.5s;
 

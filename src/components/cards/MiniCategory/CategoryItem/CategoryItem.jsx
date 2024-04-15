@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import CornerLeft from '../../../../assets/icons/corner-left.svg';
 import style from '../small-card.module.scss';
 
-function CardItems(props) {
-  const data = props.cards;
+function CardItems({ cards }) {
   return (
     <div className={style.subcategory}>
       <p>
@@ -11,17 +11,13 @@ function CardItems(props) {
         <strong>See all advertisements </strong>
         <span>in Restaurants</span>
       </p>
-
       <ul>
-        {data['restaurantPlaces'].map(
+        {cards.restaurantPlaces.map(
           ({ id, namePlace }) => {
             return (
               <li key={id}>
-                <li key={id}>
-                  <CornerLeft />
-                  {/* <Link to={'/'}> */}
-                  <strong>{namePlace}</strong>
-                </li>
+                <CornerLeft />
+                <Link to="/">{namePlace}</Link>
               </li>
             );
           },
@@ -31,31 +27,11 @@ function CardItems(props) {
   );
 }
 
-function CategoryItem(props) {
-  const category = props.info;
-  const [selectedImage, setSelectedImage] =
-    useState(null);
+CardItems.defaultProps = {
+  cards: [],
+};
 
-  return (
-    <div className={style['cards-wrapper']}>
-      {selectedImage && (
-        <CardItems cards={selectedImage} />
-      )}
-      
-      {category.map(({ img, place, id, info }) => (
-        <div
-          key={id}
-          className={style['cards-item']}
-          onClick={() => setSelectedImage(info)}
-        >
-          <div className={style['card-img']}>
-            <img src={img} alt={place} />
-          </div>
-          <p>{place}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
+CardItems.propTypes = {
+  cards: PropTypes.oneOf(['array']),
+};
 export default CardItems;
