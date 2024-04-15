@@ -1,10 +1,6 @@
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
-import {
-  useEffect,
-  useState,
-  useRef,
-} from 'react';
+import { useEffect, useState } from 'react';
 import Logo from '../../assets/icons/logo.svg';
 import Hamburger from '../../assets/icons/navbar-hamburger.svg';
 import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
@@ -26,42 +22,24 @@ export function Header() {
     style.nav,
     isOpenMenu ? style['nav-menu'] : '',
   );
+
   const activeClass = ({ isActive }) =>
     classNames(
       style['nav-list_link'],
       isActive ? style.active : '',
     );
-
-  const navMenu = useRef();
-  const hamburger = useRef();
-
   useEffect(() => {
-    document.body.style.overflow = isOpenMenu
-      ? 'hidden'
-      : 'auto';
-  }, [isOpenMenu]);
-
-  const handleOtherClicks = ({ target }) => {
-    if (
-      !navMenu.current.contains(target) &&
-      !hamburger.current.contains(target)
-    ) {
-      setIsOpenMenu(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener(
-      'click',
-      handleOtherClicks,
-    );
-    return () => {
-      window.removeEventListener(
-        'click',
-        handleOtherClicks,
+    if (isOpenMenu) {
+      document.body.classList.add(style.hidden);
+    } else {
+      document.body.classList.remove(
+        style.hidden,
       );
-    };
-  }, []);
+    }
+  }, [isOpenMenu]);
+  const handleOtherClicks = () => {
+    setIsOpenMenu((isOpen) => !isOpen);
+  };
 
   return (
     <header className={style.header}>
@@ -72,11 +50,8 @@ export function Header() {
         )}
       >
         <button
-          onClick={() => {
-            setIsOpenMenu(true);
-          }}
+          onClick={handleOtherClicks}
           className={classNames(style.hamburger)}
-          ref={hamburger}
         >
           <Hamburger />
         </button>
@@ -90,7 +65,6 @@ export function Header() {
             className={classNames(
               style['nav-content'],
             )}
-            ref={navMenu}
           >
             <button
               onClick={() => setIsOpenMenu(false)}
@@ -106,8 +80,30 @@ export function Header() {
               {linksData.map(
                 ({ id, text, link }) => {
                   return (
-                    <li key={id}>
-                      <botton
+                    <li
+                      key={id}
+                      className={style.show}
+                    >
+                      <button>
+                        <NavLink
+                          to={link}
+                          className={activeClass}
+                        >
+                          {text}
+                        </NavLink>
+                      </button>
+                    </li>
+                  );
+                },
+              )}
+              {linksData.map(
+                ({ id, text, link }) => {
+                  return (
+                    <li
+                      key={id}
+                      className={style.hide}
+                    >
+                      <button
                         onClick={setIsOpenMenu.bind(
                           null,
                           !isOpenMenu,
@@ -119,7 +115,7 @@ export function Header() {
                         >
                           {text}
                         </NavLink>
-                      </botton>
+                      </button>
                     </li>
                   );
                 },
@@ -134,15 +130,6 @@ export function Header() {
           <LanguageTab />
         </div>
       </div>
-      {/* {isOpenMenu && (
-        <button
-          onClick={() => setIsOpenMenu(false)}
-          className={classNames(
-            style['header-background'],
-          )}
-          aria-label="Close"
-        />
-      )} */}
     </header>
   );
 }

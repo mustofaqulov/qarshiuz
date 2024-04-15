@@ -76,7 +76,15 @@
   height: 100vh;
   background-color: rgb(13 13 13 / 70%);
 }
-
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.hidden {
+  overflow: hidden;
+}
 @media screen and (width <=850px) {
   .header-background {
     display: block;
@@ -129,6 +137,10 @@
                 border-left: 4px solid
                   var(--clr-primary-dk);
               }
+
+              &:hover {
+                border-color: transparent;
+              }
             }
           }
         }
@@ -140,6 +152,12 @@
         transform: translateX(0) scale(1);
       }
     }
+  }
+  .show {
+    display: none;
+  }
+  .hide {
+    display: block;
   }
 }
 

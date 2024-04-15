@@ -1,6 +1,5 @@
 // import { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { useEffect } from 'react';
 import {
   Button,
   SearchInput,

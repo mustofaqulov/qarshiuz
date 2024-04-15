@@ -4,7 +4,7 @@ import style from './category-card.module.scss';
 import LocationIcon from '../../../assets/icons/location-gray.svg';
 import SideArrowIcon from '../../../assets/icons/side-arrow.svg';
 import FlashIcon from '../../../assets/icons/flash-icon.svg';
-import { SubTag } from '../../Subtag/Subtag';
+import { SubTag } from '../../SubTag/SubTag';
 
 export function CategoryCard({ cardInfo }) {
   const {

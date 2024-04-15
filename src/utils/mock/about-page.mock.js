@@ -10,8 +10,8 @@ export const aboutData = [
   {
     id: 3,
     data: `
-    Karshi ('palace' in Mongolian) gets its modern name from the twin palaces built here in the 1320s by the Chagatai Khans Kebek and Kazanby on the site of Genghis Khan's old summer pastures. Until the 14th century the town was called as Hakshab (in some sources Nasaf), but in 1364 Tamerlane ordered to built the fortified palace and moat in what is now the southern part of Karshi, and later the town obtained the name of Karshi (Karshi in Turkic language means “fortification”). It was into this citadel that most of the town later fled, under siege from the successive campaigns of Shaybani and Abdullah Khan. Successive rulers extended the city walls and constructed caravanserais, gardens and religious buildings.
-    Beginning from the 14th century Karshi was gradually growing: the violent growth of the town was during the Dynasty of Sheybanids (16th cent.). In the 18th century it became the second important city in the Bukhara Khanate. Major part of outstanding architectural monuments of the city was built during these centuries.`,
+      Karshi ('palace' in Mongolian) gets its modern name from the twin palaces built here in the 1320s by the Chagatai Khans Kebek and Kazanby on the site of Genghis Khan's old summer pastures. Until the 14th century the town was called as Hakshab (in some sources Nasaf), but in 1364 Tamerlane ordered to built the fortified palace and moat in what is now the southern part of Karshi, and later the town obtained the name of Karshi (Karshi in Turkic language means “fortification”). It was into this citadel that most of the town later fled, under siege from the successive campaigns of Shaybani and Abdullah Khan. Successive rulers extended the city walls and constructed caravanserais, gardens and religious buildings.
+      Beginning from the 14th century Karshi was gradually growing: the violent growth of the town was during the Dynasty of Sheybanids (16th cent.). In the 18th century it became the second important city in the Bukhara Khanate. Major part of outstanding architectural monuments of the city was built during these centuries.`,
   },
   {
     id: 4,
@@ -20,6 +20,6 @@ export const aboutData = [
   {
     id: 5,
     data: `n 1868 the Russians annexed the fertile Zerafshan Valley, turning the Kashgar Darya valley around Karshi into the main granary for the entire emirate and, in 1873, the main document that relegated Bukhara to a dependency of Russia was signed in the city, much to the gall of the emir's son, Abdul Malik, who led a brief rebellion here before fleeing to Peshawar.
-    After a long hiatus, Karshi emerged briefly to international attention following the US invasion of Afghanistan as the site of the Khanabad airbase. Though this was initially used to supply US troops, it was forced to close in 2005 following US criticism of the Andijan events and replaced with the Manas airbase outside Bishkek in Kyrgyzstan.`,
+      After a long hiatus, Karshi emerged briefly to international attention following the US invasion of Afghanistan as the site of the Khanabad airbase. Though this was initially used to supply US troops, it was forced to close in 2005 following US criticism of the Andijan events and replaced with the Manas airbase outside Bishkek in Kyrgyzstan.`,
   },
 ];

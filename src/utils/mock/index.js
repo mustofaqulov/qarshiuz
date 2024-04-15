@@ -6,4 +6,6 @@ export * from './events-card.mock';
 export * from './footer-links.mock';
 export * from './recommendation.mock';
 export * from './category-card.mock';
+export * from './work-time.mock';
 export * from './about-page.mock';
+export * from './mini-category.mock';
