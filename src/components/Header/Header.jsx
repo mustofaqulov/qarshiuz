@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from '../../assets/icons/logo.svg';
 import Hamburger from '../../assets/icons/navbar-hamburger.svg';
 import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
@@ -22,6 +22,12 @@ export function Header() {
     style.nav,
     isOpenMenu ? style['nav-menu'] : '',
   );
+  useEffect(() => {
+    document.body.style.overflow = isOpenMenu
+      ? 'hidden'
+      : 'auto';
+  }, [isOpenMenu]);
+
   const activeClass = ({ isActive }) =>
     classNames(
       style['nav-list_link'],
