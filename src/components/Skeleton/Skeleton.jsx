@@ -1,10 +1,12 @@
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import style from './skeleton.module.scss';
 
-export function Skeleton() {
+export function Skeleton({ key }) {
   return (
     <div
       className={classNames(style['card-info'])}
+      key={key}
     >
       <div
         className={classNames(
@@ -33,3 +35,10 @@ export function Skeleton() {
     </div>
   );
 }
+
+Skeleton.defaultProps = {
+  key: null,
+};
+Skeleton.propTypes = {
+  key: PropTypes.node,
+};

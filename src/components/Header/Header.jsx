@@ -10,6 +10,7 @@ import Hamburger from '../../assets/icons/navbar-hamburger.svg';
 import CloseHamburger from '../../assets/icons/nav-menu-clouse.svg';
 import SearchIcon from '../../assets/icons/search.svg';
 import style from './header.module.scss';
+import { LanguageTab } from '../LanguageTab/LanguageTab';
 
 const linksData = [
   { id: 1, text: 'Home', link: '/' },

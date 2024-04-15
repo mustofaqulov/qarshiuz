@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import style from './work-time-modal.module.scss';
 import ClouseIcon from '../../assets/icons/clouse-icon-white.svg';
-import { workTimeData } from '../../utils/mock';
+import { workTimeData } from '../../utils/mock/work-time.mock';
 
 export function WorkTimeModal({ toggleModal }) {
   return (
