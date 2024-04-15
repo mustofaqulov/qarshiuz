@@ -76,15 +76,19 @@
   height: 100vh;
   background-color: rgb(13 13 13 / 70%);
 }
+
 .hide {
   display: none;
 }
+
 .show {
   display: block;
 }
+
 .hidden {
   overflow: hidden;
 }
+
 @media screen and (width <=850px) {
   .header-background {
     display: block;
@@ -153,9 +157,11 @@
       }
     }
   }
+
   .show {
     display: none;
   }
+
   .hide {
     display: block;
   }
