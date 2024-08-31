@@ -5,7 +5,6 @@ export { Select } from './Select/Select';
 export { Pagination } from './Pagination/Pagination';
 export { CategoryCard } from './Cards/CategoryCard/CategoryCard';
 export { EventsCard } from './Cards/EventsCard/EventsCard';
-
 export { MiniCategory } from './Cards/MiniCategory/MiniCategory';
 export { NewsCard } from './Cards/NewsCard/NewsCard';
 export { EventsSlider } from './Sliders/EventsSlider/EventsSlider';
